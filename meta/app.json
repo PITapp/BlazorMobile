@@ -310,7 +310,7 @@
     "$rz-series-6": "#107c10",
     "$rz-series-7": "#32145a",
     "$rz-series-8": "#005a9e",
-    "$rz-white": "#ffffff",
+    "$rz-white": "#f5f5f5",
     "$scheduler-background-color": "#ffffff",
     "$scheduler-border": "1px solid #d2d0ce",
     "$scheduler-border-radius": "4px",
