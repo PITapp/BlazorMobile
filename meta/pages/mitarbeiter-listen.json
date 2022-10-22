@@ -1,0 +1,531 @@
+{
+  "components": [
+    {
+      "components": [
+        {
+          "items": [
+            {
+              "components": [
+                {
+                  "components": [],
+                  "headerTemplate": [
+                    {
+                      "components": [
+                        {
+                          "class": "col-md-12 align-items-start d-flex",
+                          "components": [
+                            {
+                              "buttonStyle": "light",
+                              "events": {
+                                "click": []
+                              },
+                              "icon": "publish",
+                              "name": "buttonExportExcel",
+                              "size": "sm",
+                              "style": {
+                                "color": "#D86E13",
+                                "display": "block"
+                              },
+                              "template": "",
+                              "text": "Export Excel",
+                              "tooltip": "",
+                              "type": "button"
+                            }
+                          ],
+                          "name": "col1",
+                          "type": "col"
+                        }
+                      ],
+                      "name": "row0",
+                      "type": "row"
+                    }
+                  ],
+                  "icon": "",
+                  "name": "panel1",
+                  "style": {
+                    "border": "1px solid #e6ecef",
+                    "height": "700px"
+                  },
+                  "text": "Daten",
+                  "type": "panel"
+                },
+                {
+                  "components": [
+                    {
+                      "class": "col  justify-content-end d-flex",
+                      "components": [
+                        {
+                          "buttonStyle": "success",
+                          "buttonType": "submit",
+                          "events": {
+                            "click": [
+                              {
+                                "condition": "${intMitarbeiterID} != 0",
+                                "result": "${intMitarbeiterID}",
+                                "type": "close-popup"
+                              }
+                            ]
+                          },
+                          "icon": "done",
+                          "name": "buttonUebernehmen",
+                          "text": "Übernehmen",
+                          "type": "button"
+                        },
+                        {
+                          "buttonStyle": "light",
+                          "events": {
+                            "click": [
+                              {
+                                "result": "null",
+                                "type": "close-popup"
+                              }
+                            ]
+                          },
+                          "name": "buttonAbbruch",
+                          "style": {
+                            "marginLeft": "1rem"
+                          },
+                          "text": "Abbruch",
+                          "type": "button"
+                        }
+                      ],
+                      "name": "col46",
+                      "style": {},
+                      "type": "col"
+                    }
+                  ],
+                  "name": "row24",
+                  "style": {
+                    "marginTop": "20px"
+                  },
+                  "type": "row"
+                }
+              ],
+              "selected": true,
+              "text": "Basisdaten"
+            },
+            {
+              "components": [
+                {
+                  "components": [],
+                  "headerTemplate": [
+                    {
+                      "components": [
+                        {
+                          "class": "col-md-12 align-items-start d-flex",
+                          "components": [
+                            {
+                              "buttonStyle": "light",
+                              "events": {
+                                "click": []
+                              },
+                              "icon": "publish",
+                              "name": "buttonExportExcel",
+                              "size": "sm",
+                              "style": {
+                                "color": "#D86E13",
+                                "display": "block"
+                              },
+                              "template": "",
+                              "text": "Export Excel",
+                              "tooltip": "",
+                              "type": "button"
+                            }
+                          ],
+                          "name": "col1",
+                          "type": "col"
+                        }
+                      ],
+                      "name": "row0",
+                      "type": "row"
+                    }
+                  ],
+                  "icon": "",
+                  "name": "panel0",
+                  "style": {
+                    "border": "1px solid #e6ecef",
+                    "height": "700px"
+                  },
+                  "text": "Daten",
+                  "type": "panel"
+                },
+                {
+                  "components": [
+                    {
+                      "class": "col  justify-content-end d-flex",
+                      "components": [
+                        {
+                          "buttonStyle": "success",
+                          "buttonType": "submit",
+                          "events": {
+                            "click": [
+                              {
+                                "condition": "${intMitarbeiterID} != 0",
+                                "result": "${intMitarbeiterID}",
+                                "type": "close-popup"
+                              }
+                            ]
+                          },
+                          "icon": "done",
+                          "name": "button0",
+                          "text": "Übernehmen",
+                          "type": "button"
+                        },
+                        {
+                          "buttonStyle": "light",
+                          "events": {
+                            "click": [
+                              {
+                                "result": "null",
+                                "type": "close-popup"
+                              }
+                            ]
+                          },
+                          "name": "button1",
+                          "style": {
+                            "marginLeft": "1rem"
+                          },
+                          "text": "Abbruch",
+                          "type": "button"
+                        }
+                      ],
+                      "name": "col0",
+                      "style": {},
+                      "type": "col"
+                    }
+                  ],
+                  "name": "row0",
+                  "style": {
+                    "marginTop": "20px"
+                  },
+                  "type": "row"
+                }
+              ],
+              "selected": false,
+              "text": "Tätigkeiten"
+            },
+            {
+              "components": [
+                {
+                  "components": [],
+                  "headerTemplate": [
+                    {
+                      "components": [
+                        {
+                          "class": "col-md-12 align-items-start d-flex",
+                          "components": [
+                            {
+                              "buttonStyle": "light",
+                              "events": {
+                                "click": []
+                              },
+                              "icon": "publish",
+                              "name": "buttonExportExcel",
+                              "size": "sm",
+                              "style": {
+                                "color": "#D86E13",
+                                "display": "block"
+                              },
+                              "template": "",
+                              "text": "Export Excel",
+                              "tooltip": "",
+                              "type": "button"
+                            }
+                          ],
+                          "name": "col1",
+                          "type": "col"
+                        }
+                      ],
+                      "name": "row0",
+                      "type": "row"
+                    }
+                  ],
+                  "icon": "",
+                  "name": "panel2",
+                  "style": {
+                    "border": "1px solid #e6ecef",
+                    "height": "700px"
+                  },
+                  "text": "Daten",
+                  "type": "panel"
+                },
+                {
+                  "components": [
+                    {
+                      "class": "col  justify-content-end d-flex",
+                      "components": [
+                        {
+                          "buttonStyle": "success",
+                          "buttonType": "submit",
+                          "events": {
+                            "click": [
+                              {
+                                "condition": "${intMitarbeiterID} != 0",
+                                "result": "${intMitarbeiterID}",
+                                "type": "close-popup"
+                              }
+                            ]
+                          },
+                          "icon": "done",
+                          "name": "button2",
+                          "text": "Übernehmen",
+                          "type": "button"
+                        },
+                        {
+                          "buttonStyle": "light",
+                          "events": {
+                            "click": [
+                              {
+                                "result": "null",
+                                "type": "close-popup"
+                              }
+                            ]
+                          },
+                          "name": "button3",
+                          "style": {
+                            "marginLeft": "1rem"
+                          },
+                          "text": "Abbruch",
+                          "type": "button"
+                        }
+                      ],
+                      "name": "col2",
+                      "style": {},
+                      "type": "col"
+                    }
+                  ],
+                  "name": "row1",
+                  "style": {
+                    "marginTop": "20px"
+                  },
+                  "type": "row"
+                }
+              ],
+              "icon": "",
+              "selected": false,
+              "text": "Kunden"
+            },
+            {
+              "components": [
+                {
+                  "components": [],
+                  "headerTemplate": [
+                    {
+                      "components": [
+                        {
+                          "class": "col-md-12 align-items-start d-flex",
+                          "components": [
+                            {
+                              "buttonStyle": "light",
+                              "events": {
+                                "click": []
+                              },
+                              "icon": "publish",
+                              "name": "buttonExportExcel",
+                              "size": "sm",
+                              "style": {
+                                "color": "#D86E13",
+                                "display": "block"
+                              },
+                              "template": "",
+                              "text": "Export Excel",
+                              "tooltip": "",
+                              "type": "button"
+                            }
+                          ],
+                          "name": "col1",
+                          "type": "col"
+                        }
+                      ],
+                      "name": "row0",
+                      "type": "row"
+                    }
+                  ],
+                  "icon": "",
+                  "name": "panel3",
+                  "style": {
+                    "border": "1px solid #e6ecef",
+                    "height": "700px"
+                  },
+                  "text": "Daten",
+                  "type": "panel"
+                },
+                {
+                  "components": [
+                    {
+                      "class": "col  justify-content-end d-flex",
+                      "components": [
+                        {
+                          "buttonStyle": "success",
+                          "buttonType": "submit",
+                          "events": {
+                            "click": [
+                              {
+                                "condition": "${intMitarbeiterID} != 0",
+                                "result": "${intMitarbeiterID}",
+                                "type": "close-popup"
+                              }
+                            ]
+                          },
+                          "icon": "done",
+                          "name": "button4",
+                          "text": "Übernehmen",
+                          "type": "button"
+                        },
+                        {
+                          "buttonStyle": "light",
+                          "events": {
+                            "click": [
+                              {
+                                "result": "null",
+                                "type": "close-popup"
+                              }
+                            ]
+                          },
+                          "name": "button5",
+                          "style": {
+                            "marginLeft": "1rem"
+                          },
+                          "text": "Abbruch",
+                          "type": "button"
+                        }
+                      ],
+                      "name": "col3",
+                      "style": {},
+                      "type": "col"
+                    }
+                  ],
+                  "name": "row2",
+                  "style": {
+                    "marginTop": "20px"
+                  },
+                  "type": "row"
+                }
+              ],
+              "selected": false,
+              "text": "Urlaub"
+            },
+            {
+              "components": [
+                {
+                  "components": [],
+                  "headerTemplate": [
+                    {
+                      "components": [
+                        {
+                          "class": "col-md-12 align-items-start d-flex",
+                          "components": [
+                            {
+                              "buttonStyle": "light",
+                              "events": {
+                                "click": []
+                              },
+                              "icon": "publish",
+                              "name": "buttonExportExcel",
+                              "size": "sm",
+                              "style": {
+                                "color": "#D86E13",
+                                "display": "block"
+                              },
+                              "template": "",
+                              "text": "Export Excel",
+                              "tooltip": "",
+                              "type": "button"
+                            }
+                          ],
+                          "name": "col1",
+                          "type": "col"
+                        }
+                      ],
+                      "name": "row0",
+                      "type": "row"
+                    }
+                  ],
+                  "icon": "",
+                  "name": "panel4",
+                  "style": {
+                    "border": "1px solid #e6ecef",
+                    "height": "700px"
+                  },
+                  "text": "Daten",
+                  "type": "panel"
+                },
+                {
+                  "components": [
+                    {
+                      "class": "col  justify-content-end d-flex",
+                      "components": [
+                        {
+                          "buttonStyle": "success",
+                          "buttonType": "submit",
+                          "events": {
+                            "click": [
+                              {
+                                "condition": "${intMitarbeiterID} != 0",
+                                "result": "${intMitarbeiterID}",
+                                "type": "close-popup"
+                              }
+                            ]
+                          },
+                          "icon": "done",
+                          "name": "button6",
+                          "text": "Übernehmen",
+                          "type": "button"
+                        },
+                        {
+                          "buttonStyle": "light",
+                          "events": {
+                            "click": [
+                              {
+                                "result": "null",
+                                "type": "close-popup"
+                              }
+                            ]
+                          },
+                          "name": "button7",
+                          "style": {
+                            "marginLeft": "1rem"
+                          },
+                          "text": "Abbruch",
+                          "type": "button"
+                        }
+                      ],
+                      "name": "col4",
+                      "style": {},
+                      "type": "col"
+                    }
+                  ],
+                  "name": "row3",
+                  "style": {
+                    "marginTop": "20px"
+                  },
+                  "type": "row"
+                }
+              ],
+              "selected": false,
+              "text": "Termine"
+            }
+          ],
+          "name": "tabs0",
+          "tabPosition": "TabPosition.Left",
+          "type": "tabs",
+          "visible": true
+        }
+      ],
+      "container": "main",
+      "type": "content"
+    }
+  ],
+  "events": {
+    "load": [
+      {
+        "name": "intMitarbeiterID",
+        "type": "set",
+        "value": "0",
+        "valueType": "int"
+      }
+    ]
+  },
+  "layout": "Dialog",
+  "name": "MitarbeiterListen"
+}

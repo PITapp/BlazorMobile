@@ -1,0 +1,146 @@
+﻿@page "/benutzerprofil"
+@layout StandardLayout
+@inherits SinDarElaMobile.Pages.BenutzerprofilComponent
+
+@using Radzen
+@using Radzen.Blazor
+@using SinDarElaMobile.Models.DbSinDarEla
+<PageTitle>Benutzerprofil</PageTitle>
+<RadzenContent Container="main">
+  <ChildContent>
+    <div style="height: ; margin-top: -7px; padding-bottom: 0; padding-left: 5px; padding-right: 3px; padding-top: 0; width: " class="row">
+      <div class="justify-content-start       d-flex align-items-center          col-md-8" style="height: 52px; padding-bottom: 1px">
+        <RadzenHeading Size="H1" style="color: #5d717b; display: inline-block" Text="Benutzerprofil">
+        </RadzenHeading>
+        <RadzenHeading Size="H3" style="color: #e5ecef; display: inline-block; margin-top: 7px; padding-left: 10px; padding-right: 10px" Text="|">
+        </RadzenHeading>
+        <RadzenHeading Size="H3" style="color: #6A80AA; display: inline; font-size: 21px; font-weight: normal; padding-top: 4px" Text="@strNameKontakt" >
+        </RadzenHeading>
+      </div>
+      <div class="col-md-4  d-flex justify-content-end align-items-end" style="padding-right: 20px">
+        <RadzenButton ButtonStyle="ButtonStyle.Info" ButtonType="ButtonType.Button" Icon="print" Size="ButtonSize.Small" style="background-color: rgb(230, 236, 239); border-bottom: 2px solid #d86e13; color: #6A80AA; display: block; font-weight: normal; width: 150px" Text="Drucken" Click="@Button0Click">
+        </RadzenButton>
+      </div>
+    </div>
+    <RadzenTabs style="float: none">
+      <Tabs>
+        <RadzenTabsItem Selected="true" Text="Allgemein">
+          <ChildContent>
+            <div class="row">
+              <div class="col-md-4">
+                <RadzenPanel AllowCollapse="false" style="border: 1px solid #e6ecef; height: 740px" Text="Benutzerdaten">
+                  <ChildContent>
+                    <RadzenTemplateForm Data="@dsoBenutzer" TItem="SinDarElaMobile.Models.DbSinDarEla.Benutzer" style="margin-left: 10px; margin-right: 10px; margin-top: 9px">
+                      <ChildContent>
+                        <div style="margin-bottom: 10px" class="row">
+                          <div class="col-md-3" style="text-align: right">
+                            <RadzenLabel Component="Anmeldename" style="text-align: left; width: 100%" Text="Anmeldename">
+                            </RadzenLabel>
+                            <RadzenRequiredValidator Component="Anmeldename" style="display: block; position: absolute; text-align: left; width: 100%" Text="╘ eingeben">
+                            </RadzenRequiredValidator>
+                          </div>
+                          <div class="col-md-9" >
+                            <RadzenTextBox AutoComplete="false" style="display: block; width: 100%" @bind-Value="@strBenutzername" Name="Anmeldename">
+                            </RadzenTextBox>
+                          </div>
+                        </div>
+                        <div style="margin-bottom: 1rem" class="row">
+                          <div class="col-md-3" style="text-align: right">
+                            <RadzenLabel Component="Initialen" style="text-align: left; width: 100%" Text="Initialen">
+                            </RadzenLabel>
+                            <RadzenRequiredValidator Component="Initialen" style="display: block; position: absolute; text-align: left; width: 100%" Text="╘ eingeben">
+                            </RadzenRequiredValidator>
+                          </div>
+                          <div class="col-md-9" >
+                            <RadzenTextBox AutoComplete="false" style="display: block; width: 100%" @bind-Value="@strInitialen" Name="Initialen">
+                            </RadzenTextBox>
+                          </div>
+                        </div>
+                        <div style="margin-bottom: 14px" class="row">
+                          <div class="col-md-3" >
+                            <RadzenLabel Component="Info" style="text-align: left; width: 100%" Text="Notizen">
+                            </RadzenLabel>
+                          </div>
+                          <div class="col-md-9" >
+                            <RadzenTextArea Rows="4" style="height: 197px; width: 100%" @bind-Value="@strNotiz" Name="Notiz">
+                            </RadzenTextArea>
+                          </div>
+                        </div>
+                        <div style="margin-bottom: 14px" class="row">
+                          <div class="col-md-12" >
+                            <RadzenLabel style="background-color: #e6ecef; text-align: center; width: 100%" Text="Neues Passwort erstellen">
+                            </RadzenLabel>
+                          </div>
+                        </div>
+                        <div style="margin-bottom: 1rem" class="row">
+                          <div class="col-md-3" >
+                            <RadzenLabel Component="Password" style="text-align: left; width: 100%" Text="Passwort">
+                            </RadzenLabel>
+                          </div>
+                          <div class="col-md-9" >
+                            <RadzenPassword AutoComplete="false" style="display: block; width: 100%" Name="Password">
+                            </RadzenPassword>
+                          </div>
+                        </div>
+                        <div style="margin-bottom: 1rem" class="row">
+                          <div class="col-md-3" >
+                            <RadzenLabel Component="ConfirmPassword" style="text-align: left; width: 100%" Text="Wiederholen">
+                            </RadzenLabel>
+                          </div>
+                          <div class="col-md-9" >
+                            <RadzenPassword AutoComplete="false" style="display: block; width: 100%" Name="ConfirmPassword">
+                            </RadzenPassword>
+                          </div>
+                        </div>
+                      </ChildContent>
+                    </RadzenTemplateForm>
+                  </ChildContent>
+                  <HeaderTemplate>
+                    <div style="color: rgb(33, 37, 41)" class="row">
+                      <div class="col-md-12 align-items-start d-flex">
+                        <RadzenButton ButtonStyle="ButtonStyle.Light" ButtonType="ButtonType.Submit" Icon="done" Size="ButtonSize.Small" style="color: #D86E13; display: block; font-weight: normal" Text="Speichern">
+                        </RadzenButton>
+                      </div>
+                    </div>
+                  </HeaderTemplate>
+                </RadzenPanel>
+              </div>
+              <div class="col-md-4" style="padding-left: 5px">
+                <RadzenPanel style="border: 1px solid #e6ecef; height: 740px" Text="Module">
+                </RadzenPanel>
+              </div>
+              <div class="col-md-4" style="padding-left: 5px">
+                <RadzenPanel style="border: 1px solid #e6ecef; height: 740px" Text="Profilbild">
+                  <ChildContent>
+                    <div style="margin-bottom: 15px" class="row">
+                      <div class="col-md-5">
+                        <RadzenImage Path="@strBildURL" style="background-color: rgba(0, 0, 0, 0); border: 1px solid #dbdfe2; border-radius: 4px; width: 120px">
+                        </RadzenImage>
+                      </div>
+                      <div class="col-md-7 justify-content-end d-flex">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <RadzenUpload Accept="image/*" ChooseText="Bild auswählen" style="width: 100%" Error="@Upload0Error">
+                        </RadzenUpload>
+                      </div>
+                    </div>
+                  </ChildContent>
+                  <HeaderTemplate>
+                    <div class="row">
+                      <div class="col-md-12 align-items-start d-flex">
+                        <RadzenButton ButtonStyle="ButtonStyle.Light" Icon="cancel" Size="ButtonSize.Small" style="color: #6A80AA; display: block" Text="Entfernen" Tooltip="Löschen Profilbild" Click="@ButtonBildEntfernenClick">
+                        </RadzenButton>
+                      </div>
+                    </div>
+                  </HeaderTemplate>
+                </RadzenPanel>
+              </div>
+            </div>
+          </ChildContent>
+        </RadzenTabsItem>
+      </Tabs>
+    </RadzenTabs>
+  </ChildContent>
+</RadzenContent>

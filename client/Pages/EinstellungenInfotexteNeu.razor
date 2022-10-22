@@ -1,0 +1,52 @@
+﻿@page "/einstellungen-infotexte-neu"
+@layout DialogLayout
+@inherits SinDarElaMobile.Pages.EinstellungenInfotexteNeuComponent
+
+@using Radzen
+@using Radzen.Blazor
+@using SinDarElaMobile.Models.DbSinDarEla
+<PageTitle>EinstellungenInfotexteNeu</PageTitle>
+<RadzenContent Container="main">
+  <ChildContent>
+    <div class="row">
+      <div class="col-md-12">
+        <RadzenTemplateForm Data="@dsoInfotexte" TItem="SinDarElaMobile.Models.DbSinDarEla.InfotexteHtml" Visible="@(dsoInfotexte != null)" Submit="@Form0Submit">
+          <ChildContent>
+            <div style="margin-bottom: 1rem" class="row">
+              <div class="col-md-3">
+                <RadzenLabel Component="Titel" style="width: 100%" Text="Titel">
+                </RadzenLabel>
+              </div>
+              <div class="col-md-9">
+                <RadzenTextBox MaxLength="100" style="display: block; width: 100%" @bind-Value="@(dsoInfotexte.Titel)" Name="TextboxTitel">
+                </RadzenTextBox>
+                <RadzenRequiredValidator Component="TextboxTitel" style="position: absolute" Text="Titel eingeben">
+                </RadzenRequiredValidator>
+              </div>
+            </div>
+            <div style="margin-bottom: 1rem" class="row">
+              <div class="col-md-3">
+                <RadzenLabel Component="Code" style="width: 100%" Text="Code">
+                </RadzenLabel>
+              </div>
+              <div class="col-md-9">
+                <RadzenTextBox MaxLength="20" style="display: block; width: 100%" @bind-Value="@(dsoInfotexte.Code)" Name="TextboxCode">
+                </RadzenTextBox>
+                <RadzenRequiredValidator Component="TextboxCode" style="position: absolute" Text="Code eingeben">
+                </RadzenRequiredValidator>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col offset-sm-3 justify-content-end d-flex">
+                <RadzenButton ButtonStyle="ButtonStyle.Success" ButtonType="ButtonType.Submit" Icon="done" Text="Speichern">
+                </RadzenButton>
+                <RadzenButton ButtonStyle="ButtonStyle.Light" style="margin-left: 1rem" Text="Abbruch" Click="@Button2Click">
+                </RadzenButton>
+              </div>
+            </div>
+          </ChildContent>
+        </RadzenTemplateForm>
+      </div>
+    </div>
+  </ChildContent>
+</RadzenContent>

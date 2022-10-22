@@ -1,0 +1,1 @@
+{"deploy":{"provider":"ftp","server":"85.10.229.181","user":"ftp_sindarela","password":"Zpgn687!","siteName":"/","connectionStrings":{"dbSinDarEla":{"value":"Server=lx17.hoststar.hosting;Database=at33318_dbSinDarEla;Uid=at33318_SinDarEla;Pwd=kRUF77w&DjW&PY;Connection Timeout=30"}},"endPoints":{},"method":"computerName","removeAdditional":true}}

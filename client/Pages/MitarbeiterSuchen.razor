@@ -1,0 +1,26 @@
+﻿@page "/mitarbeiter-suchen"
+@layout DialogLayout
+@inherits SinDarElaMobile.Pages.MitarbeiterSuchenComponent
+
+@using Radzen
+@using Radzen.Blazor
+@using SinDarElaMobile.Models.DbSinDarEla
+<PageTitle>MitarbeiterSuchen</PageTitle>
+<RadzenContent Container="main">
+  <ChildContent>
+    <div class="row">
+      <div class="col-md-12">
+        <RadzenListBox AllowFiltering="true" Data="@rstMitarbeiter" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" style="height: 565px; width: 100%" TextProperty="NameGesamt" @bind-Value="@intMitarbeiterID" ValueProperty="MitarbeiterID" Name="ListboxMitarbeiter" @ondblclick="@ButtonUebernehmenClick">
+        </RadzenListBox>
+      </div>
+    </div>
+    <div style="margin-top: 20px" class="row">
+      <div class="col  justify-content-end d-flex" >
+        <RadzenButton ButtonStyle="ButtonStyle.Success" ButtonType="ButtonType.Submit" Icon="done" Text="Übernehmen" Click="@ButtonUebernehmenClick">
+        </RadzenButton>
+        <RadzenButton ButtonStyle="ButtonStyle.Light" style="margin-left: 1rem" Text="Abbruch" Click="@ButtonAbbruchClick">
+        </RadzenButton>
+      </div>
+    </div>
+  </ChildContent>
+</RadzenContent>

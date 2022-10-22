@@ -1,0 +1,754 @@
+{
+  "components": [
+    {
+      "components": [
+        {
+          "components": [
+            {
+              "class": "justify-content-start       d-flex align-items-center          col-md-8",
+              "components": [
+                {
+                  "name": "heading18",
+                  "size": "H1",
+                  "style": {
+                    "color": "#5d717b",
+                    "display": "inline-block"
+                  },
+                  "text": "Benutzerprofil",
+                  "type": "heading"
+                },
+                {
+                  "name": "heading19",
+                  "size": "H3",
+                  "style": {
+                    "color": "#e5ecef",
+                    "display": "inline-block",
+                    "marginTop": "7px",
+                    "paddingLeft": "10px",
+                    "paddingRight": "10px"
+                  },
+                  "text": "|",
+                  "type": "heading"
+                },
+                {
+                  "attributes": [
+                    {}
+                  ],
+                  "name": "heading21",
+                  "size": "H3",
+                  "style": {
+                    "color": "#6A80AA",
+                    "display": "inline",
+                    "fontSize": "21px",
+                    "fontWeight": "normal",
+                    "paddingTop": "4px"
+                  },
+                  "text": "${strNameKontakt}",
+                  "type": "heading"
+                }
+              ],
+              "name": "col46",
+              "style": {
+                "height": "52px",
+                "paddingBottom": "1px"
+              },
+              "type": "col"
+            },
+            {
+              "class": "col-md-4  d-flex justify-content-end align-items-end",
+              "components": [
+                {
+                  "buttonStyle": "info",
+                  "buttonType": "button",
+                  "events": {
+                    "click": [
+                      {
+                        "height": "",
+                        "parameters": [
+                          {
+                            "name": "strMeldung",
+                            "value": "\"Drucken ist für dieses Modul noch nicht aktiviert!\""
+                          }
+                        ],
+                        "path": "meldung-ok",
+                        "then": [],
+                        "title": "Info",
+                        "type": "popup",
+                        "width": 600
+                      }
+                    ]
+                  },
+                  "icon": "print",
+                  "name": "button0",
+                  "size": "sm",
+                  "style": {
+                    "backgroundColor": "rgb(230, 236, 239)",
+                    "borderBottom": "2px solid #d86e13",
+                    "color": "#6A80AA",
+                    "display": "block",
+                    "fontWeight": "normal",
+                    "width": "150px"
+                  },
+                  "text": "Drucken",
+                  "tooltip": "",
+                  "type": "button"
+                }
+              ],
+              "name": "col64",
+              "style": {
+                "paddingRight": "20px"
+              },
+              "type": "col"
+            }
+          ],
+          "name": "row24",
+          "style": {
+            "height": "",
+            "marginTop": "-7px",
+            "paddingBottom": "0",
+            "paddingLeft": "5px",
+            "paddingRight": "3px",
+            "paddingTop": "0",
+            "width": ""
+          },
+          "type": "row"
+        },
+        {
+          "items": [
+            {
+              "components": [
+                {
+                  "components": [
+                    {
+                      "class": "col-md-4",
+                      "components": [
+                        {
+                          "allowCollapse": false,
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "components": [
+                                    {
+                                      "class": "col-md-3",
+                                      "components": [
+                                        {
+                                          "component": "Anmeldename",
+                                          "name": "label2",
+                                          "style": {
+                                            "textAlign": "left",
+                                            "width": "100%"
+                                          },
+                                          "text": "Anmeldename",
+                                          "type": "label"
+                                        },
+                                        {
+                                          "component": "Anmeldename",
+                                          "name": "requiredValidator4",
+                                          "style": {
+                                            "display": "block",
+                                            "position": "absolute",
+                                            "textAlign": "left",
+                                            "width": "100%"
+                                          },
+                                          "text": "╘ eingeben",
+                                          "type": "required-validator"
+                                        }
+                                      ],
+                                      "name": "col6",
+                                      "style": {
+                                        "textAlign": "right"
+                                      },
+                                      "type": "col"
+                                    },
+                                    {
+                                      "class": "col-md-9",
+                                      "components": [
+                                        {
+                                          "autoComplete": false,
+                                          "name": "Anmeldename",
+                                          "style": {
+                                            "display": "block",
+                                            "width": "100%"
+                                          },
+                                          "type": "textbox",
+                                          "value": "${strBenutzername}",
+                                          "visible": true
+                                        }
+                                      ],
+                                      "name": "col7",
+                                      "style": {},
+                                      "type": "col"
+                                    }
+                                  ],
+                                  "name": "row3",
+                                  "style": {
+                                    "marginBottom": "10px"
+                                  },
+                                  "type": "row"
+                                },
+                                {
+                                  "components": [
+                                    {
+                                      "class": "col-md-3",
+                                      "components": [
+                                        {
+                                          "component": "Initialen",
+                                          "name": "label3",
+                                          "style": {
+                                            "textAlign": "left",
+                                            "width": "100%"
+                                          },
+                                          "text": "Initialen",
+                                          "type": "label"
+                                        },
+                                        {
+                                          "component": "Initialen",
+                                          "name": "requiredValidator2",
+                                          "style": {
+                                            "display": "block",
+                                            "position": "absolute",
+                                            "textAlign": "left",
+                                            "width": "100%"
+                                          },
+                                          "text": "╘ eingeben",
+                                          "type": "required-validator"
+                                        }
+                                      ],
+                                      "name": "col5",
+                                      "style": {
+                                        "textAlign": "right"
+                                      },
+                                      "type": "col"
+                                    },
+                                    {
+                                      "class": "col-md-9",
+                                      "components": [
+                                        {
+                                          "autoComplete": false,
+                                          "name": "Initialen",
+                                          "style": {
+                                            "display": "block",
+                                            "width": "100%"
+                                          },
+                                          "type": "textbox",
+                                          "value": "${strInitialen}",
+                                          "visible": true
+                                        }
+                                      ],
+                                      "name": "col10",
+                                      "style": {},
+                                      "type": "col"
+                                    }
+                                  ],
+                                  "name": "row2",
+                                  "style": {
+                                    "marginBottom": "1rem"
+                                  },
+                                  "type": "row"
+                                },
+                                {
+                                  "components": [
+                                    {
+                                      "class": "col-md-3",
+                                      "components": [
+                                        {
+                                          "component": "Info",
+                                          "name": "label19",
+                                          "style": {
+                                            "textAlign": "left",
+                                            "width": "100%"
+                                          },
+                                          "text": "Notizen",
+                                          "type": "label"
+                                        }
+                                      ],
+                                      "name": "col1",
+                                      "style": {},
+                                      "type": "col"
+                                    },
+                                    {
+                                      "class": "col-md-9",
+                                      "components": [
+                                        {
+                                          "name": "Notiz",
+                                          "rows": 4,
+                                          "style": {
+                                            "height": "197px",
+                                            "width": "100%"
+                                          },
+                                          "type": "textarea",
+                                          "value": "${strNotiz}"
+                                        }
+                                      ],
+                                      "name": "col65",
+                                      "style": {},
+                                      "type": "col"
+                                    }
+                                  ],
+                                  "name": "row31",
+                                  "style": {
+                                    "marginBottom": "14px"
+                                  },
+                                  "type": "row"
+                                },
+                                {
+                                  "components": [
+                                    {
+                                      "class": "col-md-12",
+                                      "components": [
+                                        {
+                                          "name": "label0",
+                                          "style": {
+                                            "backgroundColor": "#e6ecef",
+                                            "textAlign": "center",
+                                            "width": "100%"
+                                          },
+                                          "text": "Neues Passwort erstellen",
+                                          "type": "label"
+                                        }
+                                      ],
+                                      "name": "col8",
+                                      "style": {},
+                                      "type": "col"
+                                    }
+                                  ],
+                                  "name": "row0",
+                                  "style": {
+                                    "marginBottom": "14px"
+                                  },
+                                  "type": "row"
+                                },
+                                {
+                                  "components": [
+                                    {
+                                      "class": "col-md-3",
+                                      "components": [
+                                        {
+                                          "component": "Password",
+                                          "name": "PasswordLabel",
+                                          "style": {
+                                            "textAlign": "left",
+                                            "width": "100%"
+                                          },
+                                          "text": "Passwort",
+                                          "type": "label"
+                                        }
+                                      ],
+                                      "name": "col20",
+                                      "style": {},
+                                      "type": "col"
+                                    },
+                                    {
+                                      "class": "col-md-9",
+                                      "components": [
+                                        {
+                                          "autoComplete": false,
+                                          "name": "Password",
+                                          "style": {
+                                            "display": "block",
+                                            "width": "100%"
+                                          },
+                                          "type": "password",
+                                          "value": ""
+                                        }
+                                      ],
+                                      "name": "col21",
+                                      "style": {},
+                                      "type": "col"
+                                    }
+                                  ],
+                                  "name": "row9",
+                                  "style": {
+                                    "marginBottom": "1rem"
+                                  },
+                                  "type": "row"
+                                },
+                                {
+                                  "components": [
+                                    {
+                                      "class": "col-md-3",
+                                      "components": [
+                                        {
+                                          "component": "ConfirmPassword",
+                                          "name": "ConfirmPasswordLabel",
+                                          "style": {
+                                            "textAlign": "left",
+                                            "width": "100%"
+                                          },
+                                          "text": "Wiederholen",
+                                          "type": "label"
+                                        }
+                                      ],
+                                      "name": "col22",
+                                      "style": {},
+                                      "type": "col"
+                                    },
+                                    {
+                                      "class": "col-md-9",
+                                      "components": [
+                                        {
+                                          "autoComplete": false,
+                                          "name": "ConfirmPassword",
+                                          "style": {
+                                            "display": "block",
+                                            "width": "100%"
+                                          },
+                                          "type": "password",
+                                          "value": ""
+                                        }
+                                      ],
+                                      "name": "col23",
+                                      "style": {},
+                                      "type": "col"
+                                    }
+                                  ],
+                                  "name": "row10",
+                                  "style": {
+                                    "marginBottom": "1rem"
+                                  },
+                                  "type": "row"
+                                }
+                              ],
+                              "data": "${dsoBenutzer}",
+                              "events": {
+                                "submit": []
+                              },
+                              "itemType": "SinDarElaMobile.Models.DbSinDarEla.Benutzer",
+                              "name": "form0",
+                              "style": {
+                                "marginLeft": "10px",
+                                "marginRight": "10px",
+                                "marginTop": "9px"
+                              },
+                              "type": "template-form"
+                            }
+                          ],
+                          "footerTemplate": "",
+                          "headerTemplate": [
+                            {
+                              "components": [
+                                {
+                                  "class": "col-md-12 align-items-start d-flex",
+                                  "components": [
+                                    {
+                                      "buttonStyle": "light",
+                                      "buttonType": "submit",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "done",
+                                      "name": "button4",
+                                      "size": "sm",
+                                      "style": {
+                                        "color": "#D86E13",
+                                        "display": "block",
+                                        "fontWeight": "normal"
+                                      },
+                                      "text": "Speichern",
+                                      "tooltip": "",
+                                      "type": "button"
+                                    }
+                                  ],
+                                  "name": "col16",
+                                  "type": "col"
+                                }
+                              ],
+                              "name": "row8",
+                              "style": {
+                                "color": "rgb(33, 37, 41)"
+                              },
+                              "type": "row"
+                            }
+                          ],
+                          "icon": "",
+                          "name": "panelBenutzerdaten",
+                          "style": {
+                            "border": "1px solid #e6ecef",
+                            "height": "740px"
+                          },
+                          "text": "Benutzerdaten",
+                          "type": "panel"
+                        }
+                      ],
+                      "name": "col0",
+                      "type": "col"
+                    },
+                    {
+                      "class": "col-md-4",
+                      "components": [
+                        {
+                          "components": [],
+                          "icon": "",
+                          "name": "panelModule",
+                          "style": {
+                            "border": "1px solid #e6ecef",
+                            "height": "740px"
+                          },
+                          "text": "Module",
+                          "type": "panel"
+                        }
+                      ],
+                      "name": "col4",
+                      "style": {
+                        "paddingLeft": "5px"
+                      },
+                      "type": "col"
+                    },
+                    {
+                      "class": "col-md-4",
+                      "components": [
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "class": "col-md-5",
+                                  "components": [
+                                    {
+                                      "name": "BildURL",
+                                      "path": "${strBildURL}",
+                                      "style": {
+                                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                                        "border": "1px solid #dbdfe2",
+                                        "borderRadius": "4px",
+                                        "width": "120px"
+                                      },
+                                      "type": "image",
+                                      "visible": true
+                                    }
+                                  ],
+                                  "name": "col2",
+                                  "type": "col"
+                                },
+                                {
+                                  "class": "col-md-7 justify-content-end d-flex",
+                                  "components": [],
+                                  "name": "col3",
+                                  "type": "col"
+                                }
+                              ],
+                              "name": "row7",
+                              "style": {
+                                "marginBottom": "15px"
+                              },
+                              "type": "row"
+                            },
+                            {
+                              "components": [
+                                {
+                                  "class": "col-md-12",
+                                  "components": [
+                                    {
+                                      "accept": "image/*",
+                                      "chooseText": "Bild auswählen",
+                                      "events": {
+                                        "error": [
+                                          {
+                                            "detail": "Hochladen fehlgeschlagen!",
+                                            "severity": "error",
+                                            "summary": "Bild",
+                                            "type": "notify"
+                                          }
+                                        ]
+                                      },
+                                      "name": "upload0",
+                                      "style": {
+                                        "width": "100%"
+                                      },
+                                      "type": "upload",
+                                      "url": ""
+                                    }
+                                  ],
+                                  "name": "col17",
+                                  "type": "col"
+                                }
+                              ],
+                              "name": "row8",
+                              "type": "row"
+                            }
+                          ],
+                          "footerTemplate": "",
+                          "headerTemplate": [
+                            {
+                              "components": [
+                                {
+                                  "class": "col-md-12 align-items-start d-flex",
+                                  "components": [
+                                    {
+                                      "buttonStyle": "light",
+                                      "events": {
+                                        "click": [
+                                          {
+                                            "autoFocusFirstElement": false,
+                                            "parameters": [
+                                              {
+                                                "name": "strMeldung",
+                                                "value": "\"Soll das Bild von '\" + dsoBenutzer.Base.Name1 + \" \" + dsoBenutzer.Base.Name2 + \"' entfernt werden?\""
+                                              }
+                                            ],
+                                            "path": "meldung-ja-nein",
+                                            "then": [
+                                              {
+                                                "code": "${dsoBenutzer.Base.BildURL} = \"https://medien.sindarela.app/upload/bilder/base/KeinBildPerson.png\";",
+                                                "condition": "${result} == \"Ja\"",
+                                                "type": "execute"
+                                              },
+                                              {
+                                                "condition": "${result} == \"Ja\"",
+                                                "error": [
+                                                  {
+                                                    "detail": "Bild konnte nicht entfernt werden!",
+                                                    "severity": "error",
+                                                    "type": "notify"
+                                                  }
+                                                ],
+                                                "name": "dbSinDarEla.updateBase",
+                                                "parameters": [
+                                                  {
+                                                    "name": "BaseID",
+                                                    "value": "${dsoBenutzer.BaseID}"
+                                                  },
+                                                  {
+                                                    "name": "Base",
+                                                    "value": "${dsoBenutzer.Base}"
+                                                  }
+                                                ],
+                                                "then": [
+                                                  {
+                                                    "detail": "Bild entfernt",
+                                                    "severity": "success",
+                                                    "type": "notify"
+                                                  }
+                                                ],
+                                                "type": "invoke"
+                                              }
+                                            ],
+                                            "title": "Bild entfernen",
+                                            "type": "popup"
+                                          }
+                                        ]
+                                      },
+                                      "icon": "cancel",
+                                      "name": "buttonBildEntfernen",
+                                      "size": "sm",
+                                      "style": {
+                                        "color": "#6A80AA",
+                                        "display": "block"
+                                      },
+                                      "text": "Entfernen",
+                                      "tooltip": "Löschen Profilbild",
+                                      "type": "button"
+                                    }
+                                  ],
+                                  "name": "col15",
+                                  "type": "col"
+                                }
+                              ],
+                              "name": "row8",
+                              "type": "row"
+                            }
+                          ],
+                          "name": "panelBild",
+                          "style": {
+                            "border": "1px solid #e6ecef",
+                            "height": "740px"
+                          },
+                          "text": "Profilbild",
+                          "type": "panel"
+                        }
+                      ],
+                      "name": "col11",
+                      "style": {
+                        "paddingLeft": "5px"
+                      },
+                      "type": "col"
+                    }
+                  ],
+                  "name": "row1",
+                  "type": "row"
+                }
+              ],
+              "icon": "",
+              "selected": true,
+              "text": "Allgemein"
+            }
+          ],
+          "name": "tabs0",
+          "selectedIndex": "",
+          "style": {
+            "float": "none"
+          },
+          "type": "tabs",
+          "visible": true
+        }
+      ],
+      "container": "main",
+      "type": "content"
+    }
+  ],
+  "events": {
+    "load": [
+      {
+        "condition": "${Globals.globalBenutzer} == null",
+        "path": "anmeldung-laden",
+        "type": "navigate"
+      },
+      {
+        "condition": "",
+        "name": "dbSinDarEla.getBenutzers",
+        "parameters": [
+          {
+            "name": "$filter",
+            "value": "BenutzerName eq 'Günther Painsi'"
+          },
+          {
+            "name": "$expand",
+            "value": "Base"
+          }
+        ],
+        "then": [
+          {
+            "name": "dsoBenutzer",
+            "type": "set",
+            "value": "${result.Value.AsODataEnumerable().FirstOrDefault()}",
+            "valueType": "SinDarElaMobile.Models.DbSinDarEla.Benutzer"
+          },
+          {
+            "name": "strNameKontakt",
+            "type": "set",
+            "value": "${dsoBenutzer.Base.Name1} + \" \" + ${dsoBenutzer.Base.Name2}",
+            "valueType": "string"
+          },
+          {
+            "name": "strBildURL",
+            "type": "set",
+            "value": "${dsoBenutzer.Base.BildURL}",
+            "valueType": "string"
+          },
+          {
+            "name": "strBenutzername",
+            "type": "set",
+            "value": "${dsoBenutzer.Benutzername}",
+            "valueType": "string"
+          },
+          {
+            "name": "strInitialen",
+            "type": "set",
+            "value": "${dsoBenutzer.Initialen}",
+            "valueType": "string"
+          },
+          {
+            "name": "strNotiz",
+            "type": "set",
+            "value": "${dsoBenutzer.Notiz}",
+            "valueType": "string"
+          }
+        ],
+        "type": "invoke"
+      }
+    ]
+  },
+  "layout": "Standard",
+  "name": "Benutzerprofil"
+}

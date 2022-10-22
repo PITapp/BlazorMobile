@@ -1,0 +1,1188 @@
+{
+  "components": [
+    {
+      "components": [
+        {
+          "components": [
+            {
+              "class": "justify-content-start       d-flex align-items-center          col-md-8",
+              "components": [
+                {
+                  "name": "heading18",
+                  "size": "H1",
+                  "style": {
+                    "color": "#5d717b",
+                    "display": "inline-block",
+                    "marginBottom": "0"
+                  },
+                  "text": "Mitarbeiter",
+                  "type": "heading"
+                },
+                {
+                  "name": "heading19",
+                  "size": "H3",
+                  "style": {
+                    "color": "#e5ecef",
+                    "display": "inline-block",
+                    "marginBottom": "0",
+                    "marginTop": "1px",
+                    "paddingLeft": "15px",
+                    "paddingRight": "15px"
+                  },
+                  "text": "|",
+                  "type": "heading"
+                },
+                {
+                  "attributes": [
+                    {}
+                  ],
+                  "name": "heading21",
+                  "size": "H3",
+                  "style": {
+                    "color": "#5d717b",
+                    "display": "inline",
+                    "fontSize": "21px",
+                    "fontWeight": "normal",
+                    "marginBottom": "0",
+                    "marginTop": "8px"
+                  },
+                  "text": "${strMitarbeiterName}",
+                  "type": "heading"
+                }
+              ],
+              "name": "col46",
+              "style": {
+                "height": "52px",
+                "paddingBottom": "1px"
+              },
+              "type": "col"
+            },
+            {
+              "class": "col-md-4  d-flex justify-content-end align-items-end",
+              "components": [
+                {
+                  "buttonStyle": "secondary",
+                  "buttonType": "button",
+                  "events": {
+                    "click": [
+                      {
+                        "height": "",
+                        "parameters": [
+                          {
+                            "name": "strMeldung",
+                            "value": "\"Berichte ist für dieses Modul noch nicht aktiviert!\""
+                          }
+                        ],
+                        "path": "meldung-ok",
+                        "then": [],
+                        "title": "Info",
+                        "type": "popup",
+                        "width": 600
+                      }
+                    ]
+                  },
+                  "icon": "description",
+                  "name": "buttonBerichre",
+                  "shade": "Shade.Default",
+                  "size": "ButtonSize.Medium",
+                  "style": {
+                    "color": "#6A80AA",
+                    "display": "block",
+                    "fontWeight": "normal"
+                  },
+                  "template": "",
+                  "text": "Berichte",
+                  "tooltip": "",
+                  "type": "button",
+                  "variant": "Variant.Text"
+                },
+                {
+                  "buttonStyle": "secondary",
+                  "buttonType": "button",
+                  "events": {
+                    "click": [
+                      {
+                        "autoFocusFirstElement": false,
+                        "draggable": true,
+                        "height": "",
+                        "parameters": [],
+                        "path": "mitarbeiter-listen",
+                        "resizable": true,
+                        "then": [],
+                        "title": "Listen Mitarbeiter",
+                        "type": "popup",
+                        "width": 1700
+                      }
+                    ]
+                  },
+                  "icon": "view_list",
+                  "name": "buttonListen",
+                  "size": "ButtonSize.Medium",
+                  "style": {
+                    "color": "#6A80AA",
+                    "display": "block",
+                    "fontWeight": "normal"
+                  },
+                  "template": "",
+                  "text": "Listen",
+                  "tooltip": "",
+                  "type": "button",
+                  "variant": "Variant.Text"
+                },
+                {
+                  "buttonStyle": "secondary",
+                  "buttonType": "button",
+                  "events": {
+                    "click": [
+                      {
+                        "autoFocusFirstElement": false,
+                        "draggable": true,
+                        "height": "",
+                        "parameters": [],
+                        "path": "mitarbeiter-suchen",
+                        "resizable": false,
+                        "then": [
+                          {
+                            "condition": "${result} != null",
+                            "name": "Globals.globalBenutzer.LetzteMitarbeiterID",
+                            "type": "set",
+                            "value": "${result}",
+                            "valueType": "dynamic"
+                          },
+                          {
+                            "code": "await Load();",
+                            "condition": "${result} != null",
+                            "type": "execute"
+                          }
+                        ],
+                        "title": "Suchen",
+                        "type": "popup",
+                        "width": 350
+                      }
+                    ]
+                  },
+                  "icon": "assessment",
+                  "name": "buttonSuchen",
+                  "size": "ButtonSize.Medium",
+                  "style": {
+                    "color": "#6A80AA",
+                    "display": "block",
+                    "fontWeight": "normal"
+                  },
+                  "template": "",
+                  "text": "Analysen",
+                  "tooltip": "",
+                  "type": "button",
+                  "variant": "Variant.Text"
+                },
+                {
+                  "buttonStyle": "secondary",
+                  "buttonType": "button",
+                  "events": {
+                    "click": [
+                      {
+                        "path": "dashboard",
+                        "type": "navigate"
+                      }
+                    ]
+                  },
+                  "icon": "dashboard",
+                  "name": "button0",
+                  "size": "ButtonSize.Medium",
+                  "style": {
+                    "color": "#6A80AA",
+                    "display": "block",
+                    "fontWeight": "normal"
+                  },
+                  "template": "",
+                  "text": "Dashboard",
+                  "tooltip": "",
+                  "type": "button",
+                  "variant": "Variant.Text"
+                }
+              ],
+              "name": "col64",
+              "style": {
+                "paddingRight": "20px"
+              },
+              "type": "col"
+            }
+          ],
+          "name": "row24",
+          "style": {
+            "height": "",
+            "marginTop": "-7px",
+            "paddingBottom": "0",
+            "paddingLeft": "5px",
+            "paddingRight": "3px",
+            "paddingTop": "0",
+            "width": ""
+          },
+          "type": "row"
+        },
+        {
+          "items": [
+            {
+              "components": [
+                {
+                  "components": [
+                    {
+                      "class": "col-md-7",
+                      "components": [
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "class": "col-md-12",
+                                  "components": [
+                                    {
+                                      "allowFiltering": true,
+                                      "allowPaging": true,
+                                      "allowSorting": true,
+                                      "columns": [
+                                        {
+                                          "property": "NameGesamt",
+                                          "title": "Name Gesamt"
+                                        },
+                                        {
+                                          "property": "MitarbeiterArt",
+                                          "title": "Mitarbeiter Art"
+                                        },
+                                        {
+                                          "property": "Anrede",
+                                          "title": "Anrede"
+                                        },
+                                        {
+                                          "property": "NameKuerzel",
+                                          "title": "Name Kuerzel"
+                                        },
+                                        {
+                                          "property": "TitelVorne",
+                                          "title": "Titel Vorne"
+                                        },
+                                        {
+                                          "property": "TitelHinten",
+                                          "title": "Titel Hinten"
+                                        },
+                                        {
+                                          "property": "Strasse",
+                                          "title": "Strasse"
+                                        },
+                                        {
+                                          "property": "PLZ",
+                                          "title": "PLZ"
+                                        },
+                                        {
+                                          "property": "Ort",
+                                          "title": "Ort"
+                                        },
+                                        {
+                                          "formatString": "{0:d}",
+                                          "property": "Geburtsdatum",
+                                          "title": "Geburtsdatum"
+                                        },
+                                        {
+                                          "property": "Versicherungsnummer",
+                                          "title": "Versicherungsnummer"
+                                        },
+                                        {
+                                          "property": "Staatsangehoerigkeit",
+                                          "title": "Staatsangehoerigkeit"
+                                        },
+                                        {
+                                          "property": "Telefon1",
+                                          "title": "Telefon 1"
+                                        },
+                                        {
+                                          "property": "Telefon2",
+                                          "title": "Telefon 2"
+                                        },
+                                        {
+                                          "property": "EMail1",
+                                          "title": "E Mail 1"
+                                        },
+                                        {
+                                          "property": "EMail2",
+                                          "title": "E Mail 2"
+                                        },
+                                        {
+                                          "property": "Notiz",
+                                          "title": "Notiz"
+                                        },
+                                        {
+                                          "property": "KontoName",
+                                          "title": "Konto Name"
+                                        },
+                                        {
+                                          "property": "KontoNummer",
+                                          "title": "Konto Nummer"
+                                        },
+                                        {
+                                          "property": "KontoInfo",
+                                          "title": "Konto Info"
+                                        },
+                                        {
+                                          "property": "Notfallkontakt",
+                                          "title": "Notfallkontakt"
+                                        },
+                                        {
+                                          "property": "NotfallkontaktTelefon",
+                                          "title": "Notfallkontakt Telefon"
+                                        }
+                                      ],
+                                      "count": "${rstVwMitarbeiterCount}",
+                                      "data": "${rstVwMitarbeiter}",
+                                      "events": {
+                                        "loadData": [
+                                          {
+                                            "error": [
+                                              {
+                                                "detail": "Unable to load VwMitarbeiters",
+                                                "severity": "error",
+                                                "summary": "Error",
+                                                "type": "notify"
+                                              }
+                                            ],
+                                            "name": "dbSinDarEla.getVwMitarbeiters",
+                                            "parameters": [
+                                              {
+                                                "name": "$top",
+                                                "value": "event.top"
+                                              },
+                                              {
+                                                "name": "$skip",
+                                                "value": "event.skip"
+                                              },
+                                              {
+                                                "name": "$count",
+                                                "value": "event.top != null && event.skip != null"
+                                              },
+                                              {
+                                                "name": "$filter",
+                                                "operator": "and",
+                                                "value": [
+                                                  {
+                                                    "filters": [
+                                                      {
+                                                        "operation": "contains",
+                                                        "property": "NameGesamt",
+                                                        "type": "string",
+                                                        "value": "\"${txbSuchenMitarbeiter}\""
+                                                      },
+                                                      {
+                                                        "operation": "contains",
+                                                        "property": "Strasse",
+                                                        "type": "string",
+                                                        "value": "\"${txbSuchenMitarbeiter}\""
+                                                      },
+                                                      {
+                                                        "operation": "contains",
+                                                        "property": "PLZ",
+                                                        "type": "string",
+                                                        "value": "\"${txbSuchenMitarbeiter}\""
+                                                      },
+                                                      {
+                                                        "operation": "contains",
+                                                        "property": "Ort",
+                                                        "type": "string",
+                                                        "value": "\"${txbSuchenMitarbeiter}\""
+                                                      }
+                                                    ],
+                                                    "operator": "or"
+                                                  },
+                                                  {
+                                                    "value": "${(string.IsNullOrEmpty(event.filter)? \"true\" : event.filter)}"
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "name": "$orderby",
+                                                "value": [
+                                                  {
+                                                    "value": "${event.orderby}"
+                                                  }
+                                                ]
+                                              }
+                                            ],
+                                            "then": [
+                                              {
+                                                "name": "rstVwMitarbeiter",
+                                                "type": "set",
+                                                "value": "${result.Value.AsODataEnumerable()}",
+                                                "valueType": "IEnumerable<SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter>"
+                                              },
+                                              {
+                                                "name": "rstVwMitarbeiterCount",
+                                                "type": "set",
+                                                "value": "${result.Count}",
+                                                "valueType": "int"
+                                              }
+                                            ],
+                                            "type": "invoke"
+                                          }
+                                        ]
+                                      },
+                                      "filterMode": "advanced",
+                                      "itemType": "SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter",
+                                      "name": "gridMitarbeiter",
+                                      "style": {
+                                        "height": "724px"
+                                      },
+                                      "title": "",
+                                      "type": "datagrid"
+                                    }
+                                  ],
+                                  "name": "col2",
+                                  "type": "col"
+                                }
+                              ],
+                              "name": "row0",
+                              "type": "row"
+                            }
+                          ],
+                          "headerTemplate": [
+                            {
+                              "components": [
+                                {
+                                  "class": "col-md-12 align-items-start d-flex",
+                                  "components": [
+                                    {
+                                      "attributes": [
+                                        {
+                                          "name": "@oninput",
+                                          "value": "@(async(args) => {txbSuchenMitarbeiter = $\"{args.Value}\";await gridMitarbeiter.GoToPage(0);await gridMitarbeiter.Reload();})"
+                                        }
+                                      ],
+                                      "name": "txbSuchenMitarbeiter",
+                                      "placeholder": "Suchen",
+                                      "style": {
+                                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                                        "border": "1px solid rgba(0, 0, 0, 0)",
+                                        "borderBottom": "1px dotted #ecebe9",
+                                        "width": "200px"
+                                      },
+                                      "type": "textbox",
+                                      "value": ""
+                                    },
+                                    {
+                                      "buttonStyle": "secondary",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "add",
+                                      "name": "buttonNeu",
+                                      "size": "ButtonSize.Medium",
+                                      "style": {
+                                        "color": "#A95106",
+                                        "display": "block"
+                                      },
+                                      "template": "",
+                                      "text": "Neuer Mitarbeiter",
+                                      "tooltip": "",
+                                      "type": "button",
+                                      "variant": "Variant.Text"
+                                    },
+                                    {
+                                      "buttonStyle": "secondary",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "create",
+                                      "isBusy": false,
+                                      "name": "buttonBearbeitenInfotext",
+                                      "size": "ButtonSize.Medium",
+                                      "style": {
+                                        "color": "#A95106",
+                                        "display": "block",
+                                        "fontWeight": "400",
+                                        "paddingLeft": ""
+                                      },
+                                      "template": "",
+                                      "text": "Bearbeiten",
+                                      "tooltip": "Bearbeiten Infotext",
+                                      "type": "button",
+                                      "variant": "Variant.Text"
+                                    },
+                                    {
+                                      "buttonStyle": "ButtonStyle.Secondary",
+                                      "events": {
+                                        "click": [
+                                          {
+                                            "condition": "${event?.Value == \"csv\"}",
+                                            "fileName": "VwMitarbeiter",
+                                            "name": "dbSinDarEla.getVwMitarbeiters",
+                                            "parameters": [
+                                              {
+                                                "name": "$filter",
+                                                "value": "${(string.IsNullOrEmpty(gridMitarbeiter.Query.Filter)? \"true\" : gridMitarbeiter.Query.Filter)}"
+                                              },
+                                              {
+                                                "name": "$orderby",
+                                                "value": "${gridMitarbeiter.Query.OrderBy}"
+                                              },
+                                              {
+                                                "name": "$expand",
+                                                "value": ""
+                                              },
+                                              {
+                                                "name": "$select",
+                                                "value": "NameGesamt,MitarbeiterArt,Anrede,NameKuerzel,TitelVorne,TitelHinten,Strasse,PLZ,Ort,Geburtsdatum,Versicherungsnummer,Staatsangehoerigkeit,Telefon1,Telefon2,EMail1,EMail2,Notiz,KontoName,KontoNummer,KontoInfo,Notfallkontakt,NotfallkontaktTelefon"
+                                              }
+                                            ],
+                                            "type": "export"
+                                          },
+                                          {
+                                            "condition": "${event == null || event.Value == \"xlsx\"}",
+                                            "fileName": "VwMitarbeiter",
+                                            "format": "xlsx",
+                                            "name": "dbSinDarEla.getVwMitarbeiters",
+                                            "parameters": [
+                                              {
+                                                "name": "$filter",
+                                                "value": "${(string.IsNullOrEmpty(gridMitarbeiter.Query.Filter)? \"true\" : gridMitarbeiter.Query.Filter)}"
+                                              },
+                                              {
+                                                "name": "$orderby",
+                                                "value": "${gridMitarbeiter.Query.OrderBy}"
+                                              },
+                                              {
+                                                "name": "$expand",
+                                                "value": ""
+                                              },
+                                              {
+                                                "name": "$select",
+                                                "value": "NameGesamt,MitarbeiterArt,Anrede,NameKuerzel,TitelVorne,TitelHinten,Strasse,PLZ,Ort,Geburtsdatum,Versicherungsnummer,Staatsangehoerigkeit,Telefon1,Telefon2,EMail1,EMail2,Notiz,KontoName,KontoNummer,KontoInfo,Notfallkontakt,NotfallkontaktTelefon"
+                                              }
+                                            ],
+                                            "type": "export"
+                                          }
+                                        ]
+                                      },
+                                      "icon": "get_app",
+                                      "items": [
+                                        {
+                                          "icon": "",
+                                          "text": "Excel",
+                                          "value": "xlsx"
+                                        },
+                                        {
+                                          "icon": "",
+                                          "text": "CSV",
+                                          "value": "csv"
+                                        }
+                                      ],
+                                      "name": "splitbutton0",
+                                      "size": "ButtonSize.Medium",
+                                      "style": {},
+                                      "text": "Export",
+                                      "type": "splitbutton",
+                                      "variant": "Variant.Text"
+                                    }
+                                  ],
+                                  "name": "col1",
+                                  "type": "col"
+                                }
+                              ],
+                              "name": "row0",
+                              "type": "row"
+                            }
+                          ],
+                          "icon": "",
+                          "name": "panel1",
+                          "style": {
+                            "border": "1px solid #e6ecef",
+                            "height": "779px"
+                          },
+                          "text": "Mitarbeiter",
+                          "type": "panel"
+                        }
+                      ],
+                      "name": "col0",
+                      "style": {
+                        "paddingLeft": "0"
+                      },
+                      "type": "col"
+                    },
+                    {
+                      "class": "col-md-5",
+                      "components": [
+                        {
+                          "attributes": [],
+                          "components": [
+                            {
+                              "allowCompositeDataCells": true,
+                              "allowFiltering": false,
+                              "allowPaging": false,
+                              "allowSorting": false,
+                              "columnWidth": "150px",
+                              "columns": [
+                                {
+                                  "filterProperty": "",
+                                  "frozen": true,
+                                  "groupProperty": "",
+                                  "property": "FirmaName",
+                                  "title": "Name",
+                                  "width": "300px"
+                                },
+                                {
+                                  "groupProperty": "",
+                                  "property": "Position",
+                                  "title": "Position"
+                                },
+                                {
+                                  "groupProperty": "",
+                                  "property": "Status",
+                                  "title": "Status"
+                                },
+                                {
+                                  "formatString": "{0:d}",
+                                  "groupProperty": "",
+                                  "property": "ArbeitsrechtEintritt",
+                                  "title": "Arbeitsrecht Eintritt"
+                                },
+                                {
+                                  "formatString": "{0:d}",
+                                  "property": "LetzterEintritt",
+                                  "title": "Letzter Eintritt"
+                                },
+                                {
+                                  "formatString": "{0:d}",
+                                  "property": "ArbeitsrechtAustritt",
+                                  "title": "Arbeitsrecht Austritt"
+                                },
+                                {
+                                  "formatString": "{0:d}",
+                                  "property": "LetzterAustritt",
+                                  "title": "Letzter Austritt"
+                                },
+                                {
+                                  "property": "Notiz",
+                                  "title": "Notiz"
+                                }
+                              ],
+                              "count": "",
+                              "data": "${getVwMitarbeiterFirmensResult}",
+                              "density": "Density.Compact",
+                              "events": {
+                                "loadData": [
+                                  {
+                                    "error": [
+                                      {
+                                        "detail": "Unable to load VwMitarbeiterFirmens",
+                                        "severity": "error",
+                                        "summary": "Error",
+                                        "type": "notify"
+                                      }
+                                    ],
+                                    "name": "dbSinDarEla.getVwMitarbeiterFirmens",
+                                    "parameters": [
+                                      {
+                                        "name": "$filter",
+                                        "value": "MitarbeiterID eq ${Globals.globalBenutzer.LetzteMitarbeiterID}"
+                                      }
+                                    ],
+                                    "then": [
+                                      {
+                                        "name": "getVwMitarbeiterFirmensResult",
+                                        "type": "set",
+                                        "value": "${result.Value.AsODataEnumerable()}",
+                                        "valueType": "IEnumerable<SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiterFirmen>"
+                                      }
+                                    ],
+                                    "type": "invoke"
+                                  }
+                                ]
+                              },
+                              "filterMode": "advanced",
+                              "itemType": "SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiterFirmen",
+                              "name": "gridFirmen",
+                              "style": {
+                                "border": "1px solid rgba(0, 0, 0, 0)",
+                                "height": "140px",
+                                "marginTop": "10px"
+                              },
+                              "title": "",
+                              "type": "datagrid"
+                            }
+                          ],
+                          "footerTemplate": "",
+                          "headerTemplate": [
+                            {
+                              "components": [
+                                {
+                                  "class": "col-md-12 align-items-start d-flex",
+                                  "components": [
+                                    {
+                                      "buttonStyle": "secondary",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "add",
+                                      "name": "buttonHinzufuegen",
+                                      "size": "ButtonSize.Medium",
+                                      "style": {
+                                        "color": "#A95106",
+                                        "display": "block",
+                                        "float": "none"
+                                      },
+                                      "text": "Hinzufügen",
+                                      "tooltip": "",
+                                      "type": "button",
+                                      "variant": "Variant.Text"
+                                    },
+                                    {
+                                      "buttonStyle": "secondary",
+                                      "buttonType": "button",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "create",
+                                      "name": "buttonBearbeitenInfotextEditor",
+                                      "size": "ButtonSize.Medium",
+                                      "style": {
+                                        "color": "#A95106",
+                                        "display": "block"
+                                      },
+                                      "text": "Bearbeiten",
+                                      "tooltip": "",
+                                      "type": "button",
+                                      "variant": "Variant.Text"
+                                    }
+                                  ],
+                                  "name": "col1",
+                                  "type": "col"
+                                }
+                              ],
+                              "name": "row0",
+                              "type": "row"
+                            }
+                          ],
+                          "name": "panel0",
+                          "style": {
+                            "border": "1px solid #e6ecef",
+                            "height": "200px"
+                          },
+                          "text": "Firmen",
+                          "type": "panel"
+                        },
+                        {
+                          "attributes": [],
+                          "components": [
+                            {
+                              "allowFiltering": false,
+                              "allowPaging": false,
+                              "allowSorting": false,
+                              "columnWidth": "150px",
+                              "columns": [
+                                {
+                                  "property": "TaetigkeitArt",
+                                  "title": "Art"
+                                },
+                                {
+                                  "property": "LeistungSchluessel",
+                                  "title": "Schlüssel"
+                                }
+                              ],
+                              "count": "",
+                              "data": "${getVwMitarbeiterTaetigkeitensResult}",
+                              "density": "Density.Compact",
+                              "events": {
+                                "loadData": [
+                                  {
+                                    "error": [
+                                      {
+                                        "detail": "Unable to load VwMitarbeiterTaetigkeitens",
+                                        "severity": "error",
+                                        "summary": "Error",
+                                        "type": "notify"
+                                      }
+                                    ],
+                                    "name": "dbSinDarEla.getVwMitarbeiterTaetigkeitens",
+                                    "parameters": [
+                                      {
+                                        "name": "$filter",
+                                        "value": "MitarbeiterID eq ${Globals.globalBenutzer.LetzteMitarbeiterID}"
+                                      }
+                                    ],
+                                    "then": [
+                                      {
+                                        "name": "getVwMitarbeiterTaetigkeitensResult",
+                                        "type": "set",
+                                        "value": "${result.Value.AsODataEnumerable()}",
+                                        "valueType": "IEnumerable<SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiterTaetigkeiten>"
+                                      }
+                                    ],
+                                    "type": "invoke"
+                                  }
+                                ]
+                              },
+                              "filterMode": "simple",
+                              "itemType": "SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiterTaetigkeiten",
+                              "name": "gridTaetigkeiten",
+                              "style": {
+                                "border": "1px solid rgba(0, 0, 0, 0)",
+                                "height": "145px",
+                                "marginTop": "10px"
+                              },
+                              "title": "",
+                              "type": "datagrid"
+                            }
+                          ],
+                          "footerTemplate": "",
+                          "headerTemplate": [
+                            {
+                              "components": [
+                                {
+                                  "class": "col-md-12 align-items-start d-flex",
+                                  "components": [
+                                    {
+                                      "buttonStyle": "secondary",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "add",
+                                      "name": "buttonHinzufuegen",
+                                      "shade": "Shade.Default",
+                                      "size": "ButtonSize.Medium",
+                                      "style": {
+                                        "color": "#A95106",
+                                        "display": "block",
+                                        "float": "none"
+                                      },
+                                      "text": "Hinzufügen",
+                                      "tooltip": "",
+                                      "type": "button",
+                                      "variant": "Variant.Text"
+                                    },
+                                    {
+                                      "buttonStyle": "secondary",
+                                      "buttonType": "button",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "create",
+                                      "name": "buttonBearbeitenInfotextEditor",
+                                      "shade": "Shade.Default",
+                                      "size": "ButtonSize.Medium",
+                                      "style": {
+                                        "color": "#A95106",
+                                        "display": "block"
+                                      },
+                                      "text": "Bearbeiten",
+                                      "tooltip": "",
+                                      "type": "button",
+                                      "variant": "Variant.Text"
+                                    }
+                                  ],
+                                  "name": "col1",
+                                  "type": "col"
+                                }
+                              ],
+                              "name": "row0",
+                              "type": "row"
+                            }
+                          ],
+                          "name": "panel6",
+                          "style": {
+                            "border": "1px solid #e6ecef",
+                            "height": "205px",
+                            "marginTop": "16px"
+                          },
+                          "text": "Tätigkeiten",
+                          "type": "panel"
+                        },
+                        {
+                          "attributes": [],
+                          "components": [
+                            {
+                              "allowFiltering": false,
+                              "allowPaging": false,
+                              "allowSorting": false,
+                              "columnWidth": "150px",
+                              "columns": [
+                                {
+                                  "property": "KundeName",
+                                  "title": "Name"
+                                },
+                                {
+                                  "property": "LeistungArt",
+                                  "title": "Leistung Art"
+                                },
+                                {
+                                  "property": "LeistungSchluessel",
+                                  "title": "Leistung Schlüssel"
+                                },
+                                {
+                                  "property": "Betreuungsart",
+                                  "title": "Betreuungsart"
+                                }
+                              ],
+                              "count": "",
+                              "data": "${getVwMitarbeiterKundensResult}",
+                              "density": "Density.Compact",
+                              "events": {
+                                "loadData": [
+                                  {
+                                    "error": [
+                                      {
+                                        "detail": "Unable to load VwMitarbeiterKundens",
+                                        "severity": "error",
+                                        "summary": "Error",
+                                        "type": "notify"
+                                      }
+                                    ],
+                                    "name": "dbSinDarEla.getVwMitarbeiterKundens",
+                                    "parameters": [
+                                      {
+                                        "name": "$filter",
+                                        "value": "MitarbeiterID eq ${Globals.globalBenutzer.LetzteMitarbeiterID}"
+                                      }
+                                    ],
+                                    "then": [
+                                      {
+                                        "name": "getVwMitarbeiterKundensResult",
+                                        "type": "set",
+                                        "value": "${result.Value.AsODataEnumerable()}",
+                                        "valueType": "IEnumerable<SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiterKunden>"
+                                      }
+                                    ],
+                                    "type": "invoke"
+                                  }
+                                ],
+                                "rowSelect": [
+                                  {
+                                    "name": "bolTest",
+                                    "type": "set",
+                                    "value": "false",
+                                    "valueType": "bool"
+                                  }
+                                ]
+                              },
+                              "filterMode": "simple",
+                              "itemType": "SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiterKunden",
+                              "name": "gridKunden",
+                              "style": {
+                                "border": "1px solid rgba(0, 0, 0, 0)",
+                                "height": "282px",
+                                "marginTop": "10px"
+                              },
+                              "title": "",
+                              "type": "datagrid"
+                            }
+                          ],
+                          "footerTemplate": "",
+                          "headerTemplate": [
+                            {
+                              "components": [
+                                {
+                                  "class": "col-md-12 align-items-start d-flex",
+                                  "components": [
+                                    {
+                                      "buttonStyle": "secondary",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "content_copy",
+                                      "name": "buttonKopieren",
+                                      "shade": "Shade.Default",
+                                      "size": "ButtonSize.Medium",
+                                      "style": {
+                                        "color": "#A95106",
+                                        "display": "block",
+                                        "float": "none"
+                                      },
+                                      "text": "Kopieren",
+                                      "tooltip": "",
+                                      "type": "button",
+                                      "variant": "Variant.Text"
+                                    },
+                                    {
+                                      "buttonStyle": "secondary",
+                                      "buttonType": "button",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "create",
+                                      "name": "buttonBearbeitenInfotextEditor",
+                                      "shade": "Shade.Default",
+                                      "size": "ButtonSize.Medium",
+                                      "style": {
+                                        "color": "#A95106",
+                                        "display": "block"
+                                      },
+                                      "text": "Bearbeiten",
+                                      "tooltip": "",
+                                      "type": "button",
+                                      "variant": "Variant.Text"
+                                    }
+                                  ],
+                                  "name": "col1",
+                                  "type": "col"
+                                }
+                              ],
+                              "name": "row0",
+                              "type": "row"
+                            }
+                          ],
+                          "name": "panel4",
+                          "style": {
+                            "border": "1px solid #e6ecef",
+                            "height": "342px",
+                            "marginTop": "16px"
+                          },
+                          "text": "Kunden",
+                          "type": "panel"
+                        }
+                      ],
+                      "name": "col3",
+                      "style": {
+                        "paddingLeft": "0",
+                        "paddingRight": "0"
+                      },
+                      "type": "col"
+                    }
+                  ],
+                  "name": "row1",
+                  "style": {},
+                  "type": "row"
+                }
+              ],
+              "icon": "",
+              "selected": true,
+              "text": "Allgemein"
+            },
+            {
+              "components": [],
+              "icon": "",
+              "selected": false,
+              "text": "Anstellung"
+            },
+            {
+              "selected": false,
+              "text": "Urlaub"
+            },
+            {
+              "selected": false,
+              "text": "Kalender"
+            },
+            {
+              "selected": false,
+              "text": "Fortbildungen"
+            },
+            {
+              "selected": false,
+              "text": "Kundenbudget"
+            },
+            {
+              "selected": false,
+              "text": "Dokumente"
+            },
+            {
+              "icon": "",
+              "selected": false,
+              "text": "Notizen"
+            }
+          ],
+          "name": "tabs0",
+          "selectedIndex": "",
+          "style": {
+            "float": "none"
+          },
+          "type": "tabs",
+          "visible": true
+        }
+      ],
+      "container": "main",
+      "type": "content"
+    }
+  ],
+  "events": {
+    "load": [
+      {
+        "condition": "${Globals.globalBenutzer} == null",
+        "path": "anmeldung-laden",
+        "type": "navigate"
+      },
+      {
+        "condition": "${Globals.globalBenutzer} != null",
+        "error": [
+          {
+            "detail": "Kein Mitarbeiter ausgewählt!",
+            "severity": "error",
+            "type": "notify"
+          },
+          {
+            "name": "strMitarbeiterName",
+            "type": "set",
+            "value": "\"Klicke auf [Suchen] um einen Mitarbeiter auszuwählen!\"",
+            "valueType": "string"
+          }
+        ],
+        "name": "dbSinDarEla.getMitarbeiterByMitarbeiterID",
+        "parameters": [
+          {
+            "name": "MitarbeiterID",
+            "value": "${Globals.globalBenutzer.LetzteMitarbeiterID}"
+          }
+        ],
+        "then": [
+          {
+            "name": "dsoMitarbeiter",
+            "type": "set",
+            "value": "${result}",
+            "valueType": "SinDarElaMobile.Models.DbSinDarEla.Mitarbeiter"
+          },
+          {
+            "condition": "",
+            "name": "dbSinDarEla.getBaseByBaseID",
+            "parameters": [
+              {
+                "name": "BaseID",
+                "value": "${dsoMitarbeiter.BaseID}"
+              }
+            ],
+            "then": [
+              {
+                "name": "dsoBase",
+                "type": "set",
+                "value": "${result}",
+                "valueType": "SinDarElaMobile.Models.DbSinDarEla.Base"
+              },
+              {
+                "name": "strMitarbeiterName",
+                "type": "set",
+                "value": "${result.Name1} + ' ' + ${result.Name2}",
+                "valueType": "string"
+              }
+            ],
+            "type": "invoke"
+          },
+          {
+            "condition": "",
+            "name": "dbSinDarEla.getBaseAnredens",
+            "then": [
+              {
+                "name": "rstBaseAnreden",
+                "type": "set",
+                "value": "${result.Value.AsODataEnumerable()}",
+                "valueType": "IEnumerable<SinDarElaMobile.Models.DbSinDarEla.BaseAnreden>"
+              }
+            ],
+            "type": "invoke"
+          }
+        ],
+        "type": "invoke"
+      },
+      {
+        "condition": "string.IsNullOrEmpty(txbSuchenMitarbeiter)",
+        "name": "txbSuchenMitarbeiter",
+        "type": "set",
+        "value": "\"\"",
+        "valueType": "string"
+      }
+    ]
+  },
+  "layout": "Standard",
+  "name": "Mitarbeiter"
+}

@@ -1,0 +1,22 @@
+﻿@page "/zz-automatisch-erzeugen"
+@layout MainLayout
+@inherits SinDarElaMobile.Pages.ZzAutomatischErzeugenComponent
+
+@using Radzen
+@using Radzen.Blazor
+@using SinDarElaMobile.Models.DbSinDarEla
+<PageTitle>zzAutomatischErzeugen</PageTitle>
+<RadzenContent Container="main">
+  <ChildContent>
+    <RadzenHeading Size="H1" Text="zzAutomatischErzeugen">
+    </RadzenHeading>
+    <RadzenButton Text="MeldungFortschritt öffnen" Click="@Button0Click">
+    </RadzenButton>
+    <RadzenButton style="margin-left: 10px" Text="MeldungJaNein öffnen" Click="@Button1Click">
+    </RadzenButton>
+    <RadzenButton style="margin-left: 10px" Text="MeldungLoeschen öffnen" Click="@Button3Click">
+    </RadzenButton>
+    <RadzenButton style="margin-left: 10px" Text="MeldungOK öffnen" Click="@Button2Click">
+    </RadzenButton>
+  </ChildContent>
+</RadzenContent>

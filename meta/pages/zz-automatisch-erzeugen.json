@@ -1,0 +1,103 @@
+{
+  "components": [
+    {
+      "components": [
+        {
+          "name": "pageTitle",
+          "size": "H1",
+          "text": "zzAutomatischErzeugen",
+          "type": "heading"
+        },
+        {
+          "events": {
+            "click": [
+              {
+                "parameters": [
+                  {
+                    "name": "strMeldung",
+                    "value": "\"Test...\""
+                  }
+                ],
+                "path": "meldung-fortschritt",
+                "type": "popup"
+              }
+            ]
+          },
+          "name": "button0",
+          "text": "MeldungFortschritt öffnen",
+          "type": "button"
+        },
+        {
+          "events": {
+            "click": [
+              {
+                "parameters": [
+                  {
+                    "name": "strMeldung",
+                    "value": "\"Test...\""
+                  }
+                ],
+                "path": "meldung-ja-nein",
+                "type": "popup"
+              }
+            ]
+          },
+          "name": "button1",
+          "style": {
+            "marginLeft": "10px"
+          },
+          "text": "MeldungJaNein öffnen",
+          "type": "button"
+        },
+        {
+          "events": {
+            "click": [
+              {
+                "parameters": [
+                  {
+                    "name": "strMeldung",
+                    "value": "\"Test...\""
+                  }
+                ],
+                "path": "meldung-loeschen",
+                "type": "popup"
+              }
+            ]
+          },
+          "name": "button3",
+          "style": {
+            "marginLeft": "10px"
+          },
+          "text": "MeldungLoeschen öffnen",
+          "type": "button"
+        },
+        {
+          "events": {
+            "click": [
+              {
+                "parameters": [
+                  {
+                    "name": "strMeldung",
+                    "value": "\"Test...\""
+                  }
+                ],
+                "path": "meldung-ok",
+                "type": "popup"
+              }
+            ]
+          },
+          "name": "button2",
+          "style": {
+            "marginLeft": "10px"
+          },
+          "text": "MeldungOK öffnen",
+          "type": "button"
+        }
+      ],
+      "container": "main",
+      "type": "content"
+    }
+  ],
+  "layout": "Main",
+  "name": "zzAutomatischErzeugen"
+}

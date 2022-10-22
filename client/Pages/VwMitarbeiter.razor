@@ -1,0 +1,76 @@
+﻿@page "/vw-mitarbeiter"
+@layout StandardLayout
+@inherits SinDarElaMobile.Pages.VwMitarbeiterComponent
+
+@using Radzen
+@using Radzen.Blazor
+@using SinDarElaMobile.Models.DbSinDarEla
+<PageTitle>VwMitarbeiter</PageTitle>
+<RadzenContent Container="main">
+  <ChildContent>
+    <RadzenHeading Size="H1" Text="VwMitarbeiter">
+    </RadzenHeading>
+    <div class="row">
+      <div class="col-md-12">
+        <RadzenSplitButton Icon="get_app" style="margin-bottom: 10px; margin-left: 0px" Text="Export" Click="@Splitbutton0Click">
+          <ChildContent>
+            <RadzenSplitButtonItem Text="Excel" Value="xlsx">
+            </RadzenSplitButtonItem>
+            <RadzenSplitButtonItem Text="CSV" Value="csv">
+            </RadzenSplitButtonItem>
+          </ChildContent>
+        </RadzenSplitButton>
+        <RadzenTextBox Placeholder="Search ..." style="display: block; margin-bottom: 10px; width: 100%" Name="Textbox0" @oninput="@(async(args) => {search = $"{args.Value}";await grid0.GoToPage(0);await grid0.Reload();})">
+        </RadzenTextBox>
+        <RadzenDataGrid @ref="grid0" AllowFiltering="true" AllowPaging="true" AllowSorting="true" Count="@getVwMitarbeitersCount" Data="@getVwMitarbeitersResult" FilterMode="Radzen.FilterMode.Advanced" TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" LoadData="@Grid0LoadData">
+          <Columns>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="NameGesamt" Title="Name Gesamt">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="MitarbeiterArt" Title="Mitarbeiter Art">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="Anrede" Title="Anrede">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="NameKuerzel" Title="Name Kuerzel">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="TitelVorne" Title="Titel Vorne">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="TitelHinten" Title="Titel Hinten">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="Strasse" Title="Strasse">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="PLZ" Title="PLZ">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="Ort" Title="Ort">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" FormatString="{0:d}" Property="Geburtsdatum" Title="Geburtsdatum">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="Versicherungsnummer" Title="Versicherungsnummer">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="Staatsangehoerigkeit" Title="Staatsangehoerigkeit">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="Telefon1" Title="Telefon 1">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="Telefon2" Title="Telefon 2">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="EMail1" Title="E Mail 1">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="EMail2" Title="E Mail 2">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="Notiz" Title="Notiz">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="KontoName" Title="Konto Name">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="KontoNummer" Title="Konto Nummer">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="KontoInfo" Title="Konto Info">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="Notfallkontakt" Title="Notfallkontakt">
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiter" Property="NotfallkontaktTelefon" Title="Notfallkontakt Telefon">
+            </RadzenDataGridColumn>
+          </Columns>
+        </RadzenDataGrid>
+      </div>
+    </div>
+  </ChildContent>
+</RadzenContent>

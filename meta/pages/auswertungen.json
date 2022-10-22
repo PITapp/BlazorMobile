@@ -1,0 +1,544 @@
+{
+  "components": [
+    {
+      "components": [
+        {
+          "components": [
+            {
+              "class": "justify-content-start       d-flex align-items-center          col-md-8",
+              "components": [
+                {
+                  "name": "heading18",
+                  "size": "H1",
+                  "style": {
+                    "color": "#505C6D",
+                    "display": "inline-block",
+                    "marginBottom": "0"
+                  },
+                  "text": "Auswertungen",
+                  "type": "heading"
+                },
+                {
+                  "name": "heading19",
+                  "size": "H3",
+                  "style": {
+                    "color": "#e5ecef",
+                    "display": "inline-block",
+                    "marginBottom": "0",
+                    "marginTop": "1px",
+                    "paddingLeft": "15px",
+                    "paddingRight": "15px"
+                  },
+                  "text": "|",
+                  "type": "heading"
+                },
+                {
+                  "attributes": [
+                    {}
+                  ],
+                  "name": "heading21",
+                  "size": "H3",
+                  "style": {
+                    "color": "#505C6D",
+                    "display": "inline",
+                    "fontSize": "21px",
+                    "fontWeight": "normal",
+                    "marginBottom": "0",
+                    "marginTop": "8px"
+                  },
+                  "text": "Hier steht was ...",
+                  "type": "heading"
+                }
+              ],
+              "name": "col46",
+              "style": {
+                "height": "52px",
+                "paddingBottom": "1px"
+              },
+              "type": "col"
+            },
+            {
+              "class": "col-md-4  d-flex justify-content-end align-items-end",
+              "components": [
+                {
+                  "buttonStyle": "secondary",
+                  "buttonType": "button",
+                  "events": {
+                    "click": [
+                      {
+                        "height": "",
+                        "parameters": [
+                          {
+                            "name": "strMeldung",
+                            "value": "\"Berichte ist für dieses Modul noch nicht aktiviert!\""
+                          }
+                        ],
+                        "path": "meldung-ok",
+                        "then": [],
+                        "title": "Info",
+                        "type": "popup",
+                        "width": 600
+                      }
+                    ]
+                  },
+                  "icon": "description",
+                  "name": "buttonBerichre",
+                  "shade": "Shade.Default",
+                  "size": "ButtonSize.Medium",
+                  "style": {
+                    "color": "#6A80AA",
+                    "display": "block",
+                    "fontWeight": "normal"
+                  },
+                  "template": "",
+                  "text": "Berichte",
+                  "tooltip": "",
+                  "type": "button",
+                  "variant": "Variant.Text"
+                },
+                {
+                  "buttonStyle": "secondary",
+                  "buttonType": "button",
+                  "events": {
+                    "click": [
+                      {
+                        "autoFocusFirstElement": false,
+                        "draggable": true,
+                        "height": "",
+                        "parameters": [],
+                        "path": "mitarbeiter-listen",
+                        "resizable": true,
+                        "then": [],
+                        "title": "Listen Mitarbeiter",
+                        "type": "popup",
+                        "width": 1700
+                      }
+                    ]
+                  },
+                  "icon": "view_list",
+                  "name": "buttonListen",
+                  "size": "ButtonSize.Medium",
+                  "style": {
+                    "color": "#6A80AA",
+                    "display": "block",
+                    "fontWeight": "normal"
+                  },
+                  "template": "",
+                  "text": "Listen",
+                  "tooltip": "",
+                  "type": "button",
+                  "variant": "Variant.Text"
+                },
+                {
+                  "buttonStyle": "secondary",
+                  "buttonType": "button",
+                  "events": {
+                    "click": []
+                  },
+                  "icon": "assessment",
+                  "name": "buttonSuchen",
+                  "size": "ButtonSize.Medium",
+                  "style": {
+                    "color": "#6A80AA",
+                    "display": "block",
+                    "fontWeight": "normal"
+                  },
+                  "template": "",
+                  "text": "Analysen",
+                  "tooltip": "",
+                  "type": "button",
+                  "variant": "Variant.Text"
+                },
+                {
+                  "buttonStyle": "secondary",
+                  "buttonType": "button",
+                  "events": {
+                    "click": [
+                      {
+                        "path": "dashboard",
+                        "type": "navigate"
+                      }
+                    ]
+                  },
+                  "icon": "dashboard",
+                  "name": "button0",
+                  "size": "ButtonSize.Medium",
+                  "style": {
+                    "color": "#6A80AA",
+                    "display": "block",
+                    "fontWeight": "normal"
+                  },
+                  "template": "",
+                  "text": "Dashboard",
+                  "tooltip": "",
+                  "type": "button",
+                  "variant": "Variant.Text"
+                }
+              ],
+              "name": "col64",
+              "style": {
+                "paddingRight": "20px"
+              },
+              "type": "col"
+            }
+          ],
+          "name": "row24",
+          "style": {
+            "height": "",
+            "marginTop": "-7px",
+            "paddingBottom": "0",
+            "paddingLeft": "5px",
+            "paddingRight": "3px",
+            "paddingTop": "0",
+            "width": ""
+          },
+          "type": "row"
+        },
+        {
+          "items": [
+            {
+              "components": [
+                {
+                  "components": [
+                    {
+                      "class": "col-md-7",
+                      "components": [
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "class": "col-md-12",
+                                  "components": [],
+                                  "name": "col2",
+                                  "type": "col"
+                                }
+                              ],
+                              "name": "row0",
+                              "type": "row"
+                            }
+                          ],
+                          "headerTemplate": [
+                            {
+                              "components": [
+                                {
+                                  "class": "col-md-12 align-items-start d-flex",
+                                  "components": [
+                                    {
+                                      "name": "textbox0",
+                                      "placeholder": "Suchen",
+                                      "style": {
+                                        "backgroundColor": "rgba(0, 0, 0, 0)",
+                                        "border": "1px solid rgba(0, 0, 0, 0)",
+                                        "borderBottom": "1px dotted #ecebe9",
+                                        "width": "200px"
+                                      },
+                                      "type": "textbox",
+                                      "value": ""
+                                    },
+                                    {
+                                      "buttonStyle": "secondary",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "add",
+                                      "name": "buttonNeu",
+                                      "size": "ButtonSize.Medium",
+                                      "style": {
+                                        "color": "#A95106",
+                                        "display": "block"
+                                      },
+                                      "template": "",
+                                      "text": "Neu",
+                                      "tooltip": "",
+                                      "type": "button",
+                                      "variant": "Variant.Text"
+                                    },
+                                    {
+                                      "buttonStyle": "secondary",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "create",
+                                      "isBusy": false,
+                                      "name": "buttonBearbeitenInfotext",
+                                      "size": "ButtonSize.Medium",
+                                      "style": {
+                                        "color": "#A95106",
+                                        "display": "block",
+                                        "fontWeight": "400",
+                                        "paddingLeft": ""
+                                      },
+                                      "template": "",
+                                      "text": "Bearbeiten",
+                                      "tooltip": "Bearbeiten Infotext",
+                                      "type": "button",
+                                      "variant": "Variant.Text"
+                                    }
+                                  ],
+                                  "name": "col1",
+                                  "type": "col"
+                                }
+                              ],
+                              "name": "row0",
+                              "type": "row"
+                            }
+                          ],
+                          "icon": "",
+                          "name": "panel1",
+                          "style": {
+                            "border": "1px solid #e6ecef",
+                            "height": "779px"
+                          },
+                          "text": "Daten",
+                          "type": "panel"
+                        }
+                      ],
+                      "name": "col0",
+                      "style": {
+                        "paddingLeft": "0"
+                      },
+                      "type": "col"
+                    },
+                    {
+                      "class": "col-md-5",
+                      "components": [
+                        {
+                          "attributes": [],
+                          "components": [],
+                          "footerTemplate": "",
+                          "headerTemplate": [
+                            {
+                              "components": [
+                                {
+                                  "class": "col-md-12 align-items-start d-flex",
+                                  "components": [
+                                    {
+                                      "buttonStyle": "secondary",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "add",
+                                      "name": "buttonHinzufuegen",
+                                      "size": "ButtonSize.Medium",
+                                      "style": {
+                                        "color": "#A95106",
+                                        "display": "block",
+                                        "float": "none"
+                                      },
+                                      "text": "Hinzufügen",
+                                      "tooltip": "",
+                                      "type": "button",
+                                      "variant": "Variant.Text"
+                                    },
+                                    {
+                                      "buttonStyle": "secondary",
+                                      "buttonType": "button",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "create",
+                                      "name": "buttonBearbeitenInfotextEditor",
+                                      "size": "ButtonSize.Medium",
+                                      "style": {
+                                        "color": "#A95106",
+                                        "display": "block"
+                                      },
+                                      "text": "Bearbeiten",
+                                      "tooltip": "",
+                                      "type": "button",
+                                      "variant": "Variant.Text"
+                                    }
+                                  ],
+                                  "name": "col1",
+                                  "type": "col"
+                                }
+                              ],
+                              "name": "row0",
+                              "type": "row"
+                            }
+                          ],
+                          "name": "panel0",
+                          "style": {
+                            "border": "1px solid #e6ecef",
+                            "height": "200px"
+                          },
+                          "text": "Daten",
+                          "type": "panel"
+                        },
+                        {
+                          "attributes": [],
+                          "components": [],
+                          "footerTemplate": "",
+                          "headerTemplate": [
+                            {
+                              "components": [
+                                {
+                                  "class": "col-md-12 align-items-start d-flex",
+                                  "components": [
+                                    {
+                                      "buttonStyle": "secondary",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "add",
+                                      "name": "buttonHinzufuegen",
+                                      "shade": "Shade.Default",
+                                      "size": "ButtonSize.Medium",
+                                      "style": {
+                                        "color": "#A95106",
+                                        "display": "block",
+                                        "float": "none"
+                                      },
+                                      "text": "Hinzufügen",
+                                      "tooltip": "",
+                                      "type": "button",
+                                      "variant": "Variant.Text"
+                                    },
+                                    {
+                                      "buttonStyle": "secondary",
+                                      "buttonType": "button",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "create",
+                                      "name": "buttonBearbeitenInfotextEditor",
+                                      "shade": "Shade.Default",
+                                      "size": "ButtonSize.Medium",
+                                      "style": {
+                                        "color": "#A95106",
+                                        "display": "block"
+                                      },
+                                      "text": "Bearbeiten",
+                                      "tooltip": "",
+                                      "type": "button",
+                                      "variant": "Variant.Text"
+                                    }
+                                  ],
+                                  "name": "col1",
+                                  "type": "col"
+                                }
+                              ],
+                              "name": "row0",
+                              "type": "row"
+                            }
+                          ],
+                          "name": "panel6",
+                          "style": {
+                            "border": "1px solid #e6ecef",
+                            "height": "205px",
+                            "marginTop": "16px"
+                          },
+                          "text": "Daten",
+                          "type": "panel"
+                        },
+                        {
+                          "attributes": [],
+                          "components": [],
+                          "footerTemplate": "",
+                          "headerTemplate": [
+                            {
+                              "components": [
+                                {
+                                  "class": "col-md-12 align-items-start d-flex",
+                                  "components": [
+                                    {
+                                      "buttonStyle": "secondary",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "content_copy",
+                                      "name": "buttonKopieren",
+                                      "shade": "Shade.Default",
+                                      "size": "ButtonSize.Medium",
+                                      "style": {
+                                        "color": "#A95106",
+                                        "display": "block",
+                                        "float": "none"
+                                      },
+                                      "text": "Kopieren",
+                                      "tooltip": "",
+                                      "type": "button",
+                                      "variant": "Variant.Text"
+                                    },
+                                    {
+                                      "buttonStyle": "secondary",
+                                      "buttonType": "button",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "create",
+                                      "name": "buttonBearbeitenInfotextEditor",
+                                      "shade": "Shade.Default",
+                                      "size": "ButtonSize.Medium",
+                                      "style": {
+                                        "color": "#A95106",
+                                        "display": "block"
+                                      },
+                                      "text": "Bearbeiten",
+                                      "tooltip": "",
+                                      "type": "button",
+                                      "variant": "Variant.Text"
+                                    }
+                                  ],
+                                  "name": "col1",
+                                  "type": "col"
+                                }
+                              ],
+                              "name": "row0",
+                              "type": "row"
+                            }
+                          ],
+                          "name": "panel4",
+                          "style": {
+                            "border": "1px solid #e6ecef",
+                            "height": "342px",
+                            "marginTop": "16px"
+                          },
+                          "text": "Daten",
+                          "type": "panel"
+                        }
+                      ],
+                      "name": "col3",
+                      "style": {
+                        "paddingLeft": "0",
+                        "paddingRight": "0"
+                      },
+                      "type": "col"
+                    }
+                  ],
+                  "name": "row1",
+                  "style": {},
+                  "type": "row"
+                }
+              ],
+              "icon": "",
+              "selected": true,
+              "text": "Allgemein"
+            }
+          ],
+          "name": "tabs0",
+          "selectedIndex": "",
+          "style": {
+            "float": "none"
+          },
+          "type": "tabs",
+          "visible": true
+        }
+      ],
+      "container": "main",
+      "type": "content"
+    }
+  ],
+  "events": {
+    "load": [
+      {
+        "condition": "${Globals.globalBenutzer} == null",
+        "path": "anmeldung-laden",
+        "type": "navigate"
+      }
+    ]
+  },
+  "layout": "Standard",
+  "name": "Auswertungen"
+}

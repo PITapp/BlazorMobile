@@ -1,0 +1,230 @@
+{
+  "components": [
+    {
+      "components": [
+        {
+          "components": [
+            {
+              "class": "col-md-12",
+              "components": [
+                {
+                  "components": [
+                    {
+                      "components": [
+                        {
+                          "class": "col-md-3",
+                          "components": [
+                            {
+                              "component": "Titel",
+                              "name": "label1",
+                              "style": {
+                                "width": "100%"
+                              },
+                              "text": "Titel",
+                              "type": "label"
+                            }
+                          ],
+                          "name": "col4",
+                          "type": "col"
+                        },
+                        {
+                          "class": "col-md-9",
+                          "components": [
+                            {
+                              "maxLength": 100,
+                              "name": "textboxTitel",
+                              "style": {
+                                "display": "block",
+                                "width": "100%"
+                              },
+                              "type": "textbox",
+                              "value": "${dsoInfotexte.Titel}",
+                              "valueType": "string"
+                            },
+                            {
+                              "component": "textboxTitel",
+                              "name": "TitelRequiredValidator",
+                              "style": {
+                                "position": "absolute"
+                              },
+                              "text": "Titel eingeben",
+                              "type": "required-validator"
+                            }
+                          ],
+                          "name": "col5",
+                          "type": "col"
+                        }
+                      ],
+                      "name": "row2",
+                      "style": {
+                        "marginBottom": "1rem"
+                      },
+                      "type": "row"
+                    },
+                    {
+                      "components": [
+                        {
+                          "class": "col-md-3",
+                          "components": [
+                            {
+                              "component": "Code",
+                              "name": "label0",
+                              "style": {
+                                "width": "100%"
+                              },
+                              "text": "Code",
+                              "type": "label"
+                            }
+                          ],
+                          "name": "col0",
+                          "type": "col"
+                        },
+                        {
+                          "class": "col-md-9",
+                          "components": [
+                            {
+                              "maxLength": 20,
+                              "name": "textboxCode",
+                              "style": {
+                                "display": "block",
+                                "width": "100%"
+                              },
+                              "type": "textbox",
+                              "value": "${dsoInfotexte.Code}",
+                              "valueType": "string"
+                            },
+                            {
+                              "component": "textboxCode",
+                              "name": "requiredValidator0",
+                              "style": {
+                                "position": "absolute"
+                              },
+                              "text": "Code eingeben",
+                              "type": "required-validator"
+                            }
+                          ],
+                          "name": "col1",
+                          "type": "col"
+                        }
+                      ],
+                      "name": "row0",
+                      "style": {
+                        "marginBottom": "1rem"
+                      },
+                      "type": "row"
+                    },
+                    {
+                      "components": [
+                        {
+                          "class": "col offset-sm-3 justify-content-end d-flex",
+                          "components": [
+                            {
+                              "buttonStyle": "success",
+                              "buttonType": "submit",
+                              "icon": "done",
+                              "text": "Speichern",
+                              "type": "button"
+                            },
+                            {
+                              "buttonStyle": "light",
+                              "events": {
+                                "click": [
+                                  {
+                                    "result": "",
+                                    "type": "close-popup"
+                                  }
+                                ]
+                              },
+                              "style": {
+                                "marginLeft": "1rem"
+                              },
+                              "text": "Abbruch",
+                              "type": "button"
+                            }
+                          ],
+                          "type": "col"
+                        }
+                      ],
+                      "type": "row"
+                    }
+                  ],
+                  "data": "${dsoInfotexte}",
+                  "events": {
+                    "submit": [
+                      {
+                        "error": [
+                          {
+                            "detail": "Infotext konnte nicht gespeichert werden!",
+                            "severity": "error",
+                            "summary": "",
+                            "type": "notify"
+                          }
+                        ],
+                        "name": "dbSinDarEla.updateInfotexteHtml",
+                        "parameters": [
+                          {
+                            "name": "InfotextID",
+                            "value": "${parameters.InfotextID}"
+                          },
+                          {
+                            "name": "InfotexteHtml",
+                            "value": "${dsoInfotexte}"
+                          }
+                        ],
+                        "then": [
+                          {
+                            "detail": "Infotext gespeichert",
+                            "severity": "success",
+                            "type": "notify"
+                          },
+                          {
+                            "result": "${dsoInfotexte}",
+                            "type": "close-popup"
+                          }
+                        ],
+                        "type": "invoke"
+                      }
+                    ]
+                  },
+                  "itemType": "SinDarElaMobile.Models.DbSinDarEla.InfotexteHtml",
+                  "name": "form0",
+                  "type": "template-form",
+                  "visible": "${dsoInfotexte != null}"
+                }
+              ],
+              "type": "col"
+            }
+          ],
+          "type": "row"
+        }
+      ],
+      "container": "main",
+      "type": "content"
+    }
+  ],
+  "events": {
+    "load": [
+      {
+        "error": [],
+        "name": "dbSinDarEla.getInfotexteHtmlByInfotextID",
+        "parameters": [
+          {
+            "name": "InfotextID",
+            "value": "${parameters.InfotextID}"
+          }
+        ],
+        "then": [
+          {
+            "name": "dsoInfotexte",
+            "type": "set",
+            "value": "${result}",
+            "valueType": "SinDarElaMobile.Models.DbSinDarEla.InfotexteHtml"
+          }
+        ],
+        "type": "invoke"
+      }
+    ]
+  },
+  "layout": "Dialog",
+  "name": "EinstellungenInfotexteBearbeiten"
+}

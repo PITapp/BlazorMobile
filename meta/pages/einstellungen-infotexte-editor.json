@@ -1,0 +1,510 @@
+{
+  "components": [
+    {
+      "components": [
+        {
+          "components": [
+            {
+              "class": "col-md-12",
+              "components": [
+                {
+                  "attributes": [],
+                  "components": [
+                    {
+                      "disabled": false,
+                      "events": {
+                        "change": [
+                          {
+                            "name": "bolEditorAenderungen",
+                            "type": "set",
+                            "value": "true",
+                            "valueType": "bool"
+                          }
+                        ]
+                      },
+                      "name": "htmlEditor0",
+                      "style": {
+                        "borderRadius": "0px",
+                        "height": "691px",
+                        "marginLeft": "-11px",
+                        "marginRight": "-11px",
+                        "marginTop": "10px"
+                      },
+                      "tools": [
+                        {
+                          "title": "Rückgängig",
+                          "type": "Undo"
+                        },
+                        {
+                          "title": "Wiederherstellen",
+                          "type": "Redo"
+                        },
+                        {
+                          "type": "Separator"
+                        },
+                        {
+                          "title": "Fett",
+                          "type": "Bold"
+                        },
+                        {
+                          "title": "Kursiv",
+                          "type": "Italic"
+                        },
+                        {
+                          "title": "Unterstreichen",
+                          "type": "Underline"
+                        },
+                        {
+                          "title": "Durchstreichen",
+                          "type": "StrikeThrough"
+                        },
+                        {
+                          "type": "Separator"
+                        },
+                        {
+                          "title": "Linksbündig ausrichten",
+                          "type": "AlignLeft"
+                        },
+                        {
+                          "title": "Zentriert",
+                          "type": "AlignCenter"
+                        },
+                        {
+                          "title": "Rechtsbündig ausrichten",
+                          "type": "AlignRight"
+                        },
+                        {
+                          "title": "Blocksatz",
+                          "type": "Justify"
+                        },
+                        {
+                          "type": "Separator"
+                        },
+                        {
+                          "title": "Einzug vergrößern",
+                          "type": "Indent"
+                        },
+                        {
+                          "title": "Einzug verkleinern",
+                          "type": "Outdent"
+                        },
+                        {
+                          "title": "Aufzählungszeichen",
+                          "type": "UnorderedList"
+                        },
+                        {
+                          "title": "Nummerierung",
+                          "type": "OrderedList"
+                        },
+                        {
+                          "type": "Separator"
+                        },
+                        {
+                          "items": [
+                            {
+                              "value": "ff2800"
+                            },
+                            {
+                              "value": "fe9300"
+                            },
+                            {
+                              "value": "fefb00"
+                            },
+                            {
+                              "value": "02f900"
+                            },
+                            {
+                              "value": "00fdff"
+                            },
+                            {
+                              "value": "0433ff"
+                            },
+                            {
+                              "value": "ff40ff"
+                            },
+                            {
+                              "value": "942292"
+                            },
+                            {
+                              "value": "aa7942"
+                            },
+                            {
+                              "value": "ffffff"
+                            },
+                            {
+                              "value": "000000"
+                            },
+                            {
+                              "value": "53d5fd"
+                            },
+                            {
+                              "value": "73a7fe"
+                            },
+                            {
+                              "value": "874efe"
+                            },
+                            {
+                              "value": "d357fe"
+                            },
+                            {
+                              "value": "ed719e"
+                            },
+                            {
+                              "value": "ff8c82"
+                            },
+                            {
+                              "value": "ffa57d"
+                            },
+                            {
+                              "value": "ffc677"
+                            },
+                            {
+                              "value": "fff995"
+                            },
+                            {
+                              "value": "ebf38f"
+                            },
+                            {
+                              "value": "b1dd8c"
+                            }
+                          ],
+                          "title": "Textfarbe",
+                          "type": "Color"
+                        },
+                        {
+                          "items": [
+                            {
+                              "value": "ff2800"
+                            },
+                            {
+                              "value": "fe9300"
+                            },
+                            {
+                              "value": "fefb00"
+                            },
+                            {
+                              "value": "02f900"
+                            },
+                            {
+                              "value": "00fdff"
+                            },
+                            {
+                              "value": "0433ff"
+                            },
+                            {
+                              "value": "ff40ff"
+                            },
+                            {
+                              "value": "942292"
+                            },
+                            {
+                              "value": "aa7942"
+                            },
+                            {
+                              "value": "ffffff"
+                            },
+                            {
+                              "value": "000000"
+                            },
+                            {
+                              "value": "53d5fd"
+                            },
+                            {
+                              "value": "73a7fe"
+                            },
+                            {
+                              "value": "874efe"
+                            },
+                            {
+                              "value": "d357fe"
+                            },
+                            {
+                              "value": "ed719e"
+                            },
+                            {
+                              "value": "ff8c82"
+                            },
+                            {
+                              "value": "ffa57d"
+                            },
+                            {
+                              "value": "ffc677"
+                            },
+                            {
+                              "value": "fff995"
+                            },
+                            {
+                              "value": "ebf38f"
+                            },
+                            {
+                              "value": "b1dd8c"
+                            }
+                          ],
+                          "title": "Hintergrundfarbe",
+                          "type": "Background"
+                        },
+                        {
+                          "title": "Formatierung entfernen",
+                          "type": "RemoveFormat"
+                        },
+                        {
+                          "type": "Separator"
+                        },
+                        {
+                          "items": [
+                            {
+                              "text": "Arial",
+                              "value": "Arial"
+                            },
+                            {
+                              "text": "Georgia",
+                              "value": "Georgia"
+                            },
+                            {
+                              "text": "Helvetica",
+                              "value": "Helvetica"
+                            },
+                            {
+                              "text": "Monospace",
+                              "value": "monospace"
+                            },
+                            {
+                              "text": "Segoe UI",
+                              "value": "'Segoe UI'"
+                            },
+                            {
+                              "text": "Tahoma",
+                              "value": "Tahoma"
+                            },
+                            {
+                              "text": "Times New Roman",
+                              "value": "'Times New Roman'"
+                            },
+                            {
+                              "text": "Verdana",
+                              "value": "Verdana"
+                            }
+                          ],
+                          "title": "Schriftart",
+                          "type": "FontName"
+                        },
+                        {
+                          "title": "Schriftgrat",
+                          "type": "FontSize"
+                        },
+                        {
+                          "title": "Formatvorlagen",
+                          "type": "FormatBlock"
+                        }
+                      ],
+                      "type": "html-editor",
+                      "uploadUrl": "upload/image",
+                      "value": "${strInhalt}",
+                      "visible": true
+                    }
+                  ],
+                  "footerTemplate": "",
+                  "headerTemplate": [
+                    {
+                      "components": [
+                        {
+                          "class": "col-md-12 align-items-start d-flex",
+                          "components": [
+                            {
+                              "buttonStyle": "light",
+                              "events": {
+                                "click": [
+                                  {
+                                    "code": "await CopyTextToClipboard(${strInhalt})",
+                                    "type": "execute"
+                                  }
+                                ]
+                              },
+                              "icon": "content_copy",
+                              "name": "buttonKopieren",
+                              "size": "sm",
+                              "style": {
+                                "color": "#D86E13",
+                                "display": "block",
+                                "float": "none"
+                              },
+                              "text": "Kopieren",
+                              "tooltip": "",
+                              "type": "button"
+                            }
+                          ],
+                          "name": "col1",
+                          "type": "col"
+                        }
+                      ],
+                      "name": "row0",
+                      "type": "row"
+                    }
+                  ],
+                  "icon": "",
+                  "name": "panel0",
+                  "style": {
+                    "border": "1px solid #e6ecef",
+                    "height": "740px"
+                  },
+                  "text": "${strTitel + \" \"}",
+                  "type": "panel"
+                },
+                {
+                  "components": [
+                    {
+                      "class": "col offset-sm-3 justify-content-end d-flex",
+                      "components": [
+                        {
+                          "buttonStyle": "success",
+                          "buttonType": "button",
+                          "events": {
+                            "click": [
+                              {
+                                "error": [
+                                  {
+                                    "detail": "Infotext konnte nicht gespeichert werden!",
+                                    "severity": "error",
+                                    "summary": "",
+                                    "type": "notify"
+                                  }
+                                ],
+                                "name": "dbSinDarEla.updateInfotexteHtml",
+                                "parameters": [
+                                  {
+                                    "name": "InfotextID",
+                                    "value": "${parameters.InfotextID}"
+                                  },
+                                  {
+                                    "name": "InfotexteHtml",
+                                    "value": "${dsoInfotexteHTML}"
+                                  }
+                                ],
+                                "then": [
+                                  {
+                                    "detail": "Infotext gespeichert",
+                                    "severity": "success",
+                                    "type": "notify"
+                                  },
+                                  {
+                                    "result": "${result}",
+                                    "type": "close-popup"
+                                  }
+                                ],
+                                "type": "invoke"
+                              }
+                            ]
+                          },
+                          "icon": "done",
+                          "name": "button0",
+                          "text": "Speichern",
+                          "type": "button"
+                        },
+                        {
+                          "buttonStyle": "light",
+                          "events": {
+                            "click": [
+                              {
+                                "condition": "bolEditorAenderungen == false",
+                                "type": "close-popup"
+                              },
+                              {
+                                "autoFocusFirstElement": false,
+                                "closeDialogOnEsc": false,
+                                "condition": "bolEditorAenderungen == true",
+                                "parameters": [
+                                  {
+                                    "name": "strMeldung",
+                                    "value": "\"Der Text wurde geändert! Soll die Bearbeitung wirklich abgebrochen werden?\""
+                                  }
+                                ],
+                                "path": "meldung-ja-nein",
+                                "then": [
+                                  {
+                                    "condition": "${result} == \"Ja\"",
+                                    "result": "",
+                                    "type": "close-popup"
+                                  }
+                                ],
+                                "title": "Text geändert",
+                                "type": "popup",
+                                "width": 720
+                              }
+                            ]
+                          },
+                          "name": "button1",
+                          "style": {
+                            "marginLeft": "1rem"
+                          },
+                          "text": "Abbruch",
+                          "type": "button"
+                        }
+                      ],
+                      "name": "col0",
+                      "style": {},
+                      "type": "col"
+                    }
+                  ],
+                  "name": "row3",
+                  "style": {
+                    "paddingTop": "15px"
+                  },
+                  "type": "row"
+                }
+              ],
+              "name": "col1",
+              "type": "col"
+            }
+          ],
+          "name": "row1",
+          "type": "row"
+        }
+      ],
+      "container": "main",
+      "type": "content"
+    }
+  ],
+  "events": {
+    "load": [
+      {
+        "name": "bolEditorAenderungen",
+        "type": "set",
+        "value": "false",
+        "valueType": "bool"
+      },
+      {
+        "error": [],
+        "name": "dbSinDarEla.getInfotexteHtmlByInfotextID",
+        "parameters": [
+          {
+            "name": "InfotextID",
+            "value": "${parameters.InfotextID}"
+          }
+        ],
+        "then": [
+          {
+            "name": "dsoInfotexteHTML",
+            "type": "set",
+            "value": "${result}",
+            "valueType": "SinDarElaMobile.Models.DbSinDarEla.InfotexteHtml"
+          },
+          {
+            "name": "strTitel",
+            "type": "set",
+            "value": "${result.Titel}",
+            "valueType": "string"
+          },
+          {
+            "name": "strInhalt",
+            "type": "set",
+            "value": "${result.Inhalt}",
+            "valueType": "string"
+          }
+        ],
+        "type": "invoke"
+      }
+    ]
+  },
+  "layout": "Dialog",
+  "name": "EinstellungenInfotexteEditor"
+}

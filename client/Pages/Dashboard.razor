@@ -1,0 +1,100 @@
+﻿@page "/dashboard"
+@layout StandardLayout
+@inherits SinDarElaMobile.Pages.DashboardComponent
+
+@using Radzen
+@using Radzen.Blazor
+@using SinDarElaMobile.Models.DbSinDarEla
+<PageTitle>Dashboard</PageTitle>
+<RadzenContent Container="main">
+  <ChildContent>
+    <div style="height: ; margin-top: -7px; padding-bottom: 0; padding-left: 5px; padding-right: 3px; padding-top: 0; width: " class="row">
+      <div class="justify-content-start       d-flex align-items-center          col-md-8" style="height: 52px; padding-bottom: 1px">
+        <RadzenHeading Size="H1" style="color: #505C6D; display: inline-block; margin-bottom: 0" Text="Dashboard">
+        </RadzenHeading>
+        <RadzenHeading Size="H3" style="color: #e5ecef; display: inline-block; margin-bottom: 0; margin-top: 1px; padding-left: 15px; padding-right: 15px" Text="|">
+        </RadzenHeading>
+        <RadzenHeading Size="H3" style="color: #505C6D; display: inline; font-size: 21px; font-weight: normal; margin-bottom: 0; margin-top: 8px" Text="Hier steht was ..." >
+        </RadzenHeading>
+      </div>
+      <div class="col-md-4  d-flex justify-content-end align-items-end" style="padding-right: 20px">
+        <RadzenButton ButtonStyle="ButtonStyle.Secondary" ButtonType="ButtonType.Button" Icon="description" Shade="Shade.Default" Size="ButtonSize.Medium" style="color: #6A80AA; display: block; font-weight: normal" Text="Berichte" Variant="Variant.Text" Click="@ButtonBerichreClick">
+        </RadzenButton>
+        <RadzenButton ButtonStyle="ButtonStyle.Secondary" ButtonType="ButtonType.Button" Icon="view_list" Size="ButtonSize.Medium" style="color: #6A80AA; display: block; font-weight: normal" Text="Listen" Variant="Variant.Text" Click="@ButtonListenClick">
+        </RadzenButton>
+        <RadzenButton ButtonStyle="ButtonStyle.Secondary" ButtonType="ButtonType.Button" Icon="assessment" Size="ButtonSize.Medium" style="color: #6A80AA; display: block; font-weight: normal" Text="Analysen" Variant="Variant.Text">
+        </RadzenButton>
+      </div>
+    </div>
+    <RadzenTabs style="float: none">
+      <Tabs>
+        <RadzenTabsItem Selected="true" Text="Allgemein">
+          <ChildContent>
+            <div  class="row">
+              <div class="col-md-7" style="padding-left: 0">
+                <RadzenPanel style="border: 1px solid #e6ecef; height: 779px" Text="Daten">
+                  <ChildContent>
+                    <div class="row">
+                      <div class="col-md-12">
+                      </div>
+                    </div>
+                  </ChildContent>
+                  <HeaderTemplate>
+                    <div class="row">
+                      <div class="col-md-12 align-items-start d-flex">
+                        <RadzenTextBox Placeholder="Suchen" style="background-color: rgba(0, 0, 0, 0); border: 1px solid rgba(0, 0, 0, 0); border-bottom: 1px dotted #ecebe9; width: 200px" Name="Textbox0">
+                        </RadzenTextBox>
+                        <RadzenButton ButtonStyle="ButtonStyle.Secondary" Icon="add" Size="ButtonSize.Medium" style="color: #A95106; display: block" Text="Neu" Variant="Variant.Text">
+                        </RadzenButton>
+                        <RadzenButton ButtonStyle="ButtonStyle.Secondary" Icon="create" IsBusy="false" Size="ButtonSize.Medium" style="color: #A95106; display: block; font-weight: 400; padding-left: " Text="Bearbeiten" Tooltip="Bearbeiten Infotext" Variant="Variant.Text">
+                        </RadzenButton>
+                      </div>
+                    </div>
+                  </HeaderTemplate>
+                </RadzenPanel>
+              </div>
+              <div class="col-md-5" style="padding-left: 0; padding-right: 0">
+                <RadzenPanel style="border: 1px solid #e6ecef; height: 200px" Text="Daten">
+                  <HeaderTemplate>
+                    <div class="row">
+                      <div class="col-md-12 align-items-start d-flex">
+                        <RadzenButton ButtonStyle="ButtonStyle.Secondary" Icon="add" Size="ButtonSize.Medium" style="color: #A95106; display: block; float: none" Text="Hinzufügen" Variant="Variant.Text">
+                        </RadzenButton>
+                        <RadzenButton ButtonStyle="ButtonStyle.Secondary" ButtonType="ButtonType.Button" Icon="create" Size="ButtonSize.Medium" style="color: #A95106; display: block" Text="Bearbeiten" Variant="Variant.Text">
+                        </RadzenButton>
+                      </div>
+                    </div>
+                  </HeaderTemplate>
+                </RadzenPanel>
+                <RadzenPanel style="border: 1px solid #e6ecef; height: 205px; margin-top: 16px" Text="Daten">
+                  <HeaderTemplate>
+                    <div class="row">
+                      <div class="col-md-12 align-items-start d-flex">
+                        <RadzenButton ButtonStyle="ButtonStyle.Secondary" Icon="add" Shade="Shade.Default" Size="ButtonSize.Medium" style="color: #A95106; display: block; float: none" Text="Hinzufügen" Variant="Variant.Text">
+                        </RadzenButton>
+                        <RadzenButton ButtonStyle="ButtonStyle.Secondary" ButtonType="ButtonType.Button" Icon="create" Shade="Shade.Default" Size="ButtonSize.Medium" style="color: #A95106; display: block" Text="Bearbeiten" Variant="Variant.Text">
+                        </RadzenButton>
+                      </div>
+                    </div>
+                  </HeaderTemplate>
+                </RadzenPanel>
+                <RadzenPanel style="border: 1px solid #e6ecef; height: 342px; margin-top: 16px" Text="Daten">
+                  <HeaderTemplate>
+                    <div class="row">
+                      <div class="col-md-12 align-items-start d-flex">
+                        <RadzenButton ButtonStyle="ButtonStyle.Secondary" Icon="content_copy" Shade="Shade.Default" Size="ButtonSize.Medium" style="color: #A95106; display: block; float: none" Text="Kopieren" Variant="Variant.Text">
+                        </RadzenButton>
+                        <RadzenButton ButtonStyle="ButtonStyle.Secondary" ButtonType="ButtonType.Button" Icon="create" Shade="Shade.Default" Size="ButtonSize.Medium" style="color: #A95106; display: block" Text="Bearbeiten" Variant="Variant.Text">
+                        </RadzenButton>
+                      </div>
+                    </div>
+                  </HeaderTemplate>
+                </RadzenPanel>
+              </div>
+            </div>
+          </ChildContent>
+        </RadzenTabsItem>
+      </Tabs>
+    </RadzenTabs>
+  </ChildContent>
+</RadzenContent>

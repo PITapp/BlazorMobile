@@ -1,0 +1,34 @@
+﻿@inherits SinDarElaMobile.Layouts.LoginLayoutComponent
+
+@using Radzen
+@using Radzen.Blazor
+@using SinDarElaMobile.Models.DbSinDarEla
+@using SinDarElaMobile.Pages
+<RadzenDialog />
+<RadzenNotification />
+<RadzenTooltip />
+<RadzenContextMenu />
+
+<RadzenBody @ref="body0" style="margin-left: 0px" Expanded="true">
+  <ChildContent>
+    <div class="row justify-content-center">
+      <div class="justify-content-center  col-md-7 col-xl-4">
+        <RadzenCard style="margin-top: 8rem; padding-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0">
+          <ChildContent>
+            <div  style="background-color: rgba(245, 4, 4, 0); height: 52px; margin-left: -1px; margin-right: -1px; margin-top: -1px; padding-left: 10px; padding-right: ; padding-top: 10px" class="kopfzeileVerlaufend">
+              <RadzenImage Path="assets/images/LogoMitSchriftzug4.png" style="float: left; height: 36px">
+              </RadzenImage>
+              <RadzenLabel style="color: #E8E8E8; float: none; font-family: verdana,geneva,sans-serif; font-size: 16px; font-weight: normal; margin-top: 5px" Text="&nbsp;&nbsp;|&nbsp;&nbsp;SinDarEla">
+              </RadzenLabel>
+            </div>
+            <div class="col-md-12" style="padding-bottom: 16px; padding-left: 25px; padding-right: 25px; padding-top: 25px">
+              <RadzenContentContainer Name="main">
+              @Body
+              </RadzenContentContainer>
+            </div>
+          </ChildContent>
+        </RadzenCard>
+      </div>
+    </div>
+  </ChildContent>
+</RadzenBody>

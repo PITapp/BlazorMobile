@@ -1,0 +1,128 @@
+{
+  "components": [
+    {
+      "components": [
+        {
+          "components": [
+            {
+              "class": "col-md-12",
+              "components": [
+                {
+                  "name": "label1",
+                  "style": {
+                    "backgroundColor": "rgba(0, 0, 0, 0)",
+                    "color": "#5d717b",
+                    "fontSize": "18px",
+                    "textAlign": "center",
+                    "width": "100%"
+                  },
+                  "text": "Anmeldung...",
+                  "type": "label"
+                }
+              ],
+              "name": "col0",
+              "type": "col"
+            }
+          ],
+          "name": "row0",
+          "type": "row"
+        },
+        {
+          "mode": "indeterminate",
+          "name": "progressbar0",
+          "showValue": false,
+          "style": {
+            "marginBottom": "30px",
+            "marginRight": "",
+            "marginTop": "30px"
+          },
+          "type": "progressbar",
+          "value": 100
+        }
+      ],
+      "container": "main",
+      "type": "content"
+    }
+  ],
+  "events": {
+    "load": [
+      {
+        "global": false,
+        "name": "strBenutzerIDCode",
+        "type": "set",
+        "value": "await ReadLocalStorage(\"storageBenutzerIDCode\")",
+        "valueType": "string"
+      },
+      {
+        "error": [],
+        "name": "dbSinDarEla.getBenutzers",
+        "parameters": [
+          {
+            "name": "$filter",
+            "value": "BenutzerIDCode eq '${strBenutzerIDCode}'"
+          },
+          {
+            "name": "$count",
+            "value": "true"
+          },
+          {
+            "name": "$expand",
+            "value": "Base"
+          }
+        ],
+        "then": [
+          {
+            "name": "intBenutzerAnzahl",
+            "type": "set",
+            "value": "${result.Count}",
+            "valueType": "int"
+          },
+          {
+            "condition": "intBenutzerAnzahl == 1",
+            "global": true,
+            "name": "globalBenutzer",
+            "type": "set",
+            "value": "${result.Value.AsODataEnumerable().FirstOrDefault()}",
+            "valueType": "SinDarElaMobile.Models.DbSinDarEla.Benutzer"
+          },
+          {
+            "condition": "intBenutzerAnzahl == 1",
+            "name": "dsoBenutzerProtokoll",
+            "type": "set",
+            "value": "new SinDarElaMobile.Models.DbSinDarEla.BenutzerProtokoll(){}",
+            "valueType": "SinDarElaMobile.Models.DbSinDarEla.BenutzerProtokoll"
+          },
+          {
+            "code": "dsoBenutzerProtokoll.BenutzerID = Globals.globalBenutzer.BenutzerID;\ndsoBenutzerProtokoll.Art = \"AutomatischeAnmeldung\";\ndsoBenutzerProtokoll.TimeStamp = DateTime.Now;",
+            "condition": "intBenutzerAnzahl == 1",
+            "type": "execute"
+          },
+          {
+            "condition": "intBenutzerAnzahl == 1",
+            "name": "dbSinDarEla.createBenutzerProtokoll",
+            "parameters": [
+              {
+                "name": "BenutzerProtokoll",
+                "value": "${dsoBenutzerProtokoll}"
+              }
+            ],
+            "type": "invoke"
+          },
+          {
+            "condition": "intBenutzerAnzahl == 1",
+            "path": "dashboard",
+            "type": "navigate"
+          },
+          {
+            "condition": "intBenutzerAnzahl != 1",
+            "path": "anmeldung",
+            "type": "navigate"
+          }
+        ],
+        "type": "invoke"
+      }
+    ]
+  },
+  "layout": "Login",
+  "name": "AnmeldungLaden"
+}

@@ -1,0 +1,120 @@
+{
+  "components": [
+    {
+      "components": [
+        {
+          "components": [
+            {
+              "class": "col-md-12",
+              "components": [
+                {
+                  "name": "label0",
+                  "style": {
+                    "backgroundColor": "rgba(0, 0, 0, 0)",
+                    "color": "#5d717b",
+                    "fontSize": "18px",
+                    "textAlign": "center",
+                    "width": "100%"
+                  },
+                  "text": "Du wurdest abgemelder!",
+                  "type": "label"
+                }
+              ],
+              "name": "col0",
+              "type": "col"
+            }
+          ],
+          "name": "row0",
+          "type": "row"
+        },
+        {
+          "components": [
+            {
+              "class": "col-md-12",
+              "components": [
+                {
+                  "name": "label1",
+                  "style": {
+                    "backgroundColor": "rgba(0, 0, 0, 0)",
+                    "color": "#5d717b",
+                    "fontSize": "18px",
+                    "textAlign": "center",
+                    "width": "100%"
+                  },
+                  "text": "Klicke auf 'Anmeldung starten' um dich wieder anzumelden.",
+                  "type": "label"
+                }
+              ],
+              "name": "col2",
+              "type": "col"
+            }
+          ],
+          "name": "row2",
+          "type": "row"
+        },
+        {
+          "components": [
+            {
+              "class": "col-md-12 justify-content-center d-flex",
+              "components": [
+                {
+                  "events": {
+                    "click": [
+                      {
+                        "path": "anmeldung",
+                        "type": "navigate"
+                      }
+                    ]
+                  },
+                  "name": "button0",
+                  "text": "Anmeldung starten",
+                  "type": "button"
+                }
+              ],
+              "name": "col1",
+              "type": "col"
+            }
+          ],
+          "name": "row1",
+          "style": {
+            "marginBottom": "40px",
+            "marginTop": "40px"
+          },
+          "type": "row"
+        }
+      ],
+      "container": "main",
+      "type": "content"
+    }
+  ],
+  "events": {
+    "load": [
+      {
+        "code": "await RemoveLocalStorage(\"storageBenutzerIDCode\");",
+        "type": "execute"
+      },
+      {
+        "name": "dsoBenutzerProtokoll",
+        "type": "set",
+        "value": "new SinDarElaMobile.Models.DbSinDarEla.BenutzerProtokoll(){}",
+        "valueType": "SinDarElaMobile.Models.DbSinDarEla.BenutzerProtokoll"
+      },
+      {
+        "code": "dsoBenutzerProtokoll.BenutzerID = Globals.globalBenutzer.BenutzerID;\ndsoBenutzerProtokoll.Art = \"Abmeldung\";\ndsoBenutzerProtokoll.TimeStamp = DateTime.Now;",
+        "type": "execute"
+      },
+      {
+        "name": "dbSinDarEla.createBenutzerProtokoll",
+        "parameters": [
+          {
+            "name": "BenutzerProtokoll",
+            "value": "${dsoBenutzerProtokoll}"
+          }
+        ],
+        "type": "invoke"
+      }
+    ]
+  },
+  "layout": "Login",
+  "name": "Abmeldung"
+}

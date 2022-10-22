@@ -1,0 +1,294 @@
+{
+  "components": [
+    {
+      "components": [
+        {
+          "components": [
+            {
+              "class": "justify-content-start align-items-center",
+              "components": [
+                {
+                  "class": "d-flex align-items-center col-6",
+                  "components": [
+                    {
+                      "items": [
+                        {
+                          "icon": "",
+                          "image": "/assets/images/LogoMitSchriftzug-klein.png",
+                          "items": [
+                            {
+                              "icon": "dashboard",
+                              "path": "dashboard",
+                              "text": "Dashboard &emsp;&emsp;&emsp;&emsp;&emsp;"
+                            },
+                            {
+                              "icon": "assignment_turned_in",
+                              "path": "management",
+                              "text": "Management"
+                            },
+                            {
+                              "icon": "assignment",
+                              "path": "kalender",
+                              "text": "Kalender"
+                            },
+                            {
+                              "icon": "assignment_ind",
+                              "path": "mitarbeiter",
+                              "text": "Mitarbeiter"
+                            },
+                            {
+                              "icon": "face",
+                              "path": "kunden",
+                              "text": "Kunden"
+                            },
+                            {
+                              "icon": "contact_phone",
+                              "path": "kontakte",
+                              "text": "Kontakte"
+                            },
+                            {
+                              "icon": "euro_symbol",
+                              "path": "abrechnung",
+                              "text": "Abrechnung"
+                            },
+                            {
+                              "icon": "assessment",
+                              "path": "auswertungen",
+                              "text": "Auswertungen"
+                            },
+                            {
+                              "icon": "supervisor_account",
+                              "path": "benutzer",
+                              "text": "Benutzer"
+                            },
+                            {
+                              "icon": "settings",
+                              "path": "einstellungen",
+                              "text": "Einstellungen"
+                            }
+                          ],
+                          "text": "&emsp;|&emsp;SinDarEla"
+                        }
+                      ],
+                      "name": "menu0",
+                      "type": "menu"
+                    }
+                  ],
+                  "name": "leftCol",
+                  "style": {
+                    "paddingLeft": "25px"
+                  },
+                  "type": "col"
+                },
+                {
+                  "class": "justify-content-end d-flex col-6",
+                  "components": [
+                    {
+                      "items": [
+                        {
+                          "icon": "account_circle",
+                          "path": "benutzerprofil",
+                          "text": "Benutzerprofil"
+                        },
+                        {
+                          "icon": "power_settings_new",
+                          "path": "abmeldung",
+                          "text": "Logout"
+                        }
+                      ],
+                      "name": "profilemenu1",
+                      "style": {
+                        "display": "block"
+                      },
+                      "template": [
+                        {
+                          "class": "col-md-12  d-flex justify-content-end",
+                          "components": [
+                            {
+                              "name": "label7",
+                              "style": {
+                                "color": "#f5f5f5",
+                                "display": "inline-block",
+                                "fontFamily": "verdana,geneva,sans-serif",
+                                "fontSize": "12px",
+                                "fontWeight": "normal",
+                                "marginRight": "20px",
+                                "paddingTop": "7px",
+                                "verticalAlign": "bottom"
+                              },
+                              "text": "${Globals.globalBenutzer.Benutzername}",
+                              "type": "label"
+                            },
+                            {
+                              "name": "image1",
+                              "path": "${Globals.globalBenutzer.Base.BildURL}",
+                              "style": {
+                                "borderRadius": "50%",
+                                "display": "block",
+                                "float": "none",
+                                "height": "32px",
+                                "width": "32px"
+                              },
+                              "type": "image"
+                            }
+                          ],
+                          "name": "col1",
+                          "style": {
+                            "backgroundColor": "rgba(0, 0, 0, 0)"
+                          },
+                          "type": "col"
+                        }
+                      ],
+                      "type": "profilemenu",
+                      "visible": "${Globals.globalBenutzer != null}"
+                    }
+                  ],
+                  "name": "col0",
+                  "type": "col"
+                }
+              ],
+              "name": "headerRow",
+              "type": "row"
+            }
+          ],
+          "name": "header0",
+          "type": "header"
+        },
+        {
+          "components": [
+            {
+              "name": "main",
+              "type": "content-container"
+            }
+          ],
+          "name": "body0",
+          "type": "body"
+        },
+        {
+          "components": [
+            {
+              "name": "footerTextLeft",
+              "style": {
+                "color": "#6d787d",
+                "float": "none",
+                "paddingTop": "2px"
+              },
+              "text": "© 2022 Soziale-Dienste-Ennstal",
+              "type": "label"
+            },
+            {
+              "name": "label1",
+              "style": {
+                "color": "#e5ecef",
+                "float": "none",
+                "paddingLeft": "10px",
+                "paddingRight": "10px"
+              },
+              "text": "|",
+              "type": "label"
+            },
+            {
+              "name": "label4",
+              "style": {
+                "color": "#6d787d",
+                "float": "none",
+                "paddingTop": "2px"
+              },
+              "text": "Irdning · Hauptplatz 20",
+              "type": "label"
+            },
+            {
+              "icon": "",
+              "name": "linkVersion",
+              "path": "versionen",
+              "style": {
+                "color": "#A95106",
+                "float": "right"
+              },
+              "text": "Version 3.024",
+              "type": "link"
+            },
+            {
+              "name": "label2",
+              "style": {
+                "color": "#e5ecef",
+                "float": "right",
+                "paddingLeft": "10px",
+                "paddingRight": "10px"
+              },
+              "text": "|",
+              "type": "label"
+            },
+            {
+              "icon": "",
+              "name": "linkKontakt",
+              "path": "kontakt",
+              "style": {
+                "color": "#A95106",
+                "float": "right"
+              },
+              "text": "Kontakt",
+              "type": "link"
+            },
+            {
+              "name": "label6",
+              "style": {
+                "color": "#e5ecef",
+                "float": "right",
+                "paddingLeft": "10px",
+                "paddingRight": "10px"
+              },
+              "text": "|",
+              "type": "label"
+            },
+            {
+              "icon": "",
+              "name": "linkHandbuch",
+              "path": "handbuch",
+              "style": {
+                "color": "#A95106",
+                "float": "right"
+              },
+              "text": "Handbuch",
+              "type": "link"
+            },
+            {
+              "name": "label3",
+              "style": {
+                "color": "#e5ecef",
+                "float": "right",
+                "paddingLeft": "10px",
+                "paddingRight": "10px"
+              },
+              "text": "|",
+              "type": "label"
+            },
+            {
+              "icon": "",
+              "name": "linkFeedback",
+              "path": "feedback",
+              "style": {
+                "color": "#A95106",
+                "float": "right"
+              },
+              "text": "Feedback",
+              "type": "link"
+            }
+          ],
+          "name": "footer1",
+          "style": {
+            "backgroundColor": "#FFFFFF",
+            "height": "44px",
+            "paddingTop": "10px"
+          },
+          "type": "footer"
+        }
+      ],
+      "type": "layout"
+    }
+  ],
+  "events": {
+    "load": []
+  },
+  "name": "Standard"
+}

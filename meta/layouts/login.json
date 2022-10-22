@@ -1,0 +1,113 @@
+{
+  "components": [
+    {
+      "attributes": [
+        {
+          "name": "Expanded",
+          "value": "true"
+        }
+      ],
+      "components": [
+        {
+          "class": "justify-content-center",
+          "components": [
+            {
+              "class": "justify-content-center  col-md-7 col-xl-4",
+              "components": [
+                {
+                  "components": [
+                    {
+                      "attributes": [
+                        {
+                          "name": "class",
+                          "value": "kopfzeileVerlaufend"
+                        }
+                      ],
+                      "class": "col-md-12",
+                      "components": [
+                        {
+                          "events": {
+                            "click": []
+                          },
+                          "name": "image0",
+                          "path": "/assets/images/LogoMitSchriftzug4.png",
+                          "style": {
+                            "float": "left",
+                            "height": "36px"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "name": "label7",
+                          "style": {
+                            "color": "#E8E8E8",
+                            "float": "none",
+                            "fontFamily": "verdana,geneva,sans-serif",
+                            "fontSize": "16px",
+                            "fontWeight": "normal",
+                            "marginTop": "5px"
+                          },
+                          "text": "&nbsp;&nbsp;|&nbsp;&nbsp;SinDarEla",
+                          "type": "label",
+                          "visible": true
+                        }
+                      ],
+                      "name": "col3",
+                      "style": {
+                        "backgroundColor": "rgba(245, 4, 4, 0)",
+                        "height": "52px",
+                        "marginLeft": "-1px",
+                        "marginRight": "-1px",
+                        "marginTop": "-1px",
+                        "paddingLeft": "10px",
+                        "paddingRight": "",
+                        "paddingTop": "10px"
+                      },
+                      "type": "col"
+                    },
+                    {
+                      "class": "col-md-12",
+                      "components": [
+                        {
+                          "name": "main",
+                          "type": "content-container"
+                        }
+                      ],
+                      "name": "col2",
+                      "style": {
+                        "paddingBottom": "16px",
+                        "paddingLeft": "25px",
+                        "paddingRight": "25px",
+                        "paddingTop": "25px"
+                      },
+                      "type": "col"
+                    }
+                  ],
+                  "name": "card0",
+                  "style": {
+                    "marginTop": "8rem",
+                    "paddingBottom": "0",
+                    "paddingLeft": "0",
+                    "paddingRight": "0",
+                    "paddingTop": "0"
+                  },
+                  "type": "card"
+                }
+              ],
+              "name": "col0",
+              "type": "col"
+            }
+          ],
+          "name": "row0",
+          "type": "row"
+        }
+      ],
+      "name": "body0",
+      "style": {
+        "marginLeft": "0px"
+      },
+      "type": "body"
+    }
+  ],
+  "name": "Login"
+}

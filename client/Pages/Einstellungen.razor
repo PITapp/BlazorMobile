@@ -1,0 +1,84 @@
+﻿@page "/einstellungen"
+@layout StandardLayout
+@inherits SinDarElaMobile.Pages.EinstellungenComponent
+
+@using Radzen
+@using Radzen.Blazor
+@using SinDarElaMobile.Models.DbSinDarEla
+<PageTitle>Einstellungen</PageTitle>
+<RadzenContent Container="main">
+  <ChildContent>
+    <div style="height: ; margin-top: -7px; padding-bottom: 0; padding-left: 5px; padding-right: 3px; padding-top: 0; width: " class="row">
+      <div class="justify-content-start       d-flex align-items-center          col-md-8" style="height: 52px; padding-bottom: 1px">
+        <RadzenHeading Size="H1" style="color: #5d717b; display: inline-block" Text="Einstellungen">
+        </RadzenHeading>
+        <RadzenHeading Size="H3" style="color: #e5ecef; display: inline-block; margin-top: 7px; padding-left: 10px; padding-right: 10px" Text="|">
+        </RadzenHeading>
+        <RadzenHeading Size="H3" style="color: #6A80AA; display: inline; font-size: 21px; font-weight: normal; padding-top: 4px" Text="Grundeinstellungen für Module" >
+        </RadzenHeading>
+      </div>
+      <div class="col-md-4  d-flex justify-content-end align-items-end" style="padding-right: 20px">
+        <RadzenButton ButtonStyle="ButtonStyle.Info" ButtonType="ButtonType.Button" Icon="print" Size="ButtonSize.Small" style="background-color: rgb(230, 236, 239); border-bottom: 2px solid #d86e13; color: #6A80AA; display: block; font-weight: normal; width: 150px" Text="Drucken" Click="@Button0Click">
+        </RadzenButton>
+      </div>
+    </div>
+    <RadzenTabs style="float: none">
+      <Tabs>
+        <RadzenTabsItem Selected="true" Text="Infotexte">
+          <ChildContent>
+            <div class="row">
+              <div class="col-md-7">
+                <RadzenPanel style="border: 1px solid #e6ecef; height: 740px" Text="@(rstInfotexteCount.ToString() + " Infotexte")">
+                  <ChildContent>
+                    <RadzenDataGrid @ref="datagridInfotexte" AllowFiltering="true" AllowPaging="true" AllowSorting="true" Count="@rstInfotexteCount" Data="@rstInfotexte" Density="Density.Compact" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" IsLoading="false" TItem="SinDarElaMobile.Models.DbSinDarEla.InfotexteHtml" PageSize="20" style="border: 1px solid rgba(0, 0, 0, 0); height: 690px; margin-top: 9px" LoadData="@DatagridInfotexteLoadData" RowDoubleClick="@DatagridInfotexteRowDoubleClick" RowSelect="@DatagridInfotexteRowSelect">
+                      <Columns>
+                        <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.InfotexteHtml" Property="Titel" Title="Titel">
+                        </RadzenDataGridColumn>
+                        <RadzenDataGridColumn TItem="SinDarElaMobile.Models.DbSinDarEla.InfotexteHtml" Property="Code" Title="Code">
+                        </RadzenDataGridColumn>
+                      </Columns>
+                    </RadzenDataGrid>
+                  </ChildContent>
+                  <HeaderTemplate>
+                    <div class="row">
+                      <div class="col-md-12 align-items-start d-flex">
+                        <RadzenButton ButtonStyle="ButtonStyle.Light" Icon="add" Size="ButtonSize.Small" style="color: #D86E13; display: block" Text="Neuer Infotext" Click="@ButtonNeuerInfotextClick">
+                        </RadzenButton>
+                        <RadzenButton ButtonStyle="ButtonStyle.Light" Icon="create" IsBusy="false" Size="ButtonSize.Small" style="color: #6A80AA; display: block; font-weight: 400; margin-left: 10px; padding-left: " Text="Bearbeiten" Tooltip="Bearbeiten Infotext" Click="@ButtonBearbeitenInfotextClick">
+                        </RadzenButton>
+                        <RadzenButton ButtonStyle="ButtonStyle.Light" Disabled="false" Icon="cancel" Size="ButtonSize.Small" style="color: #6A80AA; display: block; font-style: normal; font-weight: normal; margin-left: 10px" Text="Löschen" Tooltip="Löschen Infotext" Click="@ButtonLoeschenInfotextClick">
+                        </RadzenButton>
+                      </div>
+                    </div>
+                  </HeaderTemplate>
+                </RadzenPanel>
+              </div>
+              <div class="col-md-5" style="padding-left: 5px">
+                <RadzenPanel style="border: 1px solid #e6ecef; height: 740px" Text="@(strTitel + " ")">
+                  <ChildContent>
+                    <RadzenHtmlEditor Disabled="true" style="border: 1px solid rgba(0, 0, 0, 0); height: 691px; margin-left: -11px; margin-right: -11px; margin-top: 9px" UploadUrl="upload/image" @bind-Value="@strTextHTML" Name="HtmlEditor0">
+                      <ChildContent>
+                        <RadzenHtmlEditorCustomTool Disabled="false" Selected="false" Visible="false">
+                        </RadzenHtmlEditorCustomTool>
+                      </ChildContent>
+                    </RadzenHtmlEditor>
+                  </ChildContent>
+                  <HeaderTemplate>
+                    <div class="row">
+                      <div class="col-md-12 align-items-start d-flex">
+                        <RadzenButton ButtonStyle="ButtonStyle.Light" Icon="content_copy" Size="ButtonSize.Small" style="color: #D86E13; display: block; float: none" Text="Kopieren" Click="@ButtonKopierenClick">
+                        </RadzenButton>
+                        <RadzenButton ButtonStyle="ButtonStyle.Light" ButtonType="ButtonType.Button" Icon="create" Size="ButtonSize.Small" style="color: #6A80AA; display: block; margin-left: 10px" Text="Bearbeiten" Click="@ButtonBearbeitenInfotextEditorClick">
+                        </RadzenButton>
+                      </div>
+                    </div>
+                  </HeaderTemplate>
+                </RadzenPanel>
+              </div>
+            </div>
+          </ChildContent>
+        </RadzenTabsItem>
+      </Tabs>
+    </RadzenTabs>
+  </ChildContent>
+</RadzenContent>

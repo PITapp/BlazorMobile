@@ -1,0 +1,34 @@
+﻿@page "/meldung-fortschritt/{strMeldung}"
+@layout DialogLayout
+@inherits SinDarElaMobile.Pages.MeldungFortschrittComponent
+
+@using Radzen
+@using Radzen.Blazor
+@using SinDarElaMobile.Models.DbSinDarEla
+<PageTitle>MeldungFortschritt</PageTitle>
+<RadzenContent Container="main">
+  <ChildContent>
+    <div class="row">
+      <div class="col-md-12">
+        <RadzenTemplateForm TItem="dynamic">
+          <ChildContent>
+            <div style="margin-bottom: 1rem" class="row">
+              <div class="col-md-12" >
+                <RadzenProgressBar Mode="ProgressBarMode.Indeterminate">
+                </RadzenProgressBar>
+                <RadzenLabel style="color: rgb(33, 37, 41); display: block; font-size: 18px; font-weight: normal" Text="@($"{(strMeldung)}")">
+                </RadzenLabel>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col offset-sm-3 justify-content-end d-flex" >
+                <RadzenButton ButtonStyle="ButtonStyle.Light" style="margin-left: 1rem" Text="OK" Click="@Button1Click">
+                </RadzenButton>
+              </div>
+            </div>
+          </ChildContent>
+        </RadzenTemplateForm>
+      </div>
+    </div>
+  </ChildContent>
+</RadzenContent>

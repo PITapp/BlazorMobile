@@ -1,0 +1,34 @@
+﻿@page "/meldung-ja-nein/{strMeldung}"
+@layout DialogLayout
+@inherits SinDarElaMobile.Pages.MeldungJaNeinComponent
+
+@using Radzen
+@using Radzen.Blazor
+@using SinDarElaMobile.Models.DbSinDarEla
+<PageTitle>MeldungJaNein</PageTitle>
+<RadzenContent Container="main">
+  <ChildContent>
+    <div class="row">
+      <div class="col-md-12">
+        <RadzenTemplateForm TItem="dynamic">
+          <ChildContent>
+            <div style="margin-bottom: 1rem" class="row">
+              <div class="col-md-12" >
+                <RadzenLabel style="color: rgb(33, 37, 41); display: block; font-size: 18px; font-weight: normal" Text="@($"{(strMeldung)}")">
+                </RadzenLabel>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col offset-sm-3 justify-content-end d-flex" >
+                <RadzenButton ButtonStyle="ButtonStyle.Success" ButtonType="ButtonType.Submit" Text="Ja" Click="@Button0Click">
+                </RadzenButton>
+                <RadzenButton ButtonStyle="ButtonStyle.Light" style="margin-left: 1rem" Text="Nein" Click="@Button1Click">
+                </RadzenButton>
+              </div>
+            </div>
+          </ChildContent>
+        </RadzenTemplateForm>
+      </div>
+    </div>
+  </ChildContent>
+</RadzenContent>

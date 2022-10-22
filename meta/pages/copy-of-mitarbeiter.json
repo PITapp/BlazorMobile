@@ -1,0 +1,2324 @@
+{
+  "components": [
+    {
+      "components": [
+        {
+          "components": [
+            {
+              "class": "justify-content-start       d-flex align-items-center          col-md-8",
+              "components": [
+                {
+                  "name": "heading18",
+                  "size": "H1",
+                  "style": {
+                    "color": "#5d717b",
+                    "display": "inline-block"
+                  },
+                  "text": "Mitarbeiter",
+                  "type": "heading"
+                },
+                {
+                  "name": "heading19",
+                  "size": "H3",
+                  "style": {
+                    "color": "#e5ecef",
+                    "display": "inline-block",
+                    "marginTop": "7px",
+                    "paddingLeft": "10px",
+                    "paddingRight": "10px"
+                  },
+                  "text": "|",
+                  "type": "heading"
+                },
+                {
+                  "attributes": [
+                    {}
+                  ],
+                  "name": "heading21",
+                  "size": "H3",
+                  "style": {
+                    "color": "#6A80AA",
+                    "display": "inline",
+                    "fontSize": "21px",
+                    "fontWeight": "normal",
+                    "paddingTop": "4px"
+                  },
+                  "text": "${strMitarbeiterName}",
+                  "type": "heading"
+                }
+              ],
+              "name": "col46",
+              "style": {
+                "height": "52px",
+                "paddingBottom": "1px"
+              },
+              "type": "col"
+            },
+            {
+              "class": "col-md-4  d-flex justify-content-end align-items-end",
+              "components": [
+                {
+                  "buttonStyle": "info",
+                  "buttonType": "button",
+                  "events": {
+                    "click": [
+                      {
+                        "height": "",
+                        "parameters": [
+                          {
+                            "name": "strMeldung",
+                            "value": "\"Berichte ist für dieses Modul noch nicht aktiviert!\""
+                          }
+                        ],
+                        "path": "meldung-ok",
+                        "then": [],
+                        "title": "Info",
+                        "type": "popup",
+                        "width": 600
+                      }
+                    ]
+                  },
+                  "icon": "description",
+                  "name": "buttonBerichre",
+                  "size": "sm",
+                  "style": {
+                    "backgroundColor": "rgb(230, 236, 239)",
+                    "borderBottom": "2px solid #d86e13",
+                    "color": "#6A80AA",
+                    "display": "block",
+                    "fontWeight": "normal",
+                    "width": "150px"
+                  },
+                  "template": "",
+                  "text": "Berichte",
+                  "tooltip": "",
+                  "type": "button"
+                },
+                {
+                  "buttonStyle": "info",
+                  "buttonType": "button",
+                  "events": {
+                    "click": [
+                      {
+                        "autoFocusFirstElement": false,
+                        "draggable": true,
+                        "height": "",
+                        "parameters": [],
+                        "path": "mitarbeiter-listen",
+                        "resizable": true,
+                        "then": [],
+                        "title": "Listen Mitarbeiter",
+                        "type": "popup",
+                        "width": 1700
+                      }
+                    ]
+                  },
+                  "icon": "list",
+                  "name": "buttonListen",
+                  "size": "sm",
+                  "style": {
+                    "backgroundColor": "rgb(230, 236, 239)",
+                    "borderBottom": "2px solid #d86e13",
+                    "color": "#6A80AA",
+                    "display": "block",
+                    "fontWeight": "normal",
+                    "marginLeft": "12px",
+                    "width": "150px"
+                  },
+                  "template": "",
+                  "text": "Listen",
+                  "tooltip": "",
+                  "type": "button"
+                },
+                {
+                  "buttonStyle": "info",
+                  "buttonType": "button",
+                  "events": {
+                    "click": [
+                      {
+                        "autoFocusFirstElement": false,
+                        "draggable": true,
+                        "height": "",
+                        "parameters": [],
+                        "path": "mitarbeiter-suchen",
+                        "resizable": false,
+                        "then": [
+                          {
+                            "condition": "${result} != null",
+                            "name": "Globals.globalBenutzer.LetzteMitarbeiterID",
+                            "type": "set",
+                            "value": "${result}",
+                            "valueType": "dynamic"
+                          },
+                          {
+                            "code": "await Load();",
+                            "condition": "${result} != null",
+                            "type": "execute"
+                          }
+                        ],
+                        "title": "Suchen",
+                        "type": "popup",
+                        "width": 350
+                      }
+                    ]
+                  },
+                  "icon": "search",
+                  "name": "buttonSuchen",
+                  "size": "sm",
+                  "style": {
+                    "backgroundColor": "rgb(230, 236, 239)",
+                    "borderBottom": "2px solid #d86e13",
+                    "color": "#6A80AA",
+                    "display": "block",
+                    "fontWeight": "normal",
+                    "marginLeft": "12px",
+                    "width": "150px"
+                  },
+                  "template": "",
+                  "text": "Suchen",
+                  "tooltip": "",
+                  "type": "button"
+                }
+              ],
+              "name": "col64",
+              "style": {
+                "paddingRight": "20px"
+              },
+              "type": "col"
+            }
+          ],
+          "name": "row24",
+          "style": {
+            "height": "",
+            "marginTop": "-7px",
+            "paddingBottom": "0",
+            "paddingLeft": "5px",
+            "paddingRight": "3px",
+            "paddingTop": "0",
+            "width": ""
+          },
+          "type": "row"
+        },
+        {
+          "items": [
+            {
+              "components": [
+                {
+                  "components": [
+                    {
+                      "class": "col-md-6",
+                      "components": [
+                        {
+                          "components": [
+                            {
+                              "components": [
+                                {
+                                  "name": "row0",
+                                  "style": {
+                                    "borderTop": "1px solid #e6ecef",
+                                    "height": "10px",
+                                    "marginTop": "10px"
+                                  },
+                                  "type": "row"
+                                },
+                                {
+                                  "components": [
+                                    {
+                                      "class": "col-md-6",
+                                      "components": [
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "component": "Name1",
+                                                  "name": "label8",
+                                                  "style": {
+                                                    "display": "block",
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "Name",
+                                                  "type": "label"
+                                                },
+                                                {
+                                                  "component": "Name1",
+                                                  "name": "requiredValidator0",
+                                                  "style": {
+                                                    "position": "absolute",
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "╘ eingeben",
+                                                  "type": "required-validator"
+                                                }
+                                              ],
+                                              "name": "col32",
+                                              "style": {
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "maxLength": 100,
+                                                  "name": "Name1",
+                                                  "placeholder": "",
+                                                  "style": {
+                                                    "display": "block",
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "textbox",
+                                                  "value": "${dsoBase.Name1}"
+                                                }
+                                              ],
+                                              "name": "col33",
+                                              "style": {
+                                                "display": "block"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row15",
+                                          "style": {
+                                            "marginBottom": "10px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "attributes": [],
+                                                  "component": "Name2",
+                                                  "name": "label18",
+                                                  "style": {
+                                                    "display": "block",
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "Vorname",
+                                                  "type": "label"
+                                                },
+                                                {
+                                                  "component": "Name2",
+                                                  "name": "requiredValidator2",
+                                                  "style": {
+                                                    "position": "absolute",
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "╘ eingeben",
+                                                  "type": "required-validator"
+                                                }
+                                              ],
+                                              "name": "col62",
+                                              "style": {
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "maxLength": 30,
+                                                  "name": "Name2",
+                                                  "style": {
+                                                    "display": "block",
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "textbox",
+                                                  "value": "${dsoBase.Name2}"
+                                                }
+                                              ],
+                                              "name": "col63",
+                                              "style": {
+                                                "display": "block"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row29",
+                                          "style": {
+                                            "marginBottom": "10px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "class": "",
+                                          "components": [
+                                            {
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "component": "AnredeID",
+                                                  "name": "label7",
+                                                  "style": {
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "Anrede",
+                                                  "type": "label"
+                                                }
+                                              ],
+                                              "name": "col30",
+                                              "style": {
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "data": "${rstBaseAnreden}",
+                                                  "emptyFilterText": "No results found",
+                                                  "multipleItemsSelectedText": "",
+                                                  "name": "AnredeID",
+                                                  "placeholder": "",
+                                                  "style": {
+                                                    "width": "100%"
+                                                  },
+                                                  "template": "",
+                                                  "textProperty": "Anrede",
+                                                  "type": "dropdown",
+                                                  "value": "${dsoBase.AnredeID}",
+                                                  "valueProperty": "AnredeID"
+                                                }
+                                              ],
+                                              "name": "col31",
+                                              "style": {},
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row14",
+                                          "style": {
+                                            "marginBottom": "4px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "component": "NameKuerzel",
+                                                  "name": "label9",
+                                                  "style": {
+                                                    "display": "block",
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "Kürzel",
+                                                  "type": "label"
+                                                },
+                                                {
+                                                  "component": "NameKuerzel",
+                                                  "name": "requiredValidator1",
+                                                  "style": {
+                                                    "position": "absolute",
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "╘ eingeben",
+                                                  "type": "required-validator"
+                                                }
+                                              ],
+                                              "name": "col35",
+                                              "style": {
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "maxLength": 5,
+                                                  "name": "NameKuerzel",
+                                                  "style": {
+                                                    "display": "block",
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "textbox",
+                                                  "value": "${dsoBase.NameKuerzel}"
+                                                }
+                                              ],
+                                              "name": "col36",
+                                              "style": {
+                                                "display": "block"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row16",
+                                          "style": {
+                                            "marginBottom": "10px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "attributes": [],
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "attributes": [
+                                                    {
+                                                      "name": "class",
+                                                      "value": "kein-zeilenumbruch"
+                                                    }
+                                                  ],
+                                                  "component": null,
+                                                  "name": "label10",
+                                                  "style": {
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "Titel vorne",
+                                                  "type": "label"
+                                                }
+                                              ],
+                                              "name": "col37",
+                                              "style": {
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "maxLength": 20,
+                                                  "name": "TitelVorne",
+                                                  "style": {
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "textbox",
+                                                  "value": "${dsoBase.TitelVorne}"
+                                                }
+                                              ],
+                                              "name": "col38",
+                                              "style": {
+                                                "display": "block"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row17",
+                                          "style": {
+                                            "marginBottom": "10px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "attributes": [
+                                                    {
+                                                      "name": "class",
+                                                      "value": "kein-zeilenumbruch"
+                                                    }
+                                                  ],
+                                                  "component": null,
+                                                  "name": "label2",
+                                                  "style": {
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "Titel hinten",
+                                                  "type": "label"
+                                                }
+                                              ],
+                                              "name": "col22",
+                                              "style": {
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "maxLength": 20,
+                                                  "name": "TitelHinten",
+                                                  "style": {
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "textbox",
+                                                  "value": "${dsoBase.TitelHinten}"
+                                                }
+                                              ],
+                                              "name": "col43",
+                                              "style": {
+                                                "display": "block"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row22",
+                                          "style": {
+                                            "marginBottom": "10px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "component": "Strasse",
+                                                  "name": "label11",
+                                                  "style": {
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "Strasse",
+                                                  "type": "label"
+                                                }
+                                              ],
+                                              "name": "col40",
+                                              "style": {
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "maxLength": 70,
+                                                  "name": "Strasse",
+                                                  "style": {
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "textbox",
+                                                  "value": "${dsoBase.Strasse}"
+                                                }
+                                              ],
+                                              "name": "col41",
+                                              "style": {},
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row18",
+                                          "style": {
+                                            "marginBottom": "10px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "component": null,
+                                                  "name": "label12",
+                                                  "style": {
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "PLZ",
+                                                  "type": "label"
+                                                }
+                                              ],
+                                              "name": "col42",
+                                              "style": {
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px",
+                                                "textAlign": "right"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "maxLength": 10,
+                                                  "name": "PLZ",
+                                                  "style": {
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "textbox",
+                                                  "value": "${dsoBase.PLZ}"
+                                                }
+                                              ],
+                                              "name": "col50",
+                                              "style": {
+                                                "display": "block"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row19",
+                                          "style": {
+                                            "marginBottom": "10px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "component": null,
+                                                  "name": "label3",
+                                                  "style": {
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "Ort",
+                                                  "type": "label"
+                                                }
+                                              ],
+                                              "name": "col66",
+                                              "style": {
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px",
+                                                "textAlign": "right"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "maxLength": 100,
+                                                  "name": "Ort",
+                                                  "style": {
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "textbox",
+                                                  "value": "${dsoBase.Ort}"
+                                                }
+                                              ],
+                                              "name": "col67",
+                                              "style": {
+                                                "display": "block"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row32",
+                                          "style": {
+                                            "marginBottom": "10px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-12 align-items-center d-flex justify-content-center",
+                                              "components": [
+                                                {
+                                                  "name": "label26",
+                                                  "style": {
+                                                    "color": "#88989b",
+                                                    "marginTop": "-6px"
+                                                  },
+                                                  "text": "Konto",
+                                                  "type": "label"
+                                                }
+                                              ],
+                                              "name": "col74",
+                                              "style": {
+                                                "backgroundColor": "#F3F5F7",
+                                                "borderRadius": "4px",
+                                                "color": "#88989b",
+                                                "display": "block",
+                                                "height": "30px",
+                                                "textAlign": "center",
+                                                "verticalAlign": "baseline"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row39",
+                                          "style": {
+                                            "marginBottom": "10px",
+                                            "marginTop": "15px",
+                                            "paddingLeft": "15px",
+                                            "paddingRight": "15px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "component": null,
+                                                  "name": "label27",
+                                                  "style": {
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "Bank",
+                                                  "type": "label"
+                                                }
+                                              ],
+                                              "name": "col76",
+                                              "style": {
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "maxLength": 70,
+                                                  "name": "KontoName",
+                                                  "style": {
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "textbox",
+                                                  "value": "${dsoBase.KontoName}"
+                                                }
+                                              ],
+                                              "name": "col77",
+                                              "style": {
+                                                "display": "block"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row38",
+                                          "style": {
+                                            "marginBottom": "10px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "component": null,
+                                                  "name": "label25",
+                                                  "style": {
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "KontoNr",
+                                                  "type": "label"
+                                                }
+                                              ],
+                                              "name": "col34",
+                                              "style": {
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "maxLength": 70,
+                                                  "name": "KontoNummer",
+                                                  "style": {
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "textbox",
+                                                  "value": "${dsoBase.KontoNummer}"
+                                                }
+                                              ],
+                                              "name": "col73",
+                                              "style": {
+                                                "display": "block"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row30",
+                                          "style": {
+                                            "marginBottom": "10px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "component": null,
+                                                  "name": "label24",
+                                                  "style": {
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "Info",
+                                                  "type": "label"
+                                                }
+                                              ],
+                                              "name": "col11",
+                                              "style": {
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "name": "KontoInfo",
+                                                  "placeholder": "",
+                                                  "style": {
+                                                    "height": "98px",
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "textarea",
+                                                  "value": "${dsoBase.KontoInfo}"
+                                                }
+                                              ],
+                                              "name": "col12",
+                                              "style": {
+                                                "display": "block"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row6",
+                                          "style": {
+                                            "marginBottom": "4px"
+                                          },
+                                          "type": "row"
+                                        }
+                                      ],
+                                      "name": "col2",
+                                      "style": {},
+                                      "type": "col"
+                                    },
+                                    {
+                                      "class": "col-md-6",
+                                      "components": [
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "component": null,
+                                                  "name": "label22",
+                                                  "style": {
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "Geburtsdatum",
+                                                  "type": "label"
+                                                }
+                                              ],
+                                              "name": "col69",
+                                              "style": {
+                                                "paddingLeft": "0",
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "dateFormat": "dd.MM.yyyy",
+                                                  "locale": "de",
+                                                  "name": "Geburtsdatum",
+                                                  "style": {
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "datepicker",
+                                                  "value": "${dsoBase.Geburtsdatum}",
+                                                  "yearRange": "1930:2050"
+                                                }
+                                              ],
+                                              "name": "col70",
+                                              "style": {
+                                                "display": "block"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row35",
+                                          "style": {
+                                            "marginBottom": "10px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "component": null,
+                                                  "name": "label6",
+                                                  "style": {
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "VersicherNr",
+                                                  "type": "label"
+                                                }
+                                              ],
+                                              "name": "col51",
+                                              "style": {
+                                                "paddingLeft": "0",
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "maxLength": 30,
+                                                  "name": "Versicherungsnummer",
+                                                  "style": {
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "textbox",
+                                                  "value": "${dsoBase.Versicherungsnummer}"
+                                                }
+                                              ],
+                                              "name": "col68",
+                                              "style": {
+                                                "display": "block"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row34",
+                                          "style": {
+                                            "marginBottom": "10px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "component": null,
+                                                  "name": "label5",
+                                                  "style": {
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "Nationalität",
+                                                  "type": "label"
+                                                }
+                                              ],
+                                              "name": "col39",
+                                              "style": {
+                                                "paddingLeft": "0",
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "maxLength": 30,
+                                                  "name": "Staatsangehoerigkeit",
+                                                  "style": {
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "textbox",
+                                                  "value": "${dsoBase.Staatsangehoerigkeit}"
+                                                }
+                                              ],
+                                              "name": "col44",
+                                              "style": {
+                                                "display": "block"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row33",
+                                          "style": {
+                                            "marginBottom": "10px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "attributes": [
+                                                    {
+                                                      "name": "class",
+                                                      "value": "kein-zeilenumbruch"
+                                                    }
+                                                  ],
+                                                  "component": null,
+                                                  "name": "label13",
+                                                  "style": {
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "Telefon 1",
+                                                  "type": "label"
+                                                }
+                                              ],
+                                              "name": "col52",
+                                              "style": {
+                                                "paddingLeft": "0",
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "maxLength": 30,
+                                                  "name": "Telefon1",
+                                                  "style": {
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "textbox",
+                                                  "value": "${dsoBase.Telefon1}"
+                                                }
+                                              ],
+                                              "name": "col53",
+                                              "style": {
+                                                "display": "block"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row20",
+                                          "style": {
+                                            "marginBottom": "10px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "attributes": [
+                                                    {
+                                                      "name": "class",
+                                                      "value": "kein-zeilenumbruch"
+                                                    }
+                                                  ],
+                                                  "component": null,
+                                                  "name": "label14",
+                                                  "style": {
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "Telefon 2",
+                                                  "type": "label"
+                                                }
+                                              ],
+                                              "name": "col54",
+                                              "style": {
+                                                "paddingLeft": "0",
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "maxLength": 30,
+                                                  "name": "Telefon2",
+                                                  "style": {
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "textbox",
+                                                  "value": "${dsoBase.Telefon2}"
+                                                }
+                                              ],
+                                              "name": "col55",
+                                              "style": {
+                                                "display": "block"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row21",
+                                          "style": {
+                                            "marginBottom": "10px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "attributes": [
+                                                    {
+                                                      "name": "class",
+                                                      "value": "kein-zeilenumbruch"
+                                                    }
+                                                  ],
+                                                  "component": null,
+                                                  "name": "label15",
+                                                  "style": {
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "E-Mail 1",
+                                                  "type": "label"
+                                                }
+                                              ],
+                                              "name": "col56",
+                                              "style": {
+                                                "paddingLeft": "0",
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "maxLength": 70,
+                                                  "name": "EMail1",
+                                                  "style": {
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "textbox",
+                                                  "value": "${dsoBase.EMail1}"
+                                                }
+                                              ],
+                                              "name": "col57",
+                                              "style": {
+                                                "display": "block"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row26",
+                                          "style": {
+                                            "marginBottom": "10px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "attributes": [
+                                                    {
+                                                      "name": "class",
+                                                      "value": "kein-zeilenumbruch"
+                                                    }
+                                                  ],
+                                                  "component": null,
+                                                  "name": "label16",
+                                                  "style": {
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "E-Mail 2",
+                                                  "type": "label"
+                                                }
+                                              ],
+                                              "name": "col58",
+                                              "style": {
+                                                "paddingLeft": "0",
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "maxLength": 70,
+                                                  "name": "EMail2",
+                                                  "style": {
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "textbox",
+                                                  "value": "${dsoBase.EMail2}"
+                                                }
+                                              ],
+                                              "name": "col59",
+                                              "style": {
+                                                "display": "block"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row27",
+                                          "style": {
+                                            "marginBottom": "10px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "attributes": [
+                                                    {
+                                                      "name": "class",
+                                                      "value": "kein-zeilenumbruch"
+                                                    }
+                                                  ],
+                                                  "component": null,
+                                                  "name": "label0",
+                                                  "style": {
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "Notfall Kontakt",
+                                                  "type": "label"
+                                                }
+                                              ],
+                                              "name": "col4",
+                                              "style": {
+                                                "paddingLeft": "0",
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px",
+                                                "textAlign": "right"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "maxLength": 100,
+                                                  "name": "textbox0",
+                                                  "placeholder": "",
+                                                  "style": {
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "textbox",
+                                                  "value": "${dsoBase.Notfallkontakt}"
+                                                }
+                                              ],
+                                              "name": "col5",
+                                              "style": {
+                                                "display": "block"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row2",
+                                          "style": {
+                                            "marginBottom": "10px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-3",
+                                              "components": [
+                                                {
+                                                  "attributes": [
+                                                    {
+                                                      "name": "class",
+                                                      "value": "kein-zeilenumbruch"
+                                                    }
+                                                  ],
+                                                  "component": null,
+                                                  "name": "label1",
+                                                  "style": {
+                                                    "textAlign": "left",
+                                                    "width": "100%"
+                                                  },
+                                                  "text": "Notfall Telefon",
+                                                  "type": "label"
+                                                }
+                                              ],
+                                              "name": "col6",
+                                              "style": {
+                                                "paddingLeft": "0",
+                                                "paddingRight": "0",
+                                                "paddingTop": "6px"
+                                              },
+                                              "type": "col"
+                                            },
+                                            {
+                                              "class": "col-md-9",
+                                              "components": [
+                                                {
+                                                  "maxLength": 70,
+                                                  "name": "textbox1",
+                                                  "style": {
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "textbox",
+                                                  "value": "${dsoBase.NotfallkontaktTelefon}"
+                                                }
+                                              ],
+                                              "name": "col7",
+                                              "style": {
+                                                "display": "block"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row3",
+                                          "style": {
+                                            "marginBottom": "10px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-12 justify-content-center d-flex align-items-center",
+                                              "components": [
+                                                {
+                                                  "name": "label28",
+                                                  "style": {
+                                                    "color": "#88989b",
+                                                    "marginTop": "-6px"
+                                                  },
+                                                  "text": "Notizen",
+                                                  "type": "label"
+                                                }
+                                              ],
+                                              "name": "col75",
+                                              "style": {
+                                                "backgroundColor": "#F3F5F7",
+                                                "borderRadius": "4px",
+                                                "color": "#88989b",
+                                                "display": "block",
+                                                "height": "30px",
+                                                "paddingRight": "0",
+                                                "textAlign": "center"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row37",
+                                          "style": {
+                                            "marginBottom": "10px",
+                                            "marginTop": "15px",
+                                            "paddingRight": "15px"
+                                          },
+                                          "type": "row"
+                                        },
+                                        {
+                                          "components": [
+                                            {
+                                              "class": "col-md-12",
+                                              "components": [
+                                                {
+                                                  "name": "Notiz",
+                                                  "rows": 4,
+                                                  "style": {
+                                                    "height": "190px",
+                                                    "width": "100%"
+                                                  },
+                                                  "type": "textarea",
+                                                  "value": "${dsoBase.Notiz}"
+                                                }
+                                              ],
+                                              "name": "col65",
+                                              "style": {
+                                                "paddingLeft": "0"
+                                              },
+                                              "type": "col"
+                                            }
+                                          ],
+                                          "name": "row31",
+                                          "style": {
+                                            "marginBottom": "4px"
+                                          },
+                                          "type": "row"
+                                        }
+                                      ],
+                                      "name": "col29",
+                                      "style": {
+                                        "paddingLeft": "30px",
+                                        "paddingRight": "0"
+                                      },
+                                      "type": "col"
+                                    }
+                                  ],
+                                  "name": "row12",
+                                  "style": {
+                                    "marginLeft": "-5px",
+                                    "marginRight": "0",
+                                    "marginTop": "11px",
+                                    "paddingRight": "10px"
+                                  },
+                                  "type": "row"
+                                }
+                              ],
+                              "data": "${dsoBase}",
+                              "events": {
+                                "submit": []
+                              },
+                              "itemType": "SinDarElaMobile.Models.DbSinDarEla.Base",
+                              "name": "form0",
+                              "type": "template-form",
+                              "visible": "${dsoBase != null}"
+                            }
+                          ],
+                          "headerTemplate": [
+                            {
+                              "components": [
+                                {
+                                  "class": "col-md-12 align-items-start d-flex",
+                                  "components": [
+                                    {
+                                      "buttonStyle": "light",
+                                      "events": {
+                                        "click": [
+                                          {
+                                            "path": "mitarbeiter-neu",
+                                            "then": [
+                                              {
+                                                "condition": "${result} != null",
+                                                "global": false,
+                                                "name": "Globals.globalBenutzer.LetzteMitarbeiterID",
+                                                "type": "set",
+                                                "value": "${result.MitarbeiterID}",
+                                                "valueType": "dynamic"
+                                              },
+                                              {
+                                                "code": "await Load();",
+                                                "condition": "${result} != null",
+                                                "type": "execute"
+                                              }
+                                            ],
+                                            "title": "Neuer Mitarbeiter",
+                                            "type": "popup"
+                                          }
+                                        ]
+                                      },
+                                      "icon": "add",
+                                      "name": "buttonNeu",
+                                      "size": "sm",
+                                      "style": {
+                                        "color": "#D86E13",
+                                        "display": "block"
+                                      },
+                                      "template": "",
+                                      "text": "Neuer Mitarbeiter",
+                                      "tooltip": "",
+                                      "type": "button"
+                                    },
+                                    {
+                                      "buttonStyle": "light",
+                                      "events": {
+                                        "click": [
+                                          {
+                                            "error": [
+                                              {
+                                                "detail": "Änderungen konnten nicht gespeichert werden!",
+                                                "severity": "error",
+                                                "type": "notify"
+                                              }
+                                            ],
+                                            "name": "dbSinDarEla.updateBase",
+                                            "parameters": [
+                                              {
+                                                "name": "BaseID",
+                                                "value": "${dsoBase.BaseID}"
+                                              },
+                                              {
+                                                "name": "Base",
+                                                "value": "${dsoBase}"
+                                              }
+                                            ],
+                                            "then": [
+                                              {
+                                                "detail": "Änderungen gespeichert",
+                                                "severity": "success",
+                                                "type": "notify"
+                                              }
+                                            ],
+                                            "type": "invoke"
+                                          }
+                                        ]
+                                      },
+                                      "icon": "done",
+                                      "isBusy": false,
+                                      "name": "buttonSpeichern",
+                                      "size": "sm",
+                                      "style": {
+                                        "color": "#6A80AA",
+                                        "display": "block",
+                                        "fontWeight": "400",
+                                        "marginLeft": "10px",
+                                        "paddingLeft": ""
+                                      },
+                                      "template": "",
+                                      "text": "Speichern",
+                                      "tooltip": "Bearbeiten Infotext",
+                                      "type": "button"
+                                    }
+                                  ],
+                                  "name": "col1",
+                                  "type": "col"
+                                }
+                              ],
+                              "name": "row0",
+                              "style": {},
+                              "type": "row"
+                            }
+                          ],
+                          "icon": "",
+                          "name": "panel1",
+                          "style": {
+                            "border": "1px solid #e6ecef",
+                            "height": "740px"
+                          },
+                          "text": "Details",
+                          "type": "panel"
+                        }
+                      ],
+                      "name": "col0",
+                      "type": "col"
+                    },
+                    {
+                      "class": "col-md-6",
+                      "components": [
+                        {
+                          "attributes": [],
+                          "components": [
+                            {
+                              "allowFiltering": false,
+                              "allowPaging": false,
+                              "allowSorting": false,
+                              "columnWidth": "150px",
+                              "columns": [
+                                {
+                                  "frozen": true,
+                                  "property": "FirmaName",
+                                  "title": "Name",
+                                  "width": "300px"
+                                },
+                                {
+                                  "property": "Position",
+                                  "title": "Position"
+                                },
+                                {
+                                  "property": "Status",
+                                  "title": "Status"
+                                },
+                                {
+                                  "formatString": "{0:d}",
+                                  "property": "ArbeitsrechtEintritt",
+                                  "title": "Arbeitsrecht Eintritt"
+                                },
+                                {
+                                  "formatString": "{0:d}",
+                                  "property": "LetzterEintritt",
+                                  "title": "Letzter Eintritt"
+                                },
+                                {
+                                  "formatString": "{0:d}",
+                                  "property": "ArbeitsrechtAustritt",
+                                  "title": "Arbeitsrecht Austritt"
+                                },
+                                {
+                                  "formatString": "{0:d}",
+                                  "property": "LetzterAustritt",
+                                  "title": "Letzter Austritt"
+                                },
+                                {
+                                  "property": "Notiz",
+                                  "title": "Notiz"
+                                }
+                              ],
+                              "count": "",
+                              "data": "${getVwMitarbeiterFirmensResult}",
+                              "events": {
+                                "loadData": [
+                                  {
+                                    "error": [
+                                      {
+                                        "detail": "Unable to load VwMitarbeiterFirmens",
+                                        "severity": "error",
+                                        "summary": "Error",
+                                        "type": "notify"
+                                      }
+                                    ],
+                                    "name": "dbSinDarEla.getVwMitarbeiterFirmens",
+                                    "parameters": [
+                                      {
+                                        "name": "$filter",
+                                        "value": "MitarbeiterID eq ${Globals.globalBenutzer.LetzteMitarbeiterID}"
+                                      }
+                                    ],
+                                    "then": [
+                                      {
+                                        "name": "getVwMitarbeiterFirmensResult",
+                                        "type": "set",
+                                        "value": "${result.Value.AsODataEnumerable()}",
+                                        "valueType": "IEnumerable<SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiterFirmen>"
+                                      }
+                                    ],
+                                    "type": "invoke"
+                                  }
+                                ]
+                              },
+                              "filterMode": "advanced",
+                              "itemType": "SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiterFirmen",
+                              "name": "grid0",
+                              "style": {
+                                "border": "1px solid rgba(0, 0, 0, 0)",
+                                "height": "150px",
+                                "marginTop": "9px"
+                              },
+                              "title": "",
+                              "type": "datagrid"
+                            }
+                          ],
+                          "footerTemplate": "",
+                          "headerTemplate": [
+                            {
+                              "components": [
+                                {
+                                  "class": "col-md-12 align-items-start d-flex",
+                                  "components": [
+                                    {
+                                      "buttonStyle": "light",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "add_task",
+                                      "name": "buttonHinzufuegen",
+                                      "size": "sm",
+                                      "style": {
+                                        "color": "#D86E13",
+                                        "display": "block",
+                                        "float": "none"
+                                      },
+                                      "text": "Hinzufügen",
+                                      "tooltip": "",
+                                      "type": "button"
+                                    },
+                                    {
+                                      "buttonStyle": "light",
+                                      "buttonType": "button",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "create",
+                                      "name": "buttonBearbeitenInfotextEditor",
+                                      "size": "sm",
+                                      "style": {
+                                        "color": "#6A80AA",
+                                        "display": "block",
+                                        "marginLeft": "10px"
+                                      },
+                                      "text": "Bearbeiten",
+                                      "tooltip": "",
+                                      "type": "button"
+                                    }
+                                  ],
+                                  "name": "col1",
+                                  "type": "col"
+                                }
+                              ],
+                              "name": "row0",
+                              "type": "row"
+                            }
+                          ],
+                          "name": "panel0",
+                          "style": {
+                            "border": "1px solid #e6ecef",
+                            "height": "205px"
+                          },
+                          "text": "Firmen",
+                          "type": "panel"
+                        },
+                        {
+                          "attributes": [],
+                          "components": [
+                            {
+                              "allowFiltering": false,
+                              "allowPaging": false,
+                              "allowSorting": false,
+                              "columnWidth": "150px",
+                              "columns": [
+                                {
+                                  "property": "TaetigkeitArt",
+                                  "title": "Art"
+                                },
+                                {
+                                  "property": "LeistungSchluessel",
+                                  "title": "Schlüssel"
+                                }
+                              ],
+                              "count": "",
+                              "data": "${getVwMitarbeiterTaetigkeitensResult}",
+                              "events": {
+                                "loadData": [
+                                  {
+                                    "error": [
+                                      {
+                                        "detail": "Unable to load VwMitarbeiterTaetigkeitens",
+                                        "severity": "error",
+                                        "summary": "Error",
+                                        "type": "notify"
+                                      }
+                                    ],
+                                    "name": "dbSinDarEla.getVwMitarbeiterTaetigkeitens",
+                                    "parameters": [
+                                      {
+                                        "name": "$filter",
+                                        "value": "MitarbeiterID eq ${Globals.globalBenutzer.LetzteMitarbeiterID}"
+                                      }
+                                    ],
+                                    "then": [
+                                      {
+                                        "name": "getVwMitarbeiterTaetigkeitensResult",
+                                        "type": "set",
+                                        "value": "${result.Value.AsODataEnumerable()}",
+                                        "valueType": "IEnumerable<SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiterTaetigkeiten>"
+                                      }
+                                    ],
+                                    "type": "invoke"
+                                  }
+                                ]
+                              },
+                              "filterMode": "simple",
+                              "itemType": "SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiterTaetigkeiten",
+                              "name": "datagrid0",
+                              "style": {
+                                "border": "1px solid rgba(0, 0, 0, 0)",
+                                "height": "200px",
+                                "marginTop": "9px"
+                              },
+                              "title": "",
+                              "type": "datagrid"
+                            }
+                          ],
+                          "footerTemplate": "",
+                          "headerTemplate": [
+                            {
+                              "components": [
+                                {
+                                  "class": "col-md-12 align-items-start d-flex",
+                                  "components": [
+                                    {
+                                      "buttonStyle": "light",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "add_task",
+                                      "name": "buttonHinzufuegen",
+                                      "size": "sm",
+                                      "style": {
+                                        "color": "#D86E13",
+                                        "display": "block",
+                                        "float": "none"
+                                      },
+                                      "text": "Hinzufügen",
+                                      "tooltip": "",
+                                      "type": "button"
+                                    },
+                                    {
+                                      "buttonStyle": "light",
+                                      "buttonType": "button",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "create",
+                                      "name": "buttonBearbeitenInfotextEditor",
+                                      "size": "sm",
+                                      "style": {
+                                        "color": "#6A80AA",
+                                        "display": "block",
+                                        "marginLeft": "10px"
+                                      },
+                                      "text": "Bearbeiten",
+                                      "tooltip": "",
+                                      "type": "button"
+                                    }
+                                  ],
+                                  "name": "col1",
+                                  "type": "col"
+                                }
+                              ],
+                              "name": "row0",
+                              "type": "row"
+                            }
+                          ],
+                          "name": "panel6",
+                          "style": {
+                            "border": "1px solid #e6ecef",
+                            "height": "205px",
+                            "marginTop": "20px"
+                          },
+                          "text": "Tätigkeiten",
+                          "type": "panel"
+                        },
+                        {
+                          "attributes": [],
+                          "components": [
+                            {
+                              "allowFiltering": false,
+                              "allowPaging": false,
+                              "allowSorting": false,
+                              "columnWidth": "150px",
+                              "columns": [
+                                {
+                                  "property": "KundeName",
+                                  "title": "Name"
+                                },
+                                {
+                                  "property": "LeistungArt",
+                                  "title": "Leistung Art"
+                                },
+                                {
+                                  "property": "LeistungSchluessel",
+                                  "title": "Leistung Schlüssel"
+                                },
+                                {
+                                  "property": "Betreuungsart",
+                                  "title": "Betreuungsart"
+                                }
+                              ],
+                              "count": "",
+                              "data": "${getVwMitarbeiterKundensResult}",
+                              "events": {
+                                "loadData": [
+                                  {
+                                    "error": [
+                                      {
+                                        "detail": "Unable to load VwMitarbeiterKundens",
+                                        "severity": "error",
+                                        "summary": "Error",
+                                        "type": "notify"
+                                      }
+                                    ],
+                                    "name": "dbSinDarEla.getVwMitarbeiterKundens",
+                                    "parameters": [
+                                      {
+                                        "name": "$filter",
+                                        "value": "MitarbeiterID eq ${Globals.globalBenutzer.LetzteMitarbeiterID}"
+                                      }
+                                    ],
+                                    "then": [
+                                      {
+                                        "name": "getVwMitarbeiterKundensResult",
+                                        "type": "set",
+                                        "value": "${result.Value.AsODataEnumerable()}",
+                                        "valueType": "IEnumerable<SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiterKunden>"
+                                      }
+                                    ],
+                                    "type": "invoke"
+                                  }
+                                ]
+                              },
+                              "filterMode": "simple",
+                              "itemType": "SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiterKunden",
+                              "name": "datagrid1",
+                              "style": {
+                                "border": "1px solid rgba(0, 0, 0, 0)",
+                                "height": "222px",
+                                "marginTop": "9px"
+                              },
+                              "title": "",
+                              "type": "datagrid"
+                            }
+                          ],
+                          "footerTemplate": "",
+                          "headerTemplate": [
+                            {
+                              "components": [
+                                {
+                                  "class": "col-md-12 align-items-start d-flex",
+                                  "components": [
+                                    {
+                                      "buttonStyle": "light",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "content_copy",
+                                      "name": "buttonKopieren",
+                                      "size": "sm",
+                                      "style": {
+                                        "color": "#D86E13",
+                                        "display": "block",
+                                        "float": "none"
+                                      },
+                                      "text": "Kopieren",
+                                      "tooltip": "",
+                                      "type": "button"
+                                    },
+                                    {
+                                      "buttonStyle": "light",
+                                      "buttonType": "button",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "create",
+                                      "name": "buttonBearbeitenInfotextEditor",
+                                      "size": "sm",
+                                      "style": {
+                                        "color": "#6A80AA",
+                                        "display": "block",
+                                        "marginLeft": "10px"
+                                      },
+                                      "text": "Bearbeiten",
+                                      "tooltip": "",
+                                      "type": "button"
+                                    }
+                                  ],
+                                  "name": "col1",
+                                  "type": "col"
+                                }
+                              ],
+                              "name": "row0",
+                              "type": "row"
+                            }
+                          ],
+                          "name": "panel4",
+                          "style": {
+                            "border": "1px solid #e6ecef",
+                            "height": "290px",
+                            "marginTop": "20px"
+                          },
+                          "text": "Kunden",
+                          "type": "panel"
+                        }
+                      ],
+                      "name": "col3",
+                      "style": {
+                        "paddingLeft": "5px"
+                      },
+                      "type": "col"
+                    }
+                  ],
+                  "name": "row1",
+                  "type": "row"
+                }
+              ],
+              "icon": "",
+              "selected": true,
+              "text": "Allgemein"
+            },
+            {
+              "components": [
+                {
+                  "components": [
+                    {
+                      "class": "col-md-6",
+                      "components": [
+                        {
+                          "components": [
+                            {
+                              "name": "label4",
+                              "text": "Hallo",
+                              "type": "label"
+                            }
+                          ],
+                          "headerTemplate": [
+                            {
+                              "components": [
+                                {
+                                  "class": "col-md-12 align-items-start d-flex",
+                                  "components": [
+                                    {
+                                      "buttonStyle": "light",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "add",
+                                      "name": "buttonNeu",
+                                      "size": "sm",
+                                      "style": {
+                                        "color": "#D86E13",
+                                        "display": "block"
+                                      },
+                                      "template": "",
+                                      "text": "Neue",
+                                      "tooltip": "",
+                                      "type": "button"
+                                    },
+                                    {
+                                      "buttonStyle": "light",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "done",
+                                      "isBusy": false,
+                                      "name": "buttonSpeichern",
+                                      "size": "sm",
+                                      "style": {
+                                        "color": "#6A80AA",
+                                        "display": "block",
+                                        "fontWeight": "400",
+                                        "marginLeft": "10px",
+                                        "paddingLeft": ""
+                                      },
+                                      "template": "",
+                                      "text": "Speichern",
+                                      "tooltip": "Bearbeiten Infotext",
+                                      "type": "button"
+                                    }
+                                  ],
+                                  "name": "col1",
+                                  "type": "col"
+                                }
+                              ],
+                              "name": "row0",
+                              "style": {},
+                              "type": "row"
+                            }
+                          ],
+                          "icon": "",
+                          "name": "panel2",
+                          "style": {
+                            "border": "1px solid #e6ecef",
+                            "height": "740px"
+                          },
+                          "text": "Details",
+                          "type": "panel"
+                        }
+                      ],
+                      "name": "col8",
+                      "type": "col"
+                    },
+                    {
+                      "class": "col-md-6",
+                      "components": [
+                        {
+                          "attributes": [],
+                          "components": [
+                            {
+                              "name": "label17",
+                              "text": "Hallo",
+                              "type": "label"
+                            }
+                          ],
+                          "footerTemplate": "",
+                          "headerTemplate": [
+                            {
+                              "components": [
+                                {
+                                  "class": "col-md-12 align-items-start d-flex",
+                                  "components": [
+                                    {
+                                      "buttonStyle": "light",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "content_copy",
+                                      "name": "buttonKopieren",
+                                      "size": "sm",
+                                      "style": {
+                                        "color": "#D86E13",
+                                        "display": "block",
+                                        "float": "none"
+                                      },
+                                      "text": "Kopieren",
+                                      "tooltip": "",
+                                      "type": "button"
+                                    },
+                                    {
+                                      "buttonStyle": "light",
+                                      "buttonType": "button",
+                                      "events": {
+                                        "click": []
+                                      },
+                                      "icon": "create",
+                                      "name": "buttonBearbeitenInfotextEditor",
+                                      "size": "sm",
+                                      "style": {
+                                        "color": "#6A80AA",
+                                        "display": "block",
+                                        "marginLeft": "10px"
+                                      },
+                                      "text": "Bearbeiten",
+                                      "tooltip": "",
+                                      "type": "button"
+                                    }
+                                  ],
+                                  "name": "col1",
+                                  "type": "col"
+                                }
+                              ],
+                              "name": "row0",
+                              "type": "row"
+                            }
+                          ],
+                          "name": "panel3",
+                          "style": {
+                            "border": "1px solid #e6ecef",
+                            "height": "740px"
+                          },
+                          "text": "Sonstiges",
+                          "type": "panel"
+                        }
+                      ],
+                      "name": "col100",
+                      "style": {
+                        "paddingLeft": "5px"
+                      },
+                      "type": "col"
+                    }
+                  ],
+                  "name": "row4",
+                  "type": "row"
+                }
+              ],
+              "icon": "",
+              "selected": false,
+              "text": "Anstellung"
+            },
+            {
+              "text": "Urlaub"
+            },
+            {
+              "text": "Termine"
+            },
+            {
+              "text": "Fortbildungen"
+            },
+            {
+              "text": "Kundenbudget"
+            },
+            {
+              "text": "Dokumente"
+            }
+          ],
+          "name": "tabs0",
+          "selectedIndex": "",
+          "style": {
+            "float": "none"
+          },
+          "type": "tabs",
+          "visible": true
+        }
+      ],
+      "container": "main",
+      "type": "content"
+    }
+  ],
+  "events": {
+    "load": [
+      {
+        "condition": "${Globals.globalBenutzer} == null",
+        "path": "anmeldung-laden",
+        "type": "navigate"
+      },
+      {
+        "condition": "${Globals.globalBenutzer} != null",
+        "error": [
+          {
+            "detail": "Kein Mitarbeiter ausgewählt!",
+            "severity": "error",
+            "type": "notify"
+          },
+          {
+            "name": "strMitarbeiterName",
+            "type": "set",
+            "value": "\"Klicke auf [Suchen] um einen Mitarbeiter auszuwählen!\"",
+            "valueType": "string"
+          }
+        ],
+        "name": "dbSinDarEla.getMitarbeiterByMitarbeiterID",
+        "parameters": [
+          {
+            "name": "MitarbeiterID",
+            "value": "${Globals.globalBenutzer.LetzteMitarbeiterID}"
+          }
+        ],
+        "then": [
+          {
+            "name": "dsoMitarbeiter",
+            "type": "set",
+            "value": "${result}",
+            "valueType": "SinDarElaMobile.Models.DbSinDarEla.Mitarbeiter"
+          },
+          {
+            "condition": "",
+            "name": "dbSinDarEla.getBaseByBaseID",
+            "parameters": [
+              {
+                "name": "BaseID",
+                "value": "${dsoMitarbeiter.BaseID}"
+              }
+            ],
+            "then": [
+              {
+                "name": "dsoBase",
+                "type": "set",
+                "value": "${result}",
+                "valueType": "SinDarElaMobile.Models.DbSinDarEla.Base"
+              },
+              {
+                "name": "strMitarbeiterName",
+                "type": "set",
+                "value": "${result.Name1} + ' ' + ${result.Name2}",
+                "valueType": "string"
+              }
+            ],
+            "type": "invoke"
+          },
+          {
+            "condition": "",
+            "name": "dbSinDarEla.getBaseAnredens",
+            "then": [
+              {
+                "name": "rstBaseAnreden",
+                "type": "set",
+                "value": "${result.Value.AsODataEnumerable()}",
+                "valueType": "IEnumerable<SinDarElaMobile.Models.DbSinDarEla.BaseAnreden>"
+              }
+            ],
+            "type": "invoke"
+          }
+        ],
+        "type": "invoke"
+      }
+    ]
+  },
+  "layout": "Main",
+  "name": "Copy of Mitarbeiter"
+}

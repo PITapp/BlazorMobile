@@ -1,0 +1,256 @@
+{
+  "components": [
+    {
+      "components": [
+        {
+          "components": [
+            {
+              "class": "col-md-12",
+              "components": [
+                {
+                  "components": [
+                    {
+                      "components": [
+                        {
+                          "class": "col-md-3",
+                          "components": [
+                            {
+                              "component": "BaseID",
+                              "name": "BaseIDLabel",
+                              "style": {
+                                "width": "100%"
+                              },
+                              "text": "Mitarbeiter",
+                              "type": "label"
+                            }
+                          ],
+                          "type": "col"
+                        },
+                        {
+                          "class": "col-md-9",
+                          "components": [
+                            {
+                              "allowFiltering": true,
+                              "attributes": [
+                                {
+                                  "name": "style",
+                                  "value": "max-height: 400px;"
+                                }
+                              ],
+                              "data": "${rstMitarbeiterNeu}",
+                              "filterCaseSensitivity": "caseInsensitive",
+                              "maxSelectedLabels": 10,
+                              "name": "BaseID",
+                              "placeholder": "",
+                              "style": {
+                                "display": "block",
+                                "width": "100%"
+                              },
+                              "textProperty": "NameGesamt",
+                              "type": "dropdown",
+                              "value": "${dsoMitarbeiter.BaseID}",
+                              "valueProperty": "BaseID",
+                              "valueType": "int"
+                            },
+                            {
+                              "component": "BaseID",
+                              "defaultValue": "0",
+                              "name": "BaseIDRequiredValidator",
+                              "style": {
+                                "position": "absolute"
+                              },
+                              "text": "Mitarbeiter eingeben",
+                              "type": "required-validator"
+                            }
+                          ],
+                          "type": "col"
+                        }
+                      ],
+                      "style": {
+                        "marginBottom": "1rem"
+                      },
+                      "type": "row"
+                    },
+                    {
+                      "components": [
+                        {
+                          "class": "col-md-3",
+                          "components": [
+                            {
+                              "component": "MitarbeiterArtID",
+                              "name": "MitarbeiterArtIDLabel",
+                              "style": {
+                                "width": "100%"
+                              },
+                              "text": "Position",
+                              "type": "label"
+                            }
+                          ],
+                          "type": "col"
+                        },
+                        {
+                          "class": "col-md-9",
+                          "components": [
+                            {
+                              "data": "${rstMitarbeiterArten}",
+                              "name": "MitarbeiterArtID",
+                              "placeholder": "",
+                              "style": {
+                                "display": "block",
+                                "width": "100%"
+                              },
+                              "textProperty": "MitarbeiterArt",
+                              "type": "dropdown",
+                              "value": "${dsoMitarbeiter.MitarbeiterArtID}",
+                              "valueProperty": "MitarbeiterArtID",
+                              "valueType": "int"
+                            },
+                            {
+                              "component": "MitarbeiterArtID",
+                              "defaultValue": "0",
+                              "name": "MitarbeiterArtIDRequiredValidator",
+                              "style": {
+                                "position": "absolute"
+                              },
+                              "text": "Position eingeben",
+                              "type": "required-validator"
+                            }
+                          ],
+                          "type": "col"
+                        }
+                      ],
+                      "style": {},
+                      "type": "row"
+                    },
+                    {
+                      "components": [
+                        {
+                          "class": "col offset-sm-3 justify-content-end d-flex",
+                          "components": [
+                            {
+                              "buttonStyle": "success",
+                              "buttonType": "submit",
+                              "icon": "done",
+                              "name": "button0",
+                              "text": "Speichern",
+                              "type": "button"
+                            },
+                            {
+                              "buttonStyle": "light",
+                              "events": {
+                                "click": [
+                                  {
+                                    "result": "null",
+                                    "type": "close-popup"
+                                  }
+                                ]
+                              },
+                              "name": "button1",
+                              "style": {
+                                "marginLeft": "1rem"
+                              },
+                              "text": "Abbruch",
+                              "type": "button"
+                            }
+                          ],
+                          "name": "col0",
+                          "type": "col"
+                        }
+                      ],
+                      "name": "row0",
+                      "style": {
+                        "marginTop": "20px"
+                      },
+                      "type": "row"
+                    }
+                  ],
+                  "data": "${dsoMitarbeiter}",
+                  "events": {
+                    "submit": [
+                      {
+                        "error": [
+                          {
+                            "detail": "Mitarbeiter konnte nicht erstellt werden!",
+                            "severity": "error",
+                            "summary": "Error",
+                            "type": "notify"
+                          }
+                        ],
+                        "name": "dbSinDarEla.createMitarbeiter",
+                        "parameters": [
+                          {
+                            "name": "Mitarbeiter",
+                            "value": "${dsoMitarbeiter}"
+                          }
+                        ],
+                        "then": [
+                          {
+                            "result": "${result}",
+                            "type": "close-popup"
+                          }
+                        ],
+                        "type": "invoke"
+                      }
+                    ]
+                  },
+                  "itemType": "SinDarElaMobile.Models.DbSinDarEla.Mitarbeiter",
+                  "method": "",
+                  "name": "form0",
+                  "type": "template-form",
+                  "visible": "${dsoMitarbeiter != null}"
+                }
+              ],
+              "type": "col"
+            }
+          ],
+          "type": "row"
+        }
+      ],
+      "container": "main",
+      "type": "content"
+    }
+  ],
+  "events": {
+    "load": [
+      {
+        "name": "dbSinDarEla.getVwMitarbeiterNeus",
+        "parameters": [],
+        "then": [
+          {
+            "name": "rstMitarbeiterNeu",
+            "type": "set",
+            "value": "${result.Value.AsODataEnumerable()}",
+            "valueType": "IEnumerable<SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiterNeu>"
+          }
+        ],
+        "type": "invoke"
+      },
+      {
+        "name": "dbSinDarEla.getMitarbeiterArtens",
+        "parameters": [
+          {
+            "name": "$orderby",
+            "value": "Sortierung"
+          }
+        ],
+        "then": [
+          {
+            "name": "rstMitarbeiterArten",
+            "type": "set",
+            "value": "${result.Value.AsODataEnumerable()}",
+            "valueType": "IEnumerable<SinDarElaMobile.Models.DbSinDarEla.MitarbeiterArten>"
+          }
+        ],
+        "type": "invoke"
+      },
+      {
+        "name": "dsoMitarbeiter",
+        "type": "set",
+        "value": "new SinDarElaMobile.Models.DbSinDarEla.Mitarbeiter(){}",
+        "valueType": "SinDarElaMobile.Models.DbSinDarEla.Mitarbeiter"
+      }
+    ]
+  },
+  "layout": "Dialog",
+  "name": "MitarbeiterNeu"
+}

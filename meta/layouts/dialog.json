@@ -1,0 +1,15 @@
+{
+  "components": [
+    {
+      "components": [
+        {
+          "name": "main",
+          "type": "content-container"
+        }
+      ],
+      "name": "body0",
+      "type": "body"
+    }
+  ],
+  "name": "Dialog"
+}

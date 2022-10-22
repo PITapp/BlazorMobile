@@ -1,0 +1,200 @@
+﻿@page "/einstellungen-infotexte-editor/{InfotextID}"
+@layout DialogLayout
+@inherits SinDarElaMobile.Pages.EinstellungenInfotexteEditorComponent
+
+@using Radzen
+@using Radzen.Blazor
+@using SinDarElaMobile.Models.DbSinDarEla
+<PageTitle>EinstellungenInfotexteEditor</PageTitle>
+<RadzenContent Container="main">
+  <ChildContent>
+    <div class="row">
+      <div class="col-md-12">
+        <RadzenPanel style="border: 1px solid #e6ecef; height: 740px" Text="@(strTitel + " ")">
+          <ChildContent>
+            <RadzenHtmlEditor Disabled="false" style="border-radius: 0px; height: 691px; margin-left: -11px; margin-right: -11px; margin-top: 10px" UploadUrl="upload/image" @bind-Value="@strInhalt" Name="HtmlEditor0" Change="@HtmlEditor0Change">
+              <ChildContent>
+                <RadzenHtmlEditorUndo Title="Rückgängig">
+                </RadzenHtmlEditorUndo>
+                <RadzenHtmlEditorRedo Title="Wiederherstellen">
+                </RadzenHtmlEditorRedo>
+                <RadzenHtmlEditorSeparator>
+                </RadzenHtmlEditorSeparator>
+                <RadzenHtmlEditorBold Title="Fett">
+                </RadzenHtmlEditorBold>
+                <RadzenHtmlEditorItalic Title="Kursiv">
+                </RadzenHtmlEditorItalic>
+                <RadzenHtmlEditorUnderline Title="Unterstreichen">
+                </RadzenHtmlEditorUnderline>
+                <RadzenHtmlEditorStrikeThrough Title="Durchstreichen">
+                </RadzenHtmlEditorStrikeThrough>
+                <RadzenHtmlEditorSeparator>
+                </RadzenHtmlEditorSeparator>
+                <RadzenHtmlEditorAlignLeft Title="Linksbündig ausrichten">
+                </RadzenHtmlEditorAlignLeft>
+                <RadzenHtmlEditorAlignCenter Title="Zentriert">
+                </RadzenHtmlEditorAlignCenter>
+                <RadzenHtmlEditorAlignRight Title="Rechtsbündig ausrichten">
+                </RadzenHtmlEditorAlignRight>
+                <RadzenHtmlEditorJustify Title="Blocksatz">
+                </RadzenHtmlEditorJustify>
+                <RadzenHtmlEditorSeparator>
+                </RadzenHtmlEditorSeparator>
+                <RadzenHtmlEditorIndent Title="Einzug vergrößern">
+                </RadzenHtmlEditorIndent>
+                <RadzenHtmlEditorOutdent Title="Einzug verkleinern">
+                </RadzenHtmlEditorOutdent>
+                <RadzenHtmlEditorUnorderedList Title="Aufzählungszeichen">
+                </RadzenHtmlEditorUnorderedList>
+                <RadzenHtmlEditorOrderedList Title="Nummerierung">
+                </RadzenHtmlEditorOrderedList>
+                <RadzenHtmlEditorSeparator>
+                </RadzenHtmlEditorSeparator>
+                <RadzenHtmlEditorColor Title="Textfarbe">
+                  <ChildContent>
+                    <RadzenHtmlEditorColorItem Value="ff2800">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="fe9300">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="fefb00">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="02f900">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="00fdff">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="0433ff">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="ff40ff">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="942292">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="aa7942">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="ffffff">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="000000">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="53d5fd">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="73a7fe">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="874efe">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="d357fe">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="ed719e">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="ff8c82">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="ffa57d">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="ffc677">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="fff995">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="ebf38f">
+                    </RadzenHtmlEditorColorItem>
+                    <RadzenHtmlEditorColorItem Value="b1dd8c">
+                    </RadzenHtmlEditorColorItem>
+                  </ChildContent>
+                </RadzenHtmlEditorColor>
+                <RadzenHtmlEditorBackground Title="Hintergrundfarbe">
+                  <ChildContent>
+                    <RadzenHtmlEditorBackgroundItem Value="ff2800">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="fe9300">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="fefb00">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="02f900">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="00fdff">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="0433ff">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="ff40ff">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="942292">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="aa7942">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="ffffff">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="000000">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="53d5fd">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="73a7fe">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="874efe">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="d357fe">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="ed719e">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="ff8c82">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="ffa57d">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="ffc677">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="fff995">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="ebf38f">
+                    </RadzenHtmlEditorBackgroundItem>
+                    <RadzenHtmlEditorBackgroundItem Value="b1dd8c">
+                    </RadzenHtmlEditorBackgroundItem>
+                  </ChildContent>
+                </RadzenHtmlEditorBackground>
+                <RadzenHtmlEditorRemoveFormat Title="Formatierung entfernen">
+                </RadzenHtmlEditorRemoveFormat>
+                <RadzenHtmlEditorSeparator>
+                </RadzenHtmlEditorSeparator>
+                <RadzenHtmlEditorFontName Title="Schriftart">
+                  <ChildContent>
+                    <RadzenHtmlEditorFontNameItem Text="Arial" Value="Arial">
+                    </RadzenHtmlEditorFontNameItem>
+                    <RadzenHtmlEditorFontNameItem Text="Georgia" Value="Georgia">
+                    </RadzenHtmlEditorFontNameItem>
+                    <RadzenHtmlEditorFontNameItem Text="Helvetica" Value="Helvetica">
+                    </RadzenHtmlEditorFontNameItem>
+                    <RadzenHtmlEditorFontNameItem Text="Monospace" Value="monospace">
+                    </RadzenHtmlEditorFontNameItem>
+                    <RadzenHtmlEditorFontNameItem Text="Segoe UI" Value="'Segoe UI'">
+                    </RadzenHtmlEditorFontNameItem>
+                    <RadzenHtmlEditorFontNameItem Text="Tahoma" Value="Tahoma">
+                    </RadzenHtmlEditorFontNameItem>
+                    <RadzenHtmlEditorFontNameItem Text="Times New Roman" Value="'Times New Roman'">
+                    </RadzenHtmlEditorFontNameItem>
+                    <RadzenHtmlEditorFontNameItem Text="Verdana" Value="Verdana">
+                    </RadzenHtmlEditorFontNameItem>
+                  </ChildContent>
+                </RadzenHtmlEditorFontName>
+                <RadzenHtmlEditorFontSize Title="Schriftgrat">
+                </RadzenHtmlEditorFontSize>
+                <RadzenHtmlEditorFormatBlock Title="Formatvorlagen">
+                </RadzenHtmlEditorFormatBlock>
+              </ChildContent>
+            </RadzenHtmlEditor>
+          </ChildContent>
+          <HeaderTemplate>
+            <div class="row">
+              <div class="col-md-12 align-items-start d-flex">
+                <RadzenButton ButtonStyle="ButtonStyle.Light" Icon="content_copy" Size="ButtonSize.Small" style="color: #D86E13; display: block; float: none" Text="Kopieren" Click="@ButtonKopierenClick">
+                </RadzenButton>
+              </div>
+            </div>
+          </HeaderTemplate>
+        </RadzenPanel>
+        <div style="padding-top: 15px" class="row">
+          <div class="col offset-sm-3 justify-content-end d-flex" >
+            <RadzenButton ButtonStyle="ButtonStyle.Success" ButtonType="ButtonType.Button" Icon="done" Text="Speichern" Click="@Button0Click">
+            </RadzenButton>
+            <RadzenButton ButtonStyle="ButtonStyle.Light" style="margin-left: 1rem" Text="Abbruch" Click="@Button1Click">
+            </RadzenButton>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ChildContent>
+</RadzenContent>

@@ -1,0 +1,30 @@
+﻿@page "/abmeldung"
+@layout LoginLayout
+@inherits SinDarElaMobile.Pages.AbmeldungComponent
+
+@using Radzen
+@using Radzen.Blazor
+@using SinDarElaMobile.Models.DbSinDarEla
+<PageTitle>Abmeldung</PageTitle>
+<RadzenContent Container="main">
+  <ChildContent>
+    <div class="row">
+      <div class="col-md-12">
+        <RadzenLabel style="background-color: rgba(0, 0, 0, 0); color: #5d717b; font-size: 18px; text-align: center; width: 100%" Text="Du wurdest abgemelder!">
+        </RadzenLabel>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <RadzenLabel style="background-color: rgba(0, 0, 0, 0); color: #5d717b; font-size: 18px; text-align: center; width: 100%" Text="Klicke auf 'Anmeldung starten' um dich wieder anzumelden.">
+        </RadzenLabel>
+      </div>
+    </div>
+    <div style="margin-bottom: 40px; margin-top: 40px" class="row">
+      <div class="col-md-12 justify-content-center d-flex">
+        <RadzenButton Text="Anmeldung starten" Click="@Button0Click">
+        </RadzenButton>
+      </div>
+    </div>
+  </ChildContent>
+</RadzenContent>

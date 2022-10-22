@@ -1,0 +1,120 @@
+{
+  "components": [
+    {
+      "components": [
+        {
+          "components": [
+            {
+              "class": "col-md-12",
+              "components": [
+                {
+                  "allowFiltering": true,
+                  "attributes": [
+                    {
+                      "name": "@ondblclick",
+                      "value": "@ButtonUebernehmenClick"
+                    }
+                  ],
+                  "data": "${rstMitarbeiter}",
+                  "events": {
+                    "MouseEnter": [],
+                    "change": []
+                  },
+                  "filterCaseSensitivity": "caseInsensitive",
+                  "name": "listboxMitarbeiter",
+                  "style": {
+                    "height": "565px",
+                    "width": "100%"
+                  },
+                  "textProperty": "NameGesamt",
+                  "type": "listbox",
+                  "value": "${intMitarbeiterID}",
+                  "valueProperty": "MitarbeiterID"
+                }
+              ],
+              "type": "col"
+            }
+          ],
+          "type": "row"
+        },
+        {
+          "components": [
+            {
+              "class": "col  justify-content-end d-flex",
+              "components": [
+                {
+                  "buttonStyle": "success",
+                  "buttonType": "submit",
+                  "events": {
+                    "click": [
+                      {
+                        "condition": "${intMitarbeiterID} != 0",
+                        "result": "${intMitarbeiterID}",
+                        "type": "close-popup"
+                      }
+                    ]
+                  },
+                  "icon": "done",
+                  "name": "buttonUebernehmen",
+                  "text": "Übernehmen",
+                  "type": "button"
+                },
+                {
+                  "buttonStyle": "light",
+                  "events": {
+                    "click": [
+                      {
+                        "result": "null",
+                        "type": "close-popup"
+                      }
+                    ]
+                  },
+                  "name": "buttonAbbruch",
+                  "style": {
+                    "marginLeft": "1rem"
+                  },
+                  "text": "Abbruch",
+                  "type": "button"
+                }
+              ],
+              "name": "col46",
+              "style": {},
+              "type": "col"
+            }
+          ],
+          "name": "row24",
+          "style": {
+            "marginTop": "20px"
+          },
+          "type": "row"
+        }
+      ],
+      "container": "main",
+      "type": "content"
+    }
+  ],
+  "events": {
+    "load": [
+      {
+        "name": "intMitarbeiterID",
+        "type": "set",
+        "value": "0",
+        "valueType": "int"
+      },
+      {
+        "name": "dbSinDarEla.getVwMitarbeiterSuchens",
+        "then": [
+          {
+            "name": "rstMitarbeiter",
+            "type": "set",
+            "value": "${result.Value.AsODataEnumerable()}",
+            "valueType": "IEnumerable<SinDarElaMobile.Models.DbSinDarEla.VwMitarbeiterSuchen>"
+          }
+        ],
+        "type": "invoke"
+      }
+    ]
+  },
+  "layout": "Dialog",
+  "name": "MitarbeiterSuchen"
+}

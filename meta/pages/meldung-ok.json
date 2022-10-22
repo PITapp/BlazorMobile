@@ -1,0 +1,93 @@
+{
+  "components": [
+    {
+      "components": [
+        {
+          "components": [
+            {
+              "class": "col-md-12",
+              "components": [
+                {
+                  "components": [
+                    {
+                      "components": [
+                        {
+                          "class": "col-md-12",
+                          "components": [
+                            {
+                              "name": "label0",
+                              "style": {
+                                "color": "rgb(33, 37, 41)",
+                                "display": "block",
+                                "fontSize": "18px",
+                                "fontWeight": "normal"
+                              },
+                              "text": "${parameters.strMeldung}",
+                              "type": "label"
+                            }
+                          ],
+                          "name": "col0",
+                          "style": {},
+                          "type": "col"
+                        }
+                      ],
+                      "name": "row0",
+                      "style": {
+                        "marginBottom": "1rem"
+                      },
+                      "type": "row"
+                    },
+                    {
+                      "components": [
+                        {
+                          "class": "col offset-sm-3 justify-content-end d-flex",
+                          "components": [
+                            {
+                              "buttonStyle": "light",
+                              "events": {
+                                "click": [
+                                  {
+                                    "result": "\"OK\"",
+                                    "type": "close-popup"
+                                  }
+                                ]
+                              },
+                              "name": "button1",
+                              "style": {},
+                              "text": "OK",
+                              "tooltip": "",
+                              "type": "button"
+                            }
+                          ],
+                          "name": "col4",
+                          "style": {},
+                          "type": "col"
+                        }
+                      ],
+                      "name": "row2",
+                      "type": "row"
+                    }
+                  ],
+                  "events": {
+                    "submit": []
+                  },
+                  "name": "form0",
+                  "type": "template-form"
+                }
+              ],
+              "type": "col"
+            }
+          ],
+          "type": "row"
+        }
+      ],
+      "container": "main",
+      "type": "content"
+    }
+  ],
+  "events": {
+    "load": []
+  },
+  "layout": "Dialog",
+  "name": "MeldungOK"
+}

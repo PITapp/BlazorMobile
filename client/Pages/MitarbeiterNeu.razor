@@ -1,0 +1,52 @@
+﻿@page "/mitarbeiter-neu"
+@layout DialogLayout
+@inherits SinDarElaMobile.Pages.MitarbeiterNeuComponent
+
+@using Radzen
+@using Radzen.Blazor
+@using SinDarElaMobile.Models.DbSinDarEla
+<PageTitle>MitarbeiterNeu</PageTitle>
+<RadzenContent Container="main">
+  <ChildContent>
+    <div class="row">
+      <div class="col-md-12">
+        <RadzenTemplateForm Data="@dsoMitarbeiter" TItem="SinDarElaMobile.Models.DbSinDarEla.Mitarbeiter" Visible="@(dsoMitarbeiter != null)" Submit="@Form0Submit">
+          <ChildContent>
+            <div style="margin-bottom: 1rem" class="row">
+              <div class="col-md-3">
+                <RadzenLabel Component="BaseID" style="width: 100%" Text="Mitarbeiter">
+                </RadzenLabel>
+              </div>
+              <div class="col-md-9">
+                <RadzenDropDown AllowFiltering="true" Data="@rstMitarbeiterNeu" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" MaxSelectedLabels="10" style=@($"display: block; width: 100%;max-height: 400px;") TextProperty="NameGesamt" @bind-Value="@(dsoMitarbeiter.BaseID)" ValueProperty="BaseID" Name="BaseID">
+                </RadzenDropDown>
+                <RadzenRequiredValidator Component="BaseID" DefaultValue="0" style="position: absolute" Text="Mitarbeiter eingeben">
+                </RadzenRequiredValidator>
+              </div>
+            </div>
+            <div  class="row">
+              <div class="col-md-3">
+                <RadzenLabel Component="MitarbeiterArtID" style="width: 100%" Text="Position">
+                </RadzenLabel>
+              </div>
+              <div class="col-md-9">
+                <RadzenDropDown Data="@rstMitarbeiterArten" style="display: block; width: 100%" TextProperty="MitarbeiterArt" @bind-Value="@(dsoMitarbeiter.MitarbeiterArtID)" ValueProperty="MitarbeiterArtID" Name="MitarbeiterArtID">
+                </RadzenDropDown>
+                <RadzenRequiredValidator Component="MitarbeiterArtID" DefaultValue="0" style="position: absolute" Text="Position eingeben">
+                </RadzenRequiredValidator>
+              </div>
+            </div>
+            <div style="margin-top: 20px" class="row">
+              <div class="col offset-sm-3 justify-content-end d-flex">
+                <RadzenButton ButtonStyle="ButtonStyle.Success" ButtonType="ButtonType.Submit" Icon="done" Text="Speichern">
+                </RadzenButton>
+                <RadzenButton ButtonStyle="ButtonStyle.Light" style="margin-left: 1rem" Text="Abbruch" Click="@Button1Click">
+                </RadzenButton>
+              </div>
+            </div>
+          </ChildContent>
+        </RadzenTemplateForm>
+      </div>
+    </div>
+  </ChildContent>
+</RadzenContent>

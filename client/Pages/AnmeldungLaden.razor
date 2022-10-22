@@ -1,0 +1,21 @@
+﻿@page "/"
+@page "/anmeldung-laden"
+@layout LoginLayout
+@inherits SinDarElaMobile.Pages.AnmeldungLadenComponent
+
+@using Radzen
+@using Radzen.Blazor
+@using SinDarElaMobile.Models.DbSinDarEla
+<PageTitle>AnmeldungLaden</PageTitle>
+<RadzenContent Container="main">
+  <ChildContent>
+    <div class="row">
+      <div class="col-md-12">
+        <RadzenLabel style="background-color: rgba(0, 0, 0, 0); color: #5d717b; font-size: 18px; text-align: center; width: 100%" Text="Anmeldung...">
+        </RadzenLabel>
+      </div>
+    </div>
+    <RadzenProgressBar Mode="ProgressBarMode.Indeterminate" ShowValue="false" style="margin-bottom: 30px; margin-right: ; margin-top: 30px" Value="100">
+    </RadzenProgressBar>
+  </ChildContent>
+</RadzenContent>

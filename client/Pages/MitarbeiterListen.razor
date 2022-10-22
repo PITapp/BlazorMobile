@@ -1,0 +1,126 @@
+﻿@page "/mitarbeiter-listen"
+@layout DialogLayout
+@inherits SinDarElaMobile.Pages.MitarbeiterListenComponent
+
+@using Radzen
+@using Radzen.Blazor
+@using SinDarElaMobile.Models.DbSinDarEla
+<PageTitle>MitarbeiterListen</PageTitle>
+<RadzenContent Container="main">
+  <ChildContent>
+    <RadzenTabs TabPosition="TabPosition.Left">
+      <Tabs>
+        <RadzenTabsItem Selected="true" Text="Basisdaten">
+          <ChildContent>
+            <RadzenPanel style="border: 1px solid #e6ecef; height: 700px" Text="Daten">
+              <HeaderTemplate>
+                <div class="row">
+                  <div class="col-md-12 align-items-start d-flex">
+                    <RadzenButton ButtonStyle="ButtonStyle.Light" Icon="publish" Size="ButtonSize.Small" style="color: #D86E13; display: block" Text="Export Excel">
+                    </RadzenButton>
+                  </div>
+                </div>
+              </HeaderTemplate>
+            </RadzenPanel>
+            <div style="margin-top: 20px" class="row">
+              <div class="col  justify-content-end d-flex" >
+                <RadzenButton ButtonStyle="ButtonStyle.Success" ButtonType="ButtonType.Submit" Icon="done" Text="Übernehmen" Click="@ButtonUebernehmenClick">
+                </RadzenButton>
+                <RadzenButton ButtonStyle="ButtonStyle.Light" style="margin-left: 1rem" Text="Abbruch" Click="@ButtonAbbruchClick">
+                </RadzenButton>
+              </div>
+            </div>
+          </ChildContent>
+        </RadzenTabsItem>
+        <RadzenTabsItem Selected="false" Text="Tätigkeiten">
+          <ChildContent>
+            <RadzenPanel style="border: 1px solid #e6ecef; height: 700px" Text="Daten">
+              <HeaderTemplate>
+                <div class="row">
+                  <div class="col-md-12 align-items-start d-flex">
+                    <RadzenButton ButtonStyle="ButtonStyle.Light" Icon="publish" Size="ButtonSize.Small" style="color: #D86E13; display: block" Text="Export Excel">
+                    </RadzenButton>
+                  </div>
+                </div>
+              </HeaderTemplate>
+            </RadzenPanel>
+            <div style="margin-top: 20px" class="row">
+              <div class="col  justify-content-end d-flex" >
+                <RadzenButton ButtonStyle="ButtonStyle.Success" ButtonType="ButtonType.Submit" Icon="done" Text="Übernehmen" Click="@Button0Click">
+                </RadzenButton>
+                <RadzenButton ButtonStyle="ButtonStyle.Light" style="margin-left: 1rem" Text="Abbruch" Click="@Button1Click">
+                </RadzenButton>
+              </div>
+            </div>
+          </ChildContent>
+        </RadzenTabsItem>
+        <RadzenTabsItem Selected="false" Text="Kunden">
+          <ChildContent>
+            <RadzenPanel style="border: 1px solid #e6ecef; height: 700px" Text="Daten">
+              <HeaderTemplate>
+                <div class="row">
+                  <div class="col-md-12 align-items-start d-flex">
+                    <RadzenButton ButtonStyle="ButtonStyle.Light" Icon="publish" Size="ButtonSize.Small" style="color: #D86E13; display: block" Text="Export Excel">
+                    </RadzenButton>
+                  </div>
+                </div>
+              </HeaderTemplate>
+            </RadzenPanel>
+            <div style="margin-top: 20px" class="row">
+              <div class="col  justify-content-end d-flex" >
+                <RadzenButton ButtonStyle="ButtonStyle.Success" ButtonType="ButtonType.Submit" Icon="done" Text="Übernehmen" Click="@Button2Click">
+                </RadzenButton>
+                <RadzenButton ButtonStyle="ButtonStyle.Light" style="margin-left: 1rem" Text="Abbruch" Click="@Button3Click">
+                </RadzenButton>
+              </div>
+            </div>
+          </ChildContent>
+        </RadzenTabsItem>
+        <RadzenTabsItem Selected="false" Text="Urlaub">
+          <ChildContent>
+            <RadzenPanel style="border: 1px solid #e6ecef; height: 700px" Text="Daten">
+              <HeaderTemplate>
+                <div class="row">
+                  <div class="col-md-12 align-items-start d-flex">
+                    <RadzenButton ButtonStyle="ButtonStyle.Light" Icon="publish" Size="ButtonSize.Small" style="color: #D86E13; display: block" Text="Export Excel">
+                    </RadzenButton>
+                  </div>
+                </div>
+              </HeaderTemplate>
+            </RadzenPanel>
+            <div style="margin-top: 20px" class="row">
+              <div class="col  justify-content-end d-flex" >
+                <RadzenButton ButtonStyle="ButtonStyle.Success" ButtonType="ButtonType.Submit" Icon="done" Text="Übernehmen" Click="@Button4Click">
+                </RadzenButton>
+                <RadzenButton ButtonStyle="ButtonStyle.Light" style="margin-left: 1rem" Text="Abbruch" Click="@Button5Click">
+                </RadzenButton>
+              </div>
+            </div>
+          </ChildContent>
+        </RadzenTabsItem>
+        <RadzenTabsItem Selected="false" Text="Termine">
+          <ChildContent>
+            <RadzenPanel style="border: 1px solid #e6ecef; height: 700px" Text="Daten">
+              <HeaderTemplate>
+                <div class="row">
+                  <div class="col-md-12 align-items-start d-flex">
+                    <RadzenButton ButtonStyle="ButtonStyle.Light" Icon="publish" Size="ButtonSize.Small" style="color: #D86E13; display: block" Text="Export Excel">
+                    </RadzenButton>
+                  </div>
+                </div>
+              </HeaderTemplate>
+            </RadzenPanel>
+            <div style="margin-top: 20px" class="row">
+              <div class="col  justify-content-end d-flex" >
+                <RadzenButton ButtonStyle="ButtonStyle.Success" ButtonType="ButtonType.Submit" Icon="done" Text="Übernehmen" Click="@Button6Click">
+                </RadzenButton>
+                <RadzenButton ButtonStyle="ButtonStyle.Light" style="margin-left: 1rem" Text="Abbruch" Click="@Button7Click">
+                </RadzenButton>
+              </div>
+            </div>
+          </ChildContent>
+        </RadzenTabsItem>
+      </Tabs>
+    </RadzenTabs>
+  </ChildContent>
+</RadzenContent>

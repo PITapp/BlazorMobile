@@ -1,0 +1,100 @@
+﻿@inherits SinDarElaMobile.Layouts.StandardLayoutComponent
+
+@using Radzen
+@using Radzen.Blazor
+@using SinDarElaMobile.Models.DbSinDarEla
+@using SinDarElaMobile.Pages
+<RadzenDialog />
+<RadzenNotification />
+<RadzenTooltip />
+<RadzenContextMenu />
+
+<RadzenLayout>
+  <ChildContent>
+    <RadzenHeader>
+      <ChildContent>
+        <div class="row justify-content-start align-items-center">
+          <div class="d-flex align-items-center col-6" style="padding-left: 25px">
+            <RadzenMenu>
+              <ChildContent>
+                <RadzenMenuItem Image="/assets/images/LogoMitSchriftzug-klein.png" Text="&emsp;|&emsp;SinDarEla">
+                  <ChildContent>
+                    <RadzenMenuItem Icon="dashboard" Path="dashboard" Text="Dashboard &emsp;&emsp;&emsp;&emsp;&emsp;">
+                    </RadzenMenuItem>
+                    <RadzenMenuItem Icon="assignment_turned_in" Path="management" Text="Management">
+                    </RadzenMenuItem>
+                    <RadzenMenuItem Icon="assignment" Path="kalender" Text="Kalender">
+                    </RadzenMenuItem>
+                    <RadzenMenuItem Icon="assignment_ind" Path="mitarbeiter" Text="Mitarbeiter">
+                    </RadzenMenuItem>
+                    <RadzenMenuItem Icon="face" Path="kunden" Text="Kunden">
+                    </RadzenMenuItem>
+                    <RadzenMenuItem Icon="contact_phone" Path="kontakte" Text="Kontakte">
+                    </RadzenMenuItem>
+                    <RadzenMenuItem Icon="euro_symbol" Path="abrechnung" Text="Abrechnung">
+                    </RadzenMenuItem>
+                    <RadzenMenuItem Icon="assessment" Path="auswertungen" Text="Auswertungen">
+                    </RadzenMenuItem>
+                    <RadzenMenuItem Icon="supervisor_account" Path="benutzer" Text="Benutzer">
+                    </RadzenMenuItem>
+                    <RadzenMenuItem Icon="settings" Path="einstellungen" Text="Einstellungen">
+                    </RadzenMenuItem>
+                  </ChildContent>
+                </RadzenMenuItem>
+              </ChildContent>
+            </RadzenMenu>
+          </div>
+          <div class="justify-content-end d-flex col-6">
+            <RadzenProfileMenu style="display: block" Visible="@(Globals.globalBenutzer != null)">
+              <ChildContent>
+                <RadzenProfileMenuItem Icon="account_circle" Path="benutzerprofil" Text="Benutzerprofil">
+                </RadzenProfileMenuItem>
+                <RadzenProfileMenuItem Icon="power_settings_new" Path="abmeldung" Text="Logout">
+                </RadzenProfileMenuItem>
+              </ChildContent>
+              <Template>
+                <div class="col-md-12  d-flex justify-content-end" style="background-color: rgba(0, 0, 0, 0)">
+                  <RadzenLabel style="color: #f5f5f5; display: inline-block; font-family: verdana,geneva,sans-serif; font-size: 12px; font-weight: normal; margin-right: 20px; padding-top: 7px; vertical-align: bottom" Text="@($"{(Globals.globalBenutzer.Benutzername)}")">
+                  </RadzenLabel>
+                  <RadzenImage Path="@(Globals.globalBenutzer.Base.BildURL)" style="border-radius: 50%; display: block; float: none; height: 32px; width: 32px">
+                  </RadzenImage>
+                </div>
+              </Template>
+            </RadzenProfileMenu>
+          </div>
+        </div>
+      </ChildContent>
+    </RadzenHeader>
+    <RadzenBody @ref="body0">
+      <ChildContent>
+        <RadzenContentContainer Name="main">
+        @Body
+        </RadzenContentContainer>
+      </ChildContent>
+    </RadzenBody>
+    <RadzenFooter style="background-color: #FFFFFF; height: 44px; padding-top: 10px">
+      <ChildContent>
+        <RadzenLabel style="color: #6d787d; float: none; padding-top: 2px" Text="© 2022 Soziale-Dienste-Ennstal">
+        </RadzenLabel>
+        <RadzenLabel style="color: #e5ecef; float: none; padding-left: 10px; padding-right: 10px" Text="|">
+        </RadzenLabel>
+        <RadzenLabel style="color: #6d787d; float: none; padding-top: 2px" Text="Irdning · Hauptplatz 20">
+        </RadzenLabel>
+        <RadzenLink Path="versionen" style="color: #A95106; float: right" Text="Version 3.024">
+        </RadzenLink>
+        <RadzenLabel style="color: #e5ecef; float: right; padding-left: 10px; padding-right: 10px" Text="|">
+        </RadzenLabel>
+        <RadzenLink Path="kontakt" style="color: #A95106; float: right" Text="Kontakt">
+        </RadzenLink>
+        <RadzenLabel style="color: #e5ecef; float: right; padding-left: 10px; padding-right: 10px" Text="|">
+        </RadzenLabel>
+        <RadzenLink Path="handbuch" style="color: #A95106; float: right" Text="Handbuch">
+        </RadzenLink>
+        <RadzenLabel style="color: #e5ecef; float: right; padding-left: 10px; padding-right: 10px" Text="|">
+        </RadzenLabel>
+        <RadzenLink Path="feedback" style="color: #A95106; float: right" Text="Feedback">
+        </RadzenLink>
+      </ChildContent>
+    </RadzenFooter>
+  </ChildContent>
+</RadzenLayout>
