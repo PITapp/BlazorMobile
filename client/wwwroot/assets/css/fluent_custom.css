@@ -1,0 +1,66 @@
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* Einstellungen für SinDarEla                                                                                 */
+/* ------------------------------------------------------------------------------------------------------------------- */
+
+/* --- Der Icon für den DataPicker wird falsch angezeigt. Mit dieser Einstellung wird er wieder in das Eingabefeld gesetzt --- */
+.rz-datepicker-trigger {
+  right: 150px;
+}
+
+/* --- Kopfzeile verlaufend dunkel --- */
+.header {
+  background-image: linear-gradient(#F1903C, #d66808);
+}
+
+.kopfzeileVerlaufend {
+  background-image: linear-gradient(#F1903C, #d66808);
+}
+
+/* --- Profil Menü recht oben transparent --- */
+ul.rz-profile-menu {
+  background-color: transparent;
+}
+
+/* --- Panel transparent und ohne Schatten --- */
+.rz-panel {
+  box-shadow: none;
+}
+
+/* --- Menü Farbe beim draufzeigen im ersten Eintrag --- */
+.rz-menu:not(.rz-profile-menu) .rz-navigation-item-wrapper:hover {
+  background-color: #D66808;
+}
+
+/* --- Panel: Überschrift größere Schrift einstellen --- */
+.rz-panel-titlebar {
+  font-size: 18px;
+}
+
+/* --- Panel: Überlauf unsichtbar machen --- */
+.rz-panel {
+  overflow: hidden !important;
+}
+
+/* --- Tabs: unten kein Rand --- */
+.rz-tabview-panel {
+  padding-bottom: 0px;
+}
+
+/* --- Menü: Schriftgröße --- */
+.rz-menu:not(.rz-profile-menu) .rz-navigation-menu {
+  font-size: 16px;
+}
+
+.rz-menu:not(.rz-profile-menu) .rz-navigation-item-icon {
+  font-size: 18px;
+}
+
+.rz-menu:not(.rz-profile-menu) .rz-navigation-item-text {
+  font-size: 16px;
+  padding-right: 5px;
+}
+
+/* --- Splitbutton: Schriftfarbe --- */
+.rz-button.rz-variant-text.rz-secondary.rz-shade-default, .rz-variant-text.rz-secondary.rz-shade-default.rz-paginator-element {
+  color: #A95106;
+}

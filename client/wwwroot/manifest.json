@@ -1,11 +1,26 @@
 {
-  "name": "SinDarElaMobile",
-  "short_name": "SinDarElaMobile",
+  "name": "SinDarEla",
+  "short_name": "SinDarEla",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#03173d",
+  "theme_color": "#D86E13",
   "icons": [
+    {
+      "src": "icon-128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "icon-152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "icon-256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
     {
       "src": "icon-512.png",
       "type": "image/png",

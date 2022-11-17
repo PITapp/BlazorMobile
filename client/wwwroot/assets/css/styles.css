@@ -4,7 +4,8 @@
 
 
 /* Import the Radzen CSS files */
-@import './styles-generated.css';
+@import 'fluent.css';
+@import 'fluent_custom.css';
 
  
 #blazor-error-ui {

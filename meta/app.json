@@ -6,7 +6,13 @@
   "generator": "@radzen/blazor-server",
   "https": true,
   "ignore": [
-    ""
+    "client\\wwwroot\\index.html",
+    "client\\wwwroot\\manifest.json",
+    "client\\wwwroot\\favicon.ico",
+    "client\\wwwroot\\icon-128.png",
+    "client\\wwwroot\\icon-152.png",
+    "client\\wwwroot\\icon-256.png",
+    "client\\wwwroot\\icon-512.png"
   ],
   "javaScriptFiles": [],
   "layouts": [
@@ -424,8 +430,8 @@
     "$upload-files-remove-color": "#323130",
     "$warning": "#ffc80a",
     "upgraded": true,
-    "version": 4
+    "version": 4.1
   },
-  "title": "SinDarElaMobile",
+  "title": "SinDarEla",
   "wasm": true
 }

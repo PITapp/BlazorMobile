@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>SinDarElaMobile</title>
+    <title>SinDarEla</title>
     <base href="/" />
     <link href="assets/css/styles.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <app>Loading...</app>
+    <app>SinDarEla laden...</app>
 
     <div id="blazor-error-ui">
         An unhandled error has occurred.
@@ -23,6 +23,48 @@
     <script src="_framework/blazor.webassembly.js"></script>
     <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
+
+    <script>
+        // 11.04.2022 gp
+        // Dieser Script wurde von mir hinzugefügt
+        // Er ist in den Einstellungen von Radzen vor dem Überschreiben geschützt (Ignorlist)
+        // 
+        // Damit kann Text in die Zwischenablage gebracht werden
+        //
+        function copyTextToClipboard(strText) {
+            // Create container for the HTML
+            // [1]
+            var container = document.createElement('div')
+            container.innerHTML = strText
+        
+            // Hide element
+            // [2]
+            container.style.position = 'fixed'
+            container.style.pointerEvents = 'none'
+            container.style.opacity = '0'
+            container.style.background = 'white'
+        
+            // Mount the container to the DOM to make `contentWindow` available
+            // [3]
+            document.body.appendChild(container)
+        
+            // Copy to clipboard
+            // [4]
+            window.getSelection().removeAllRanges()
+        
+            var range = document.createRange()
+            range.selectNode(container)
+            window.getSelection().addRange(range)
+        
+            // [5]
+            document.execCommand('copy')
+            
+            // Remove the container
+            // [6]
+            document.body.removeChild(container)
+        }
+    </script>
+
 </body>
 
 </html>
